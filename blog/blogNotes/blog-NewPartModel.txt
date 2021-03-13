@@ -8,7 +8,7 @@
 										<figure class="entry-thumbnail">
 
 											<a href="./blog/blogNotes/firstNote.html" title="MAXIANG">
-												<img width="520" height="400" src="./blog/blogPic/b20210312.jpeg"
+												<img width="520" height="400" src="./blog/blogPic/b20210312.jpg"
 													class="attachment-type-medium size-type-medium wp-post-image"
 													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
 											</a>
@@ -19,7 +19,7 @@
 										<div class="entry-header">
 											<div class="entry-meta">
 												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
+												<!--第2/5处修改(2)：tag_href, tag-->
 
 												<span class="cat-links">
 													<a href="https://#.com/category/tag1.html"
@@ -33,7 +33,7 @@
 												</span>
 
 												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
+												<!--第3/5处修改(2)：time-->
 												<span class="posted-on">
 													
 														<time>2022-02-12</time>
