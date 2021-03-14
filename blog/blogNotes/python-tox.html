@@ -4,39 +4,43 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +217,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +267,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +314,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +365,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +375,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +456,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +472,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +480,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -526,277 +527,317 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
-
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+
+
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>Python自动化测试工具tox学习</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
+
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
+
+											</span>
+											&nbsp;&nbsp;
+											<time>Mar. 2021</time>
+										</span>
+
+									</div>
+								</header>
+								<!-- .entry-header -->
+
+
+								<div class="entry-content">
+
+									
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
+									
+									<!--Markdown内容开始((((-->
+<div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h2 id="1-定义解释">1 定义/解释</h2>
+
+<p><strong>关于<code>virtualenv</code></strong></p>
+
+<blockquote>
+  <p>虚拟环境<code>virtualenv</code>，是可以在一个主机上，自定义出多套的Python环境。多套环境中使用不同的Python解析器、环境变量设置、第三方依赖包，执行不同的测试命令，<strong>最重要的是</strong>各个环境之间互不影响，相互隔离。</p>
+  
+  <ul><li><p>最典型的应用场景就是<strong>测试在不同Python版本下代码的兼容性</strong>。我们可以为py2.4，py2.5，py2.6，py2.7，py3.4等不同Python版本创建不同的虚拟环境，通过<code>tox</code>进行统一管理。也可以自定义虚拟环境（<code>tox.ini</code>进行配置）</p></li>
+  <li><p>例如：</p>
+  
+  <ul>
+  <li><p><code>testenv:pep8</code>，代码格式检查；</p></li>
+  <li><p><code>testenv:cover</code>，测试覆盖率。</p></li></ul></li>
+  </ul>
+</blockquote>
+
+<p><strong>关于<code>tox</code></strong></p>
+
+<blockquote>
+  <p><code>tox</code>是一个基于命令行驱动的Python任务自动化测试工具(<strong>通用的虚拟环境管理和测试命令行工具</strong>)。目的是为了Python测试标准化，自动化。</p>
+  
+  <blockquote>
+    <p>功能包括：</p>
+    
+    <ul><li><p>可以实现自定义多套<strong>相互独立的Python环境</strong>，用不同的Python版本和解释器检查软件包是否正确安装；</p></li>
+    <li><p>可以在不同的<code>virtualenv</code>中进行测试，配置选定的测试工具；</p></li>
+    <li><p>…(待学习)</p></li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<p><strong>关于<code>tox.ini</code></strong></p>
+
+<blockquote>
+  <ul><li><p><strong>配置文件</strong>：关于项目的基本信息以及该项目待运行的环境；</p></li>
+  <li><p>这个文件需要跟项目的<code>setup.py</code>文件放置同一路径下，路径名{toxinidir}<strong>（<code>tox.ini</code>所在的目录）</strong>。（<strong>Reason</strong>: 工作方式是通过<code>setup.py</code>文件为待测程序创建源码安装包，他会查看<code>tox.ini</code>中的所有环境设置，并针对每个环境设置执行相应操作）</p>
+  
+  <blockquote>
+    <p>在该路径下，执行<code>tox-quickstart</code>按照指示可生成示例<code>tox.ini</code>文件，我们可以根据需要手动修改配置信息。 <br>
+    在该路径下，执行<code>tox</code>，会发生什么？</p>
+    
+    <ul>
+    <li><p>打包项目</p></li>
+    <li><p>构建虚拟机测试环境</p></li>
+    <li><p>测试项目代码</p></li></ul>
+  </blockquote></li>
+  </ul>
+</blockquote>
+
+<hr>
+
+<h2 id="2-使用方法">2 使用方法</h2>
+
+<p><a href="https://tox.readthedocs.io/en/latest/examples.html" target="_blank">使用场景示例官方文档</a></p>
+
+<p><strong>安装</strong></p>
+
+<blockquote>
+  <p>使用<code>pip install tox</code>安装</p>
+  
+  <ul><li><p><em>在需要运行的Python项目目录中建立<code>tox.ini</code>文件，在<code>tox.ini</code>文件中配置项目的基本信息和想要的测试环境；</em></p></li>
+  <li><p><em>可以通过运行<code>tox-quickstart</code>来自动生成一个<code>tox.ini</code>文件。</em></p></li>
+  </ul>
+</blockquote>
+
+<p><strong>运行</strong></p>
+
+<blockquote>
+  <ul><li><p>命令tox运行全部测试环境；</p>
+  
+  <blockquote>
+    <p>如果在其他目录下运行，则需要<code>tox -c ./dir/tox.ini</code> <strong>-c</strong>是指定配置文件的意思</p>
+  </blockquote></li>
+  <li><p>命令<code>tox -e envname</code>运行指定的环境；</p></li>
+  <li><p>命令<code>tox -h</code>查看命令参数帮助。</p></li>
+  </ul>
+</blockquote>
+
+<p><strong>行为控制</strong></p>
+
+<blockquote>
+  <p><code>tox</code> 的行为由其配置文件控制，当前它支持 <code>3</code> 种配置文件：</p>
+  
+  <ul><li><p><code>pyproject.toml</code></p></li>
+  <li><p><strong><code>tox.ini</code></strong></p></li>
+  <li><p><code>setup.cfg</code></p></li>
+  </ul>
+</blockquote>
+
+<h2 id="3-配置官方文档">3 配置<a href="https://tox.readthedocs.io/en/latest/config.html" target="_blank">@官方文档</a></h2>
+
+<blockquote>
+  <p><code>tox.ini</code>文件常用配置<strong>实例&amp;解释</strong></p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">[tox]
+</div><div class="hljs-line">envlist = test_api,py34,pep8
+</div><div class="hljs-line">skipsdist = <span class="hljs-keyword">True</span>
+</div><div class="hljs-line">toxworkdir = {toxinidir}/../var/.tox
+</div><div class="hljs-line">indexserver = 
+</div><div class="hljs-line">    default = https://pypi.doubanio.com/simple
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">[testenv]
+</div><div class="hljs-line">changedir = {toxinidir}/..   
+</div><div class="hljs-line"><span class="hljs-comment">#安装依赖</span>
+</div><div class="hljs-line">deps = -r{toxinidir}/requirements.txt
+</div><div class="hljs-line"><span class="hljs-comment"># 表示构建环境的时候要执行的命令，一般是使用 pip 安装</span>
+</div><div class="hljs-line">install_command = pip install {opts} {packages}   
+</div><div class="hljs-line">setenv = 
+</div><div class="hljs-line">    <span class="hljs-comment"># 不生成_pycache_文件</span>
+</div><div class="hljs-line">    PYTHONDONTWRITEBYTECODE = <span class="hljs-number">1</span>
+</div><div class="hljs-line">[testenv:test_api]
+</div><div class="hljs-line"><span class="hljs-comment"># 运行pytest并生成报告</span>
+</div><div class="hljs-line">commands = pytest \
+</div><div class="hljs-line">    -vs {posargs:case/} --html=./var/report.html
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">[testenv:py34]
+</div><div class="hljs-line"><span class="hljs-comment"># 这个 section 是为 py34 环境定制某些配置的，没有定制的配置，将会从 [testenv] 读取</span>
+</div><div class="hljs-line">commands =
+</div><div class="hljs-line">  python -m testtools.run
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">[testenv:pep8]
+</div><div class="hljs-line">commands =
+</div><div class="hljs-line">  flake8 {posargs} ./egis egis/common
+</div><div class="hljs-line">  <span class="hljs-comment"># Check that .po and .pot files are valid:</span>
+</div><div class="hljs-line">  bash -c <span class="hljs-string">"find egis -type f -regex '.*\.pot?' -print0|xargs -0 -n 1 msgfmt --check-format -o /dev/null"</span>
+</div><div class="hljs-line">  {toxinidir}/tools/config/check_uptodate.sh
+</div><div class="hljs-line">  {toxinidir}/tools/check_exec.py {toxinidir}/egis
+</div><div class="hljs-line"><span class="hljs-comment"># 执行 tox -e pep8 进行代码检查, 实际上是执行了上述指令来进行代码的语法规范检查</span>
+</div></code></pre>
+
+<p><strong>3.1 说明</strong></p>
+
+<blockquote>
+  <p>每个<code>[xxx]</code>及其下方内容组成一个<strong>章节(<code>section</code>)</strong>，每个<strong>章节</strong>间使用空行作间隔。</p>
+  
+  <blockquote>
+    <p><code>[tox]</code>下面是<strong>全局性的配置项</strong>，<code>envlist</code> 字段定义了<code>tox</code>操作的环境； <br>
+    <code>[xxx]</code>下面是 <code>xxx</code> 虚拟环境的配置项，<code>[xxx:yyy]</code>继承<code>xxx</code>的配置，同时其自身配置项的优先级更高；</p>
+  </blockquote>
+</blockquote>
+
+<p><strong>3.2 <code>[tox]</code>下的配置参数说明</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">testenv 是默认配置，如果某个环境自身的 <span class="hljs-selector-tag">section</span> 中没有定义这些配置， 那么就从这个 <span class="hljs-selector-tag">section</span> 中读取
+</div></code></pre>
+
+<blockquote>
+  <p><code>envlist</code> 表示 tox 中配置的环境都有哪些，网上有很多比如py2, py3</p>
+  
+  <p><code>toxworkdir</code> 创建virtual虚拟环境的路径</p>
+  
+  <p><code>skipsdist = True</code> 跳过本地软件包安装到virtualenv中步骤</p>
+  
+  <blockquote>
+    <p>tox默认会使用sdist构建包，对于测试来说没有必要，而且构建还会要求存在<code>README</code>、<code>setup.py</code>等文件，并且保证<code>setup.py</code>的格式符合要求等，<strong>所以本条命令的意思是：跳过此步</strong></p>
+  </blockquote>
+  
+  <p><code>changedir</code> 执行命令时更改，以该目录当前目录</p>
+</blockquote>
+
+<p><strong>3.3 虚拟环境<code>[xxx]</code>下的配置参数说明</strong></p>
+
+<blockquote>
+  <p>对于每个虚拟环境，可用的配置项很多：</p>
+  
+  <blockquote>
+    <p><strong>常用的有：</strong></p>
+    
+    <ul><li><p><strong>description</strong>（描述信息）</p></li>
+    <li><p><strong>basepython</strong>（Python解释器版本）</p></li>
+    <li><p><strong>deps</strong>（环境依赖项） - <code>requirement.txt</code></p>
+    
+    <blockquote>
+      <p><code>deps =</code> <br>
+      <code>-r{toxinidir}/requirements.txt</code> <br>
+      <code>-r{toxinidir}/test-requirements.txt</code> <br>
+      <strong>deps</strong> 指定构建环境时需要安装的第三方依赖包 <br>
+      每个虚拟环境创建的时候， 会通过 <code>pip install -r requirements.txt</code> 和 <code>pip install -r test-requirements.txt</code> 安装依赖包到虚拟环境 <br>
+      一般的项目会直接安装 <strong>requirements.txt</strong> 和 <strong>test-requirements.txt</strong> 两个文件中的所有依赖包</p>
+    </blockquote></li>
+    <li><p><strong>setenv</strong> 导入变量，跟exprot一样</p></li>
+    <li><p><strong>commands</strong>（命令语句）表示构建好 virtualenv 之后要执行的命令</p>
+    
+    <blockquote>
+      <p><strong>posargs</strong> 参数变量 如果输入<strong>tox</strong> ，默认执行<code>case</code>目录，如果输入<code>tox /test</code> 则执行<code>/test</code>目录下的文件，而不执行<code>case</code>目录下文件 <br>
+      <strong>e.g.</strong> <code>commands = ostestr {posargs}</code></p>
+      
+      <ul>
+      <li><p><code>这里调用了 ostestr 指令来调用 testrepository 执行单元测试用例</code></p></li>
+      <li><p><code>{posargs} 参数就是可以将 tox 指令的参数传递给 ostestr</code></p></li></ul>
+    </blockquote></li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<p>文件示例：<code>requirement.txt</code></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>requests
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>pytest
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>pytest-html
+</div></code></pre>
+
+<p><strong>3.4 测试</strong></p>
+
+<blockquote>
+  <p>所有的命都是在{toxinidir}（<code>tox.ini</code>所在的目录）作为当前命令执行的工作目录</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">tox-quickstart
+</div><div class="hljs-line">or
+</div><div class="hljs-line">tox [<span class="hljs-_">-e</span> py34] [subpath]
+</div><div class="hljs-line"><span class="hljs-comment"># subpath以Python模块形式用"."一级一级连接</span>
+</div></code></pre>
+
+<h2 id="4-工作流程">4 工作流程</h2>
+
+
+
+<p><img align="middle" longdesc="../blogPic/python-tox-workflow.png" alt="Alt text" title="" type="image/png" src="../blogPic/python-tox-workflow.png" class=""></p>
+
+
+
+<ul><li><p>配置（<strong>configuration</strong>）：加载配置文件（如 <code>tox.ini</code>），解析命令行参数，读取系统环境变量等</p></li>
+<li><p>打包（<strong>packaging</strong>）：(虚线框表示可选的)对于带有 <code>setup.py</code> 文件的项目，可以在这步去生成它的源发行版</p></li>
+<li><p>创建虚拟环境：默认使用 <code>virtualenv</code> 来创建虚拟环境，并根据配置项中的“<strong>deps</strong>”安装所需的依赖项，然后执行配置好的命令（<code>commands</code>）</p></li>
+<li><p>报告（<strong>report</strong>）：汇总所有虚拟环境的运行结果并罗列出来</p></li>
+</ul>
+
+<hr>
+
+<h2 id="参考资料">参考资料</h2>
+
+<ol><li rel="1"><p><a href="https://blog.csdn.net/wqwqwqwq403/article/details/79237128" target="_blank">openstack中tox的使用</a></p></li>
+<li rel="2"><p><a href="https://www.jb51.net/article/182834.htm" target="_blank">Python任务自动化工具tox使用教程</a></p></li>
+<li rel="3"><p><a href="https://www.jianshu.com/p/645ec1c1c926" target="_blank">tox工具</a></p></li>
+<li rel="4"><p><a href="https://blog.csdn.net/LANNY8588/article/details/90487029" target="_blank">pytest tox.ini使用</a></p></li>
+</ol>
+
+
+
+<h2 id="目录">目录</h2>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><a href="#python自动化测试工具tox学习">Python自动化测试工具tox学习</a><ul>
+<li><a href="#1-定义解释">1 定义/解释</a></li>
+<li><a href="#2-使用方法">2 使用方法</a></li>
+<li><a href="#3-配置官方文档">3 配置@官方文档</a></li>
+<li><a href="#4-工作流程">4 工作流程</a></li>
+<li><a href="#参考资料">参考资料</a></li>
+<li><a href="#目录">目录</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+									
+									
+									<!--))))Markdown内容结束-->
+
+
+								</div><!-- .entry-content -->
+
+							</article><!-- #post-## -->
+
+						</main><!-- #main -->
 
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-
-
-
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-								</div>
-
-								
-
-
-
-							</section>
-
-						</main>
-						<!-- #main -->
 					</div>
 					<!-- #primary -->
 
@@ -846,21 +887,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>
