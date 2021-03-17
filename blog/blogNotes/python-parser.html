@@ -4,39 +4,44 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
+	<link rel="shortcut icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="shortcut icon" href="../../blog/favicon4.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
-
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +218,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +268,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +315,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +366,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +376,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +457,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +473,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +481,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -526,397 +528,455 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
 
-							<div class="post-wrapper col-12">
 
-									<article id="#" class="list-post hentry">
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>Python-parser 学习实例</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
 
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
 
-											<a href="./blog/blogNotes/python-parser.html" title="parser实例">
-												<img width="520" height="400" src="./blog/blogPic/python-parser.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
+											</span>
+											&nbsp;&nbsp;
+											<time>Mar. 2021</time>
+										</span>
 
-										</figure>
+									</div>
+								</header>
+								<!-- .entry-header -->
 
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
 
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
+								<div class="entry-content">
 
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
+									
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
+									
+									<!--Markdown内容开始((((-->
+	
+<div id='preview-contents' class='note-content'>
+                        
+                    
 
-											</div>
+<h3 id="1-文件夹结构">1 文件(夹)结构</h3>
 
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-parser.html">
-													Python-parser 学习实例
-												</a>
-											</h2>
+<pre>(base) <font color="#4E9A06"><b>t@t-virtual-machine</b></font>:<font color="#3465A4"><b>~/PycharmProjects/ParserLearning</b></font>$ tree -L 3
+<font color="#3465A4"><b>.</b></font>
+├── README.md
+├── setup.cfg
+├── <font color="#4E9A06"><b>setup.py</b></font>
+├── <font color="#3465A4"><b>ttest</b></font>
+│   ├── __init__.py
+│   ├── __main__.py
+│   ├── main.py
+│   ├── parser.py
+│   ├── <font color="#3465A4"><b>testfunc</b></font>
+│   │   ├── __init__.py
+│   │   └── prtTips.py
+│   └── __version__.py
+└── <font color="#3465A4"><b>venv</b></font>
+</pre>
 
-											<div class=" entry-meta">
 
-											</div>
-										</div><!-- .entry-header -->
 
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>用实际的例子，综合学习Python中parser以及setup.py的用法。</p>
-										</div><!-- .entry-content -->
+<h3 id="2-文件内容">2 文件内容</h3>
 
-									</article><!-- #post-## -->
+<pre class="prettyprint hljs-dark"><code class="language-markdown hljs"><div class="hljs-line">README.md
+</div><div class="hljs-line"><span class="hljs-section"># This is a readme.md files.</span>
+</div></code></pre>
 
-								</div>
-							
-							<div class="post-wrapper col-12">
 
-									<article id="#" class="list-post hentry">
 
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># setup.cfg</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">[metadata]
+</div><div class="hljs-line">name = ttest
+</div><div class="hljs-line">version = attr: ttest.__version__
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">[options]
+</div><div class="hljs-line">zip_safe = <span class="hljs-keyword">False</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># Very important!</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 自动搜索存在__init__.py的文件夹作为包!!!!!!!!!</span>
+</div><div class="hljs-line">packages = find:
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 因为例子里没涉及到其他操作，这里只要求1个必须的包</span>
+</div><div class="hljs-line">install_requires =
+</div><div class="hljs-line">  argcomplete ~= <span class="hljs-number">1.9</span><span class="hljs-number">.4</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">python_requires = ~= <span class="hljs-number">3.7</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">[options.entry_points]
+</div><div class="hljs-line">console_scripts =
+</div><div class="hljs-line">  ttest = ttest.__main__:main
+</div><div class="hljs-line"><span class="hljs-comment"># ttest包内，必须有一个__main__.py文件，该文件内部，必须定义了[def main():]</span>
+</div></code></pre>
 
-											<a href="./blog/blogNotes/python-import.html" title="import导包">
-												<img width="520" height="400" src="./blog/blogPic/python-import.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># setup.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#!/usr/bin/env python3</span>
+</div><div class="hljs-line"><span class="hljs-string">"""Metadata for package to allow installation with pip."""</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> setuptools
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> os
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> subprocess
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">with</span> open(<span class="hljs-string">"README.md"</span>, <span class="hljs-string">"r"</span>) <span class="hljs-keyword">as</span> fh:
+</div><div class="hljs-line">    long_description = fh.read()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 执行指定位置下的文件内容读取操作，不打印</span>
+</div><div class="hljs-line">exec(open(os.path.join(<span class="hljs-string">"ttest"</span>, <span class="hljs-string">"__version__.py"</span>)).read())
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 获取当前.py文件所在的文件夹路径</span>
+</div><div class="hljs-line">print(os.path.dirname(__file__))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 执行指定文件夹下的.py文件，类似于直接命令行执行：env python3 xxx.py</span>
+</div><div class="hljs-line"><span class="hljs-comment"># subprocess.run(['env', 'python3', os.path.join(os.path.dirname(__file__), 'refresh_version.py')])</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 进一步理解(必须安装了tree)</span>
+</div><div class="hljs-line">subprocess.run([<span class="hljs-string">'tree'</span>, <span class="hljs-string">'-L'</span>, <span class="hljs-string">'1'</span>])
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">setuptools.setup(
+</div><div class="hljs-line">    name=<span class="hljs-string">"ttest"</span>,
+</div><div class="hljs-line">    description=<span class="hljs-string">"test parser by tao."</span>,
+</div><div class="hljs-line">    author=<span class="hljs-string">"tao"</span>,
+</div><div class="hljs-line">    author_email=<span class="hljs-string">"tideal@qq.com"</span>,
+</div><div class="hljs-line">    version=__version__,
+</div><div class="hljs-line">    url=<span class="hljs-string">"https://tideal.github.io/blogs/"</span>,
+</div><div class="hljs-line">    packages=setuptools.find_packages(),
+</div><div class="hljs-line">    tests_require=[
+</div><div class="hljs-line">    ],
+</div><div class="hljs-line">    classifiers=[
+</div><div class="hljs-line">        <span class="hljs-string">"Programming Language :: Python :: 3"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"License :: OSI Approved :: MIT License"</span>,
+</div><div class="hljs-line">    ]
+</div><div class="hljs-line">)
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
 
-										</figure>
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># ttest/__init__.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 从当前包内的parser.py文件中导入parser函数，并且执行该函数</span>
+</div><div class="hljs-line"><span class="hljs-comment"># [.parser] 意味着 .../parser.py </span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> .parser <span class="hljs-keyword">import</span> parser
+</div><div class="hljs-line">parser()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> ttest.__version__ <span class="hljs-keyword">import</span> __version__
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 从.../ttest/main.py 导入函数 main()</span>
+</div><div class="hljs-line"><span class="hljs-comment"># if no this, error tips: -&gt;  AttributeError: module 'ttest' has no attribute 'main'</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> ttest.main <span class="hljs-keyword">import</span> main
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 导入.../ttest/testfunc 包，即导入testfunc包内的__init__.py文件</span>
+</div><div class="hljs-line"><span class="hljs-comment"># must have this:</span>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> ttest.testfunc <span class="hljs-keyword">as</span> testfunc
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
 
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># ttest/__main__.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-string">""" __main__.py</span>
+</div><div class="hljs-line"><span class="hljs-string">"""</span>
+</div><div class="hljs-line"><span class="hljs-comment"># PYTHON_ARGCOMPLETE_OK</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> ttest
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># setup.cfg 入口函数</span>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-comment"># 放这句话的原因是，验证自己的猜想，结果表明，执行的是这段代码！</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"Enter into [__main__.py -&gt; main()]..."</span>)
+</div><div class="hljs-line">    ttest.main()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:
+</div><div class="hljs-line">    <span class="hljs-comment"># 放这句话的原因是，验证自己的猜想，结果表明：这段代码根本没执行！</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"Enter into [__main__.py -&gt; if]..."</span>)
+</div><div class="hljs-line">    ttest.main()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
 
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># ttest/main.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> ttest
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> sys
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># print("&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; xxx")为调试作用</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">(args=None)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-string">"""Command-line interface entry point."""</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"Enter into [main.py -&gt; main()]..."</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 1"</span>)
+</div><div class="hljs-line">    parser = ttest.parser()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 2"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 2-1 args:"</span>)
+</div><div class="hljs-line">    print(args)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    args = parser.parse_args(args)
+</div><div class="hljs-line">    print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 2-2 args:"</span>)
+</div><div class="hljs-line">    print(args)
+</div><div class="hljs-line">    print(args.func)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 3"</span>)
+</div><div class="hljs-line">    <span class="hljs-keyword">try</span>:
+</div><div class="hljs-line">        print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 4-1"</span>)
+</div><div class="hljs-line">        func = eval(args.func)
+</div><div class="hljs-line">        print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 4-2"</span>)
+</div><div class="hljs-line">    <span class="hljs-keyword">except</span> AttributeError:
+</div><div class="hljs-line">        print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 5-1"</span>)
+</div><div class="hljs-line">        parser.print_help()
+</div><div class="hljs-line">        print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 5-2"</span>)
+</div><div class="hljs-line">        sys.exit(<span class="hljs-number">0</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 6"</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    print(<span class="hljs-string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; line 7 args:"</span>)
+</div><div class="hljs-line">    print(args)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    func(args)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:
+</div><div class="hljs-line">    print(<span class="hljs-string">"Enter into [main.py -&gt; if]..."</span>)
+</div><div class="hljs-line">    main()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
 
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
+<p>学习文档@<a href="https://docs.python.org/3/library/argparse.html" target="_blank">官方文档</a></p>
 
-											</div>
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># ttest/parser.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parser</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-string">"""Returns parser for ttest."""</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">import</span> argparse
+</div><div class="hljs-line">    <span class="hljs-keyword">import</span> argcomplete
+</div><div class="hljs-line">    <span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> __version__
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    parser = argparse.ArgumentParser(
+</div><div class="hljs-line">        description=<span class="hljs-string">'\n'</span>.join([
+</div><div class="hljs-line">            <span class="hljs-string">"ttest"</span>,
+</div><div class="hljs-line">            <span class="hljs-string">"--------"</span>,
+</div><div class="hljs-line">            <span class="hljs-string">"Version: {}"</span>.format(__version__),
+</div><div class="hljs-line">        ]),
+</div><div class="hljs-line">        formatter_class=argparse.RawTextHelpFormatter,
+</div><div class="hljs-line">    )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    parser.add_argument(
+</div><div class="hljs-line">        <span class="hljs-string">'-v'</span>,
+</div><div class="hljs-line">        <span class="hljs-string">'--version'</span>,
+</div><div class="hljs-line">        action=<span class="hljs-string">'version'</span>,
+</div><div class="hljs-line">        version=__version__,
+</div><div class="hljs-line">    )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    subparsers = parser.add_subparsers()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    t_parser = subparsers.add_parser(<span class="hljs-string">"run_t"</span>, help=<span class="hljs-string">"t model"</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    t_parser.add_argument(<span class="hljs-string">"--func_tips"</span>, type=str, default=<span class="hljs-keyword">None</span>, help=<span class="hljs-string">"test the function of subparsers"</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 一直写到函数名：</span>
+</div><div class="hljs-line">    <span class="hljs-string">'''对于代码ttest.testfunc.prtTips2：</span>
+</div><div class="hljs-line"><span class="hljs-string">    [ttest.testfunc] 指代的是：parser.py所在包ttest下的testfunc包中的__init__.py文件;</span>
+</div><div class="hljs-line"><span class="hljs-string">    [prtTips2]指代的是：__init__.py文件中已添加的函数名'''</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    t_parser.set_defaults(func=<span class="hljs-string">"ttest.testfunc.prtTips2"</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    argcomplete.autocomplete(parser)
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> parser
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
 
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-import.html">
-													关于导包的几种方式
-												</a>
-											</h2>
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># ttest/__version__.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">__version__ = <span class="hljs-string">"1.0"</span>
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
 
-											<div class=" entry-meta">
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># ttest/testfunc/__init__.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 准备在parser.set_defaults(func=xxx)里的xxx必须要在__int__.py中导入</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 从../ttest/testfunc/prtTips.py中导入函数：prtTips1, prtTips2(两个函数调用，以示区分)</span>
+</div><div class="hljs-line"><span class="hljs-string">''' !!!!本行代码:</span>
+</div><div class="hljs-line"><span class="hljs-string">from .prtTips import prtTips1, prtTips2</span>
+</div><div class="hljs-line"><span class="hljs-string">与ttest/__init__.py中的代码: </span>
+</div><div class="hljs-line"><span class="hljs-string">import ttest.testfunc as testfunc,</span>
+</div><div class="hljs-line"><span class="hljs-string">结合，即可以用在parser.py文件中，实现：</span>
+</div><div class="hljs-line"><span class="hljs-string">t_parser.set_defaults(func="ttest.testfunc.prtTips2")</span>
+</div><div class="hljs-line"><span class="hljs-string">'''</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> .prtTips <span class="hljs-keyword">import</span> prtTips1, prtTips2
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
 
-											</div>
-										</div><!-- .entry-header -->
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># ttest/testfunc/prtTips.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prtTips1</span><span class="hljs-params">(args=None)</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is a tips1:"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"hello, current directory is ttest.testfunc.prtTips.prtTips1"</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prtTips2</span><span class="hljs-params">(args=None)</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is a tips2:"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"hello, current directory is ttest.testfunc.prtTips.prtTips2"</span>)
+</div></code></pre>
 
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>在不同的文件中，import导入包的格式、作用有哪些不同？</p>
-										</div><!-- .entry-content -->
 
-									</article><!-- #post-## -->
 
-								</div>
+<h3 id="3-操作命令">3 操作命令</h3>
+
+
+
+<h4 id="31-命令行输入打包并安装">3.1 命令行输入，打包，并安装</h4>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line"> python setup.py install
+</div></code></pre>
+
+
+
+<h4 id="32-键入命令查看包">3.2 键入命令，查看包</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line"> pip list
+</div></code></pre>
+
+<h4 id="33-用包名执行-h-帮助菜单">3.3 用包名执行 -h 帮助菜单</h4>
+
+<pre class="prettyprint hljs-dark"><code class="hljs prolog"><div class="hljs-line"> usage: ttest [-h] [-v] {run_t} ...
+</div></code></pre>
+
+<h4 id="34-按照帮助菜单键入命令">3.4 按照帮助菜单，键入命令</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line"> ttest run_t
+</div></code></pre>
+
+<p>or</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line"> ttest run_t --func_tips t
+</div></code></pre>
+
+<blockquote>
+  <p>解释</p>
+  
+  <blockquote>
+    <ul><li><p>“<code>ttest</code>“包名，也是执行的命令</p></li>
+    <li><p>“<code>run_t</code>“是选择参数（只有这一个参数），要么选，要么不选</p></li>
+    <li><p>“<code>--func_tips</code>“是可选参数</p></li>
+    <li><p>“<code>t</code>“是<code>--func_tips</code>明确指示的输入参数，类型默认为<code>type=str</code></p></li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<h3 id="4-执行结果">4 执行结果</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs ruby"><div class="hljs-line">(venv) (base) t@t-virtual-<span class="hljs-symbol">machine:</span>~<span class="hljs-regexp">/PycharmProjects/</span>ParserLearning$ ttest run_t 
+</div><div class="hljs-line"><span class="hljs-comment">#-----------------------------------------------------</span>
+</div><div class="hljs-line">Enter into [__main_<span class="hljs-number">_</span>.py -&gt; main()]...
+</div><div class="hljs-line">Enter into [main.py -&gt; main()]...
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">1</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">2</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">2</span>-<span class="hljs-number">1</span> <span class="hljs-symbol">args:</span>
+</div><div class="hljs-line">None
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">2</span>-<span class="hljs-number">2</span> <span class="hljs-symbol">args:</span>
+</div><div class="hljs-line">Namespace(func=<span class="hljs-string">'ttest.testfunc.prtTips2'</span>, func_tips=None)
+</div><div class="hljs-line">ttest.testfunc.prtTips2
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">3</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">4</span>-<span class="hljs-number">1</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">4</span>-<span class="hljs-number">2</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">6</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">7</span> <span class="hljs-symbol">args:</span>
+</div><div class="hljs-line">Namespace(func=<span class="hljs-string">'ttest.testfunc.prtTips2'</span>, func_tips=None)
+</div><div class="hljs-line">This is a <span class="hljs-symbol">tips2:</span>
+</div><div class="hljs-line">hello, current directory is ttest.testfunc.prtTips.prtTips2
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">(venv) (base) t@t-virtual-<span class="hljs-symbol">machine:</span>~<span class="hljs-regexp">/PycharmProjects/</span>ParserLearning$ ttest run_t --func_tips t
+</div><div class="hljs-line"><span class="hljs-comment">#-----------------------------------------------------</span>
+</div><div class="hljs-line">Enter into [__main_<span class="hljs-number">_</span>.py -&gt; main()]...
+</div><div class="hljs-line">Enter into [main.py -&gt; main()]...
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">1</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">2</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">2</span>-<span class="hljs-number">1</span> <span class="hljs-symbol">args:</span>
+</div><div class="hljs-line">None
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">2</span>-<span class="hljs-number">2</span> <span class="hljs-symbol">args:</span>
+</div><div class="hljs-line">Namespace(func=<span class="hljs-string">'ttest.testfunc.prtTips2'</span>, func_tips=<span class="hljs-string">'t'</span>)
+</div><div class="hljs-line">ttest.testfunc.prtTips2
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">3</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">4</span>-<span class="hljs-number">1</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">4</span>-<span class="hljs-number">2</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">6</span>
+</div><div class="hljs-line"><span class="hljs-meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; line <span class="hljs-number">7</span> <span class="hljs-symbol">args:</span>
+</div><div class="hljs-line">Namespace(func=<span class="hljs-string">'ttest.testfunc.prtTips2'</span>, func_tips=<span class="hljs-string">'t'</span>)
+</div><div class="hljs-line">This is a <span class="hljs-symbol">tips2:</span>
+</div><div class="hljs-line">hello, current directory is ttest.testfunc.prtTips.prtTips2
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<h2 id="参考资料">参考资料</h2>
+
+<p><a href="https://docs.python.org/3/library/argparse.html" target="_blank">官方文档</a></p>
+
+
+
+<h2 id="目录">目录</h2>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><a href="#python-parser-学习实例">Python-parser 学习实例</a><ul>
+<li><a href="#1-文件夹结构">1 文件(夹)结构</a></li>
+<li><a href="#2-文件内容">2 文件内容</a></li>
+<li><a href="#3-操作命令">3 操作命令</a><ul>
+<li><a href="#31-命令行输入打包并安装">3.1 命令行输入，打包，并安装</a></li>
+<li><a href="#32-键入命令查看包">3.2 键入命令，查看包</a></li>
+<li><a href="#33-用包名执行-h-帮助菜单">3.3 用包名执行 -h 帮助菜单</a></li>
+<li><a href="#34-按照帮助菜单键入命令">3.4 按照帮助菜单，键入命令</a></li>
+</ul>
+</li>
+<li><a href="#4-执行结果">4 执行结果</a></li>
+</ul>
+</li>
+<li><a href="#参考资料">参考资料</a></li>
+<li><a href="#目录">目录</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div>
 								
-							
-							<div class="post-wrapper col-12">
+									<!--))))Markdown内容结束-->
 
-									<article id="#" class="list-post hentry">
 
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
+								</div><!-- .entry-content -->
 
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
+							</article><!-- #post-## -->
 
-										</figure>
+						</main><!-- #main -->
 
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-
-
-
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-								</div>
-
-								
-
-
-
-							</section>
-
-						</main>
-						<!-- #main -->
 					</div>
 					<!-- #primary -->
 
@@ -966,21 +1026,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>

@@ -4,39 +4,44 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
+	<link rel="shortcut icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="shortcut icon" href="../../blog/favicon4.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
-
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +218,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +268,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +315,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +366,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +376,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +457,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +473,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +481,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -526,397 +528,604 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
-
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-parser.html" title="parser实例">
-												<img width="520" height="400" src="./blog/blogPic/python-parser.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-parser.html">
-													Python-parser 学习实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>用实际的例子，综合学习Python中parser以及setup.py的用法。</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-import.html" title="import导包">
-												<img width="520" height="400" src="./blog/blogPic/python-import.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-import.html">
-													关于导包的几种方式
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>在不同的文件中，import导入包的格式、作用有哪些不同？</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
 
-											</div>
 
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>关于导包的几种方式</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
 
-											<div class=" entry-meta">
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
 
-											</div>
-										</div><!-- .entry-header -->
+											</span>
+											&nbsp;&nbsp;
+											<time>Mar. 2021</time>
+										</span>
 
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-										</div><!-- .entry-content -->
+									</div>
+								</header>
+								<!-- .entry-header -->
 
-									</article><!-- #post-## -->
 
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
+								<div class="entry-content">
 
-											</div>
+									
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
+									
+									<!--Markdown内容开始((((-->
+									
+									
+<div id='preview-contents' class='note-content'>
+                        
+                    
 
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
+<blockquote>
+  <p>文件夹结构</p>
+</blockquote>
 
-											<div class="entry-meta">
+<pre>(base) <font color="#4E9A06"><b>t@t-virtual-machine</b></font>:<font color="#3465A4"><b>~/PycharmProjects/importLeaning</b></font>$ tree -L 2
+<font color="#3465A4"><b>.</b></font>
+├── <font color="#blue"><b>folder01</b></font>
+│   ├── <font color="#blue">in01.py</font>
+│   └── <font color="#blue">inMain01.py</font>
+├── <font color="#blue">outMain01.py</font>
+├── <font color="#red">outMain02.py</font>
+├── <font color="#red"><b>package02</b></font>
+│   ├── <font color="#red">in02.py</font>
+│   ├── <font color="#red">__init__.py</font>
+│   └── <font color="#red">inMain02.py</font>
+└── <font color="#3465A4"><b>venv</b></font>
+</pre>
 
-											</div>
-										</div><!-- .entry-header -->
 
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-										</div><!-- .entry-content -->
 
-									</article><!-- #post-## -->
+<h3 id="1-常规情况完整路径文件名">1 常规情况(<code>完整路径+文件名</code>)</h3>
 
-								</div>
 
 
+<h4 id="11-文件夹folder">1.1 文件夹(folder)</h4>
 
+<ul><li><p><code>in01.py</code></p></li>
+</ul>
 
 
-								<div class="post-wrapper col-12">
 
-									<article id="#" class="list-post hentry">
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun_in01</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is in01.py!"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"The abs_path is: importLearning -&gt; folder01 -&gt; in01.py -&gt; fun_in01()"</span>)
+</div></code></pre>
 
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
+<ul><li><p><code>inMain01.py</code>(与<code>in01.py</code><strong>在</strong>同一个<strong><code>文件夹</code></strong>)</p></li>
+</ul>
 
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
 
-										</figure>
 
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">from</span> in01 <span class="hljs-keyword">import</span> fun_in01  <span class="hljs-comment"># 正常</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_in01()
+</div></code></pre>
 
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
+<ul><li><p><code>outMain01.py</code>(与<code>in01.py</code><strong>不在</strong>同一<strong><code>文件夹</code></strong>)</p></li>
+</ul>
 
-											</div>
 
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
 
-											<div class="entry-meta">
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">from</span> folder01.in01 <span class="hljs-keyword">import</span> fun_in01  <span class="hljs-comment"># 正常</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_in01()
+</div></code></pre>
 
-											</div>
-										</div><!-- .entry-header -->
+<blockquote>
+  <p>文件夹正常调用方法</p>
+  
+  <ul><li><p>同<code>文件夹</code>内部调用（<code>inMain01.py</code> 调用 <code>in01.py</code>中的函数）</p></li>
+  <li><p>不同<code>文件夹</code>之间调用（<code>outMain01.py</code> 调用 <code>in01.py</code> 中的函数）</p></li>
+  </ul>
+</blockquote>
 
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-										</div><!-- .entry-content -->
 
-									</article><!-- #post-## -->
-								</div>
 
-								
+<h4 id="12-包package">1.2 包(package)</h4>
 
+<ul><li><p><code>in02.py</code></p></li>
+</ul>
 
 
-							</section>
 
-						</main>
-						<!-- #main -->
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun_in02</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is in02.py!"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"The abs_path is: importLearning -&gt; package02 -&gt; in02.py -&gt; fun_in02()"</span>)
+</div></code></pre>
+
+<ul><li><p><code>__init__.py</code></p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun_init</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is __init__.py!"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"The abs_path is: importLearning -&gt; package02 -&gt; __init__.py -&gt; fun_init()"</span>)
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<ul><li><p><code>inMain02.py</code>(与<code>in02.py</code>, <code>__init__.py</code> <strong>在</strong>同一个<strong><code>包</code></strong>)</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">from</span> in02 <span class="hljs-keyword">import</span> fun_in02  <span class="hljs-comment"># 正常</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_in02()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># --------------------------------------</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> __init__ <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># 正常</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+<ul><li><p><code>outMain02.py</code>(与<code>in02.py</code>, <code>__init__.py</code><strong>不在</strong>同一<strong><code>包</code></strong>)</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">from</span> package02.in02 <span class="hljs-keyword">import</span> fun_in02  <span class="hljs-comment"># 正常</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_in02()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># --------------------------------------</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02.__init__ <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># 正常</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+<blockquote>
+  <p>包正常调用方法</p>
+  
+  <ul><li><p>同<code>包</code>内部调用（<code>inMain02.py</code> 调用 <code>in02.py</code>, <code>__init__.py</code>中的函数）</p></li>
+  <li><p>不同<code>包</code>之间调用（<code>outMain02.py</code> 调用 <code>in02.py</code>, <code>__init__.py</code> 中的函数）</p></li>
+  </ul>
+</blockquote>
+
+
+
+<h4 id="13-总结">1.3 总结</h4>
+
+<blockquote>
+  <p>在同一个包/文件夹时：</p>
+  
+  <ul><li><p><code>from</code> 脚本名 <code>import</code> 函数名</p></li>
+  </ul>
+  
+  <p>不在同一个包/文件夹时：</p>
+  
+  <ul><li><p><code>from</code> 包名[文件夹名]<code>.</code>脚本名 <code>import</code> 函数名</p></li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="2-常用情况不完整的路径文件名">2 常用情况(<code>不完整的路径/文件名</code>)</h3>
+
+<ul><li><p><code>inMain02.py</code>(调用<code>__init__.py</code> <strong>在</strong>同一个<strong><code>包</code></strong>)</p></li>
+</ul>
+
+<p>正常情况</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># inMain02.py</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># 注意，此时直接用包名，没有.后缀</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+<p>异常①</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># inMain02.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># ImportError: cannot import name 'fun_in02' from 'package02' (/home/t/PycharmProjects/importLeaning/package02/__init__.py)</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_in02  
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_in02()
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+
+
+<h4 id="21-解析">2.1 解析</h4>
+
+<p>从异常①代码和正常情况对比，可以发现<code>包名</code>和<code>包内的__init__.py</code>有特殊联系：</p>
+
+<ul><li><p>可以通过包名（省去<code>.脚本名</code>）的方式，即<code>from 包名[文件夹名]</code><del><code>.脚本名</code></del><code>import 函数名</code>，导入包内<strong><code>__init__.py</code></strong>文件中的函数；</p></li>
+<li><p>但，不能通过这个方式导入<strong>其他<code>.py</code></strong>文件中的函数。</p></li>
+</ul>
+
+<p>异常 ②</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># inMain02.py</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># ImportError: attempted relative import with no known parent package</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+<p>异常 ③</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># inMain02.py</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> .__init__ <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># ImportError: attempted relative import with no known parent package</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+<ul><li><p><code>outMain02.py</code>(调用<code>__init__.py</code> <strong>不在</strong>同一个<strong><code>包</code></strong>)</p></li>
+</ul>
+
+<p>正常</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># outMain02.py</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># 注意，此时直接用包名，没有.后缀</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+<p>异常②  -&gt; 正常</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># inMain02.py (异常②)</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># ImportError: attempted relative import with no known parent package</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># outMain02.py</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> inMain02
+</div></code></pre>
+
+<p>异常③  -&gt; 正常</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># inMain02.py (异常③)</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> .__init__ <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># ImportError: attempted relative import with no known parent package</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># outMain02.py</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> inMain02
+</div></code></pre>
+
+
+
+<h4 id="22-解析">2.2 解析</h4>
+
+<p>异常②，异常③提示的错误信息都是：<strong>no known parent package</strong> (没有已知的父包) <br>
+解决方法是：</p>
+
+<ul><li><p>在文件(<code>outMain02.py</code>)中<code>from package02 import inMain02</code>这一句代码，</p></li>
+<li><p>将<code>package02</code>包导入了进来，</p></li>
+<li><p>而此包就是(<code>__init__.py</code>)所在的包。</p></li>
+</ul>
+
+<p>★ 解决了(<code>inMain02.py</code>)文件中<strong>no known parent package</strong>的问题。</p>
+
+<p><strong>综合执行（正常）：</strong></p>
+
+<blockquote>
+  <p><code>outMain02.py</code></p>
+  
+  <blockquote>
+    <ul><li><p><code>from package02 import inMain02</code></p></li>
+    </ul>
+  </blockquote>
+  
+  <p><code>inMain02.py</code>单独执行会报错异常② &amp; 异常③</p>
+  
+  <blockquote>
+    <ul><li><p><code>from .__init__ import fun_init</code>异常② or  <code>from . import fun_init</code>异常③</p></li>
+    <li><p><code>fun_init()</code></p></li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<h4 id="23-最后比较">2.3 最后比较</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># ---------------------------------------------------</span>
+</div><div class="hljs-line"><span class="hljs-comment"># outMain02.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># （异常）ImportError: cannot import name 'fun_in02' from 'package02' (/home/t/PycharmProjects/importLeaning/package02/__init__.py)</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_in02  <span class="hljs-comment"># fun_in02是在in02.py文件中的</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_in02()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># ---------------------------------------------------</span>
+</div><div class="hljs-line"><span class="hljs-comment"># outMain02.py</span>
+</div><div class="hljs-line"><span class="hljs-comment"># （正常）</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># fun_init是在__init__.py文件中的</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_init()
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+
+
+<h3 id="3-探究initpy的特殊性">3 探究<code>__init__.py</code>的特殊性</h3>
+
+<blockquote>
+  <p>既然<code>包</code>与 <code>__init__.py</code> 之间有特殊性，那么具体特殊的地方在哪里？</p>
+  
+  <p>代码全清空，只留下<strong>包</strong><code>package02</code>, 及其内部文件<code>.py</code>文件，包括<code>__init__.py</code>, <code>in02.py</code> , <code>inMain02.py</code> .</p>
+</blockquote>
+
+
+
+<h4 id="31-各个文件初始内容">3.1 各个文件初始内容</h4>
+
+<ul><li><p><code>__init__.py</code></p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun_init</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is __init__.py!"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"The abs_path is: importLearning -&gt; package02 -&gt; __init__.py -&gt; fun_init()"</span>)
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<ul><li><p><code>in02.py</code></p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun_in02</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is in02.py!"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"The abs_path is: importLearning -&gt; package02 -&gt; in02.py -&gt; fun_in02()"</span>)
+</div></code></pre>
+
+<ul><li><p><code>inMain02.py</code></p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">from</span> package02.__init__ <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># 正常</span>
+</div><div class="hljs-line">fun_init()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># 正常（&lt;-测试1）</span>
+</div><div class="hljs-line">fun_init()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># 异常②</span>
+</div><div class="hljs-line">fun_init()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> .__init__ <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># 异常③</span>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+<hr>
+
+
+
+<h4 id="32-测试1">3.2 测试1</h4>
+
+<ul><li><p>原版 <code>inMain02.py</code></p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_init  <span class="hljs-comment"># 正常（&lt;-测试1）</span>
+</div><div class="hljs-line">fun_init()
+</div></code></pre>
+
+<ul><li><p>改版1 - 报错</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># inMain02.py</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># ImportError: cannot import name 'fun_in02' from 'package02' (/home/t/PycharmProjects/importLeaning/package02/__init__.py)</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_in02
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_in02()
+</div></code></pre>
+
+<ul><li><p>改版2 </p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># --------------------------------------------------</span>
+</div><div class="hljs-line"><span class="hljs-comment"># inMain02.py</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 改版1原代码，不动</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_in02
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_in02()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># --------------------------------------------------</span>
+</div><div class="hljs-line"><span class="hljs-comment"># __init__.py </span>
+</div><div class="hljs-line"><span class="hljs-comment"># 修改文件__init__.py，即可配合改版2 - inMain02.py 实现正常输出</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> .in02 <span class="hljs-keyword">import</span> fun_in02  <span class="hljs-comment"># 修改地方：增加此句</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun_init</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is __init__.py!"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"The abs_path is: importLearning -&gt; package02 -&gt; __init__.py -&gt; fun_init()"</span>)
+</div></code></pre>
+
+
+
+<h4 id="33-分析">3.3 分析</h4>
+
+<blockquote>
+  <p>文件结构为： <strong>包</strong><code>package02</code>, 及其内部文件<code>.py</code>文件，包括<code>__init__.py</code>, <code>in02.py</code> , <code>inMain02.py</code> .</p>
+  
+  <blockquote>
+    <p>在<code>__init__.py</code>中，将同级文件<code>in02.py</code>中的函数导入，即可调用该函数。</p>
+  </blockquote>
+</blockquote>
+
+
+
+<h4 id="34-测试2">3.4 测试2</h4>
+
+<ul><li><p>改版3 </p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># inMain02.py</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 改版2的 __init__.py原代码，不动；重新修改inMain02.py，也可实现正常输出</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> package02
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">package02.fun_in02()
+</div></code></pre>
+
+
+
+<h4 id="35-总结正常输出的两种情况">3.5 总结正常输出的两种情况</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># [通用] in02.py</span>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun_in02</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is in02.py!"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"The abs_path is: importLearning -&gt; package02 -&gt; in02.py -&gt; fun_in02()"</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># [通用] __init__.py</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> .in02 <span class="hljs-keyword">import</span> fun_in02  <span class="hljs-comment"># 修改地方：增加此句</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun_init</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    print(<span class="hljs-string">"This is __init__.py!"</span>)
+</div><div class="hljs-line">    print(<span class="hljs-string">"The abs_path is: importLearning -&gt; package02 -&gt; __init__.py -&gt; fun_init()"</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 第一种 inMain02.py </span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># from 包名 导入 函数名，即 导入包内的__init__.py文件添加的函数</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> package02 <span class="hljs-keyword">import</span> fun_in02
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">fun_in02()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 第二种 inMain02.py </span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># import 包名，即 导入包内的__init__.py文件</span>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> package02
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">package02.fun_in02()
+</div></code></pre>
+
+
+
+<h3 id="4-总结">4 总结</h3>
+
+<ul><li><p><code>__init__.py</code>文件，具有特殊性，可以通过 <code>from 包名 import 函数名</code> 进行调用；</p></li>
+<li><p>.py文件若含有<code>from . import 导包或导入函数</code>的情况，无法在该文件下正常执行，而<strong>父模块被外部加载时</strong>可以正常被使用。</p></li>
+<li><p><strong>重点：通过操作<code>__init__.py</code>文件，即，在其内部导入<code>包</code>，可以给<code>包</code>本身增加attribute.</strong></p></li>
+</ul>
+
+<hr>
+
+<ul><li><p>三种<code>import</code>的方式</p>
+
+<ul>
+<li><p><code>import 包名</code>，实际上是<code>import</code>包内的<code>__init__.py</code></p>
+
+<ul>
+<li><p><code>import package02</code>，就是把package02包中的<code>__init__.py</code>包含的内容导入，所以，此时<code>__init__.py</code>内部应该已经添加了待调用的函数。</p></li></ul></li>
+<li><p><code>from 脚本名(.py文件名) import 函数名</code></p>
+
+<ul>
+<li><p>e.g.,  <code>from package02.in02 import fun_in02</code> </p></li>
+<li><p>e.g.,  <code>from .in02 import fun_in02</code> (被导入的脚本和目标脚本在同一文件夹，可省略包名)</p></li></ul></li>
+<li><p><code>from 包名 import 函数名</code>和第二种相同，只是此时的脚本是<code>__init__.py</code></p>
+
+<ul>
+<li><p><code>from package02 import fun_in02</code> </p></li></ul></li></ul></li>
+</ul>
+
+
+
+<h3 id="目录">目录</h3>
+
+<p><strong>注释：以上内容为本人自学过程的记录，可能有所欠缺或错误，欢迎随时联系，共同探讨。</strong></p>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><a href="#关于导包的几种方式">关于导包的几种方式</a><ul>
+<li><a href="#1-常规情况完整路径文件名">1 常规情况(完整路径+文件名)</a><ul>
+<li><a href="#11-文件夹folder">1.1 文件夹(folder)</a></li>
+<li><a href="#12-包package">1.2 包(package)</a></li>
+<li><a href="#13-总结">1.3 总结</a></li>
+</ul>
+</li>
+<li><a href="#2-常用情况不完整的路径文件名">2 常用情况(不完整的路径/文件名)</a><ul>
+<li><a href="#21-解析">2.1 解析</a></li>
+<li><a href="#22-解析">2.2 解析</a></li>
+<li><a href="#23-最后比较">2.3 最后比较</a></li>
+</ul>
+</li>
+<li><a href="#3-探究initpy的特殊性">3 探究__init__.py的特殊性</a><ul>
+<li><a href="#31-各个文件初始内容">3.1 各个文件初始内容</a></li>
+<li><a href="#32-测试1">3.2 测试1</a></li>
+<li><a href="#33-分析">3.3 分析</a></li>
+<li><a href="#34-测试2">3.4 测试2</a></li>
+<li><a href="#35-总结正常输出的两种情况">3.5 总结正常输出的两种情况</a></li>
+</ul>
+</li>
+<li><a href="#4-总结">4 总结</a></li>
+<li><a href="#目录">目录</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+									
+									<!--))))Markdown内容结束-->
+
+
+								</div><!-- .entry-content -->
+
+							</article><!-- #post-## -->
+
+						</main><!-- #main -->
+
 					</div>
 					<!-- #primary -->
 
@@ -966,21 +1175,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>
