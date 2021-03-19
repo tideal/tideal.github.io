@@ -4,39 +4,44 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
+	<link rel="shortcut icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="shortcut icon" href="../../blog/favicon4.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
-
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +218,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +268,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +315,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +366,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +376,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +457,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +473,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +481,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -526,600 +528,338 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
-
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-pkl.html" title="pickle file 操作">
-												<img width="520" height="400" src="./blog/blogPic/python-pkl.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-pkl.html">
-													普通文件转.pkl文件
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>同时也可以举一反三，其他类型问题是否可以同样处理呢？</p>
-											<p>BlogID: [<font color='red'>Py03192</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-config.html" title="config使用方法">
-												<img width="520" height="400" src="./blog/blogPic/python-config.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-config.html">
-													Python-config 配置实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Python中config的使用方法的实际应用</p>
-											<p>BlogID: [<font color='red'>Py03191</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-parser.html" title="parser实例">
-												<img width="520" height="400" src="./blog/blogPic/python-parser.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-parser.html">
-													Python-parser 学习实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>用实际的例子，综合学习Python中parser以及setup.py的用法。</p>
-											<p>BlogID: [<font color='red'>Py03172</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-import.html" title="import导包">
-												<img width="520" height="400" src="./blog/blogPic/python-import.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-import.html">
-													关于导包的几种方式
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>在不同的文件中，import导入包的格式、作用有哪些不同？</p>
-											<p>BlogID: [<font color='red'>Py03171</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-											<p>BlogID: [<font color='red'>Py03151</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-<p>BlogID: [<font color='red'>Py03141</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-											<p>BlogID: [<font color='red'>Py03123</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-apj.html" title="Anaconda,pytorch,jupyter">
-												<img width="520" height="400" src="./blog/blogPic/python-apj.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-apj.html">
-													Linux下安装Anaconda3, pytorch, jupyter notebook
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Anaconda3, pytorch, jupyter notebook的安装与配置（就像是自己搭载了一个服务器的感觉）</p>
-											<p>BlogID: [<font color='red'>Py03122</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-
-
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-											<p>BlogID: [<font color='red'>Html03121</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-								</div>
-
-								
-
-
-
-							</section>
-
-						</main>
-						<!-- #main -->
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+
+
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>Linux 安装 Anaconda3 &amp; Pytorch 以及 配置Jupyter Notebook</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
+
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
+
+											</span>
+											&nbsp;&nbsp;
+											<time>Mar. 2021</time>
+										</span>
+
+									</div>
+								</header>
+								<!-- .entry-header -->
+
+
+								<div class="entry-content">
+
+									
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
+									
+									<!--Markdown内容开始((((-->
+	
+<div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+<h3 id="1-安装anaconda3-pytorchcpuonly">1 安装Anaconda3 &amp; Pytorch(CPUonly)</h3>
+
+<h4 id="11-安装anaconda3-第一次尝试有问题">1.1 安装Anaconda3 第一次尝试（有问题）</h4>
+
+<blockquote>
+  <p><strong>目标</strong>：linux下安装<code>.sh</code>文件</p>
+</blockquote>
+
+<ul><li><p>查看当前文件夹下的文件，命令：<code>ls</code></p></li>
+<li><p>转anaconda3安装包目录下，命令：<code>cd 下载</code></p></li>
+<li><p>安装anaconda3，命令：<code>bash Anaconda3-xxx.sh</code></p></li>
+</ul>
+
+<hr>
+
+<p><strong>出现问题 A</strong>：Anaconda3 装在了root文件夹(进入需要密码)下，无法使用<code>conda</code>; <br>
+<strong>解决方法 A</strong>：root文件夹进入后，①参考同级文件夹重新设置了权限；②配置了<code>.bashrc</code>文件</p>
+
+<blockquote>
+  <p><strong>前提</strong>：root文件夹进入密码自己知道，有权限通过文件管理系统进入</p>
+  
+  <ul><li><p>【<code>解决方法1</code>：进root文件夹所在目录-属性-修改权限（参考其他文件夹）】<strong>已尝试</strong></p>
+  
+  <blockquote>
+    <ul>
+    <li><p><code>vim ~/.bashrc</code></p></li>
+    <li><p>在最后一行添加字符串：<code>export PATH="/home/xxx/anaconda3/bin:$PATH"</code>     </p></li>
+    <li><p>[<strong>注意</strong>，如果安装目录在root下，就要把<code>/home/xxx</code> 改为 <code>/root</code>]</p></li>
+    <li><p><code>source ~/.bashrc</code></p></li>
+    <li><p>【<code>vim</code>的命令操作，键盘‘<code>i</code>’表示“<code>insert</code>”，进入可编辑状态】</p></li>
+    <li><p>【<code>vim</code>的命令操作，键盘‘<code>esc</code>’表示切换状态，这个时候输入命令“<code>:wq</code>”即可保存已编辑的文件】</p></li></ul>
+  </blockquote></li>
+  <li><p>【<code>解决方法2</code>：<code>sudo chown -R 't' /root</code>】<strong>未尝试</strong>，其中<code>'t'</code>是用户名，注意修改对应自己<code>PC</code>的用户名</p>
+  
+  <blockquote>
+    <ul>
+    <li><p><code>echo 'export PATH="/home/xxx/anaconda3/bin:$PATH"'&gt;&gt;~/.bashrc</code></p></li>
+    <li><p>[<strong>注意</strong>，如果安装目录在root下，就要把<code>/home/xxx</code> 改为 <code>/root</code>]</p></li>
+    <li><p><code>source ~/.bashrc</code></p></li></ul>
+  </blockquote></li>
+  </ul>
+</blockquote>
+
+<p><strong>效果 A</strong>：可以使用<code>conda</code> <br>
+<strong>新问题 B</strong>：直接进入root更改文件夹权限，由于计算机性能延迟，导致权限没有更新彻底，后来通过<code>pip</code>进行操作时，提示升级<code>pip</code>，没有成功，提示权限不够</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-powershell hljs"><div class="hljs-line">pip install --upgrade pip
+</div><div class="hljs-line">Collecting pip
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">  …
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">Could not install packages due to an EnvironmentError: [Errno <span class="hljs-number">13</span>] 权限不够: <span class="hljs-string">'/root/anaconda3/bin/pip'</span>
+</div><div class="hljs-line">Consider using the `--user` option or check the permissions.
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">You are using pip version <span class="hljs-number">10.0</span>.<span class="hljs-number">1</span>, however version <span class="hljs-number">21.0</span>.<span class="hljs-number">1</span> is available.
+</div><div class="hljs-line">You should consider upgrading via the <span class="hljs-string">'pip install --upgrade pip'</span> command.
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<p><strong>解决方法 B</strong>：</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">t@t-virtual-machine:/$ sudo chown -R <span class="hljs-string">'t'</span> /root
+</div><div class="hljs-line">t@t-virtual-machine:/$ pip install --upgrade pip
+</div></code></pre>
+
+<p><strong>效果 B</strong>：root权限更改后，<code>pip</code>得到了升级</p>
+
+<p><strong>新问题 C</strong>：<code>conda</code>安装<code>pytorch</code>，装完之后，<code>pytorch</code>可以使用，<code>conda</code>无法使用 <br>
+<strong>原因 C</strong>：python被更新，<code>conda</code>命令找不到 <br>
+<strong>解决方法 C</strong>：尝试安装<code>conda.exe</code>，没有安装成功</p>
+
+<h4 id="12-安装anaconda3-第二次尝试搞定">1.2 安装Anaconda3 第二次尝试（搞定）</h4>
+
+<blockquote>
+  <p><strong>说明</strong>：（按顺序）更新<code>conda</code>，新建虚拟环境<code>pytorchEnv</code>，在虚拟环境中安装<code>pytorch</code></p>
+</blockquote>
+
+<ul><li><p>重新卸载Anaconda3，这次把Anaconda装在了<code>/home/t/</code>文件夹下，并且配置了<code>.bashrc</code>文件</p></li>
+<li><p>直接更新了<code>conda</code>，随之python升级到3.9.1，然后利用<code>conda</code>创建一个<strong>新的env</strong>，python版本指定为3.7.0</p></li>
+<li><p>在<strong>新env</strong>中安装<code>pytorch</code>，可行；</p></li>
+</ul>
+
+<blockquote>
+  <p>【<strong>新的env</strong>创建方法】 <br>
+  用如下命令创建一个配有python 3.6，最新<code>numpy</code>和<code>scipy</code>的新环境：</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">conda create -n pytorchenv python=3.6 numpy scipy
+</div><div class="hljs-line">conda create -n py34 python=3.4 anaconda 
+</div></code></pre>
+
+<blockquote>
+  <p>【环境切换 &gt;】创建好之后，从<code>base</code>进入<code>pytorchenv</code>：</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">conda activate pytorchenv
+</div><div class="hljs-line"><span class="hljs-built_in">source</span> activate py34
+</div></code></pre>
+
+<blockquote>
+  <p>【环境切换 &lt;】执行结束后，返回最初环境</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">conda activate root
+</div><div class="hljs-line"><span class="hljs-comment"># source activate root</span>
+</div><div class="hljs-line">conda deactivate
+</div><div class="hljs-line"><span class="hljs-comment"># source deactivate – deprecated(即将弃用)</span>
+</div></code></pre>
+
+<hr>
+
+<p><code>【root版本】</code></p>
+
+<ul><li><p>base情况下python版本，conda版本，pip版本：</p></li>
+</ul>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">(base) t@t-virtual-machine:~$ python -V
+</div><div class="hljs-line">Python 3.9.2
+</div><div class="hljs-line">(base) t@t-virtual-machine:~$ conda -V
+</div><div class="hljs-line">conda 4.9.2
+</div><div class="hljs-line">(base) t@t-virtual-machine:~$ pip -V
+</div><div class="hljs-line">pip 21.0.1 from /home/t/anaconda3/lib/python3.9/site-packages/pip (python 3.9)
+</div><div class="hljs-line">(base) t@t-virtual-machine:~$
+</div></code></pre>
+
+<p><code>【envs虚拟环境版本】</code></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line"><span class="hljs-comment"># 先激活新创建的环境（从base转换到新env）</span>
+</div><div class="hljs-line">(base) t@t-virtual-machine:~$ conda activate pytorchEnv
+</div></code></pre>
+
+<ul><li><p>env情况下python版本，conda版本，pip版本</p></li>
+</ul>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ python -V
+</div><div class="hljs-line">Python 3.7.10
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ conda -V
+</div><div class="hljs-line">conda 4.9.
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ pip -V
+</div><div class="hljs-line">pip 21.0.1 from /home/t/anaconda3/envs/pytorchEnv/lib/python3.7/site-packages/pip (python 3.7)
+</div></code></pre>
+
+<blockquote>
+  <p>根据pytorch官网<a href="https://pytorch.org" target="_blank">https://pytorch.org</a> 指示，安装<code>CPUonly</code>版本<code>pytorch</code>，命令如下：</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ conda install pytorch torchvision torchaudio cpuonly -c pytorch
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ python
+</div><div class="hljs-line">Python 3.7.10 (default, Feb 26 2021, 18:47:35) 
+</div><div class="hljs-line">[GCC 7.3.0] :: Anaconda, Inc. on linux
+</div><div class="hljs-line">Type <span class="hljs-string">"help"</span>, <span class="hljs-string">"copyright"</span>, <span class="hljs-string">"credits"</span> or <span class="hljs-string">"license"</span> <span class="hljs-keyword">for</span> more information.
+</div><div class="hljs-line">&gt;&gt;&gt; import torch
+</div><div class="hljs-line">&gt;&gt;&gt; <span class="hljs-built_in">print</span>(torch.__version__)
+</div><div class="hljs-line">1.8.0
+</div><div class="hljs-line">&gt;&gt;&gt;
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<hr>
+
+<h3 id="2-安装并配置jupyter-notebook">2 安装并配置Jupyter Notebook</h3>
+
+<p><strong>【安装】</strong></p>
+
+<blockquote>
+  <p>首先激活环境，在虚拟环境下安装，这样不会对大环境造成影响，如果失败了，就把这个环境x掉，重新建一个，再尝试！</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">(base) t@t-virtual-machine:~$ conda activate pytorchEnv
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ conda install juypter
+</div></code></pre>
+
+<p><strong>【配置】</strong></p>
+
+<blockquote>
+  <p>这里的配置，需要参考网页资料；e.g., “密码”要保存，后期要使用！</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ jupyter notebook --generate-config
+</div><div class="hljs-line">Writing default config to: /home/t/.jupyter/jupyter_notebook_config.py
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ python
+</div><div class="hljs-line">Python 3.7.10 (default, Feb 26 2021, 18:47:35) 
+</div><div class="hljs-line">[GCC 7.3.0] :: Anaconda, Inc. on linux
+</div><div class="hljs-line">Type <span class="hljs-string">"help"</span>, <span class="hljs-string">"copyright"</span>, <span class="hljs-string">"credits"</span> or <span class="hljs-string">"license"</span> <span class="hljs-keyword">for</span> more information.
+</div><div class="hljs-line">&gt;&gt;&gt; from notebook.auth import passwd
+</div><div class="hljs-line">&gt;&gt;&gt; passwd()
+</div><div class="hljs-line">Enter password: 
+</div><div class="hljs-line">Verify password: 
+</div><div class="hljs-line"><span class="hljs-string">'argon2:$argon2id$v=19$m=10240,t=10,p=8$7uI95+zv29bCzMTEgrucnw$X0oXrR84Tjqtu+BZDUMWOQ'</span>
+</div><div class="hljs-line">&gt;&gt;&gt; <span class="hljs-built_in">exit</span>()
+</div></code></pre>
+
+<blockquote>
+  <p>退出之后，配置jupyter，参考网页(1)中配置说明部分；</p>
+  
+  <ul><li><p><a href="https://blog.csdn.net/qq_45589658/article/details/109118098" target="_blank">参考网页(1)</a></p></li>
+  <li><p><a href="https://blog.csdn.net/yiyayiya557/article/details/105656713/" target="_blank">参考网页(2)</a></p></li>
+  <li><p><a href="https://www.freesion.com/article/82161026205/" target="_blank">未参考网页(3)</a> (猜测该页面的主要目的：在<code>base</code>环境下，把带有<code>pytorch</code>的新环境，放在快捷命令条中的<code>kernel</code>里)</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ vim ~/.jupyter/jupyter_notebook_config.py
+</div><div class="hljs-line"><span class="hljs-comment"># 一些vim文件操作，配置完成，退出！</span>
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-bash hljs"><div class="hljs-line"><span class="hljs-comment"># 查看ipython, jupyter, python发现都是在已新建的环境下进行的安装，对base状态下的python无影响！ </span>
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ <span class="hljs-built_in">which</span> ipython
+</div><div class="hljs-line">/home/t/anaconda3/envs/pytorchEnv/bin/ipython
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ <span class="hljs-built_in">which</span> jupyter
+</div><div class="hljs-line">/home/t/anaconda3/envs/pytorchEnv/bin/jupyter
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ <span class="hljs-built_in">which</span> python
+</div><div class="hljs-line">/home/t/anaconda3/envs/pytorchEnv/bin/python
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<p><strong>【启动】</strong></p>
+
+<blockquote>
+  <p>启动<code>jupyter notebook</code>目前我知道的有两种方法：<strong><code>OP1</code></strong> &amp; <strong><code>OP2</code></strong></p>
+</blockquote>
+
+<p><strong><code>OP1</code></strong> </p>
+
+<ul><li><p>在服务器终端输入<code>jupyter notebook</code>;</p></li>
+<li><p>打开本地浏览器，输入<a href="http://localhost:portnum/" target="_blank">http://localhost:portnum/</a>;(<em>这个时候，进入的是服务器根目录，注意选择合适的文件夹操作，不要误删其他重要文件/文件夹 </em>)</p></li>
+<li><p>操作实例（My）</p></li>
+</ul>
+
+<pre class="prettyprint hljs-dark"><code class="language-powershell hljs"><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ mkdir jupyter_notebook
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ ls
+</div><div class="hljs-line">公共的  视频  文档  音乐  anaconda3         snap
+</div><div class="hljs-line">模板    图片  下载  桌面  jupyter_notebook
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~$ cd jupyter_notebook
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~/jupyter_notebook$ ls
+</div><div class="hljs-line">(pytorchEnv) t@t-virtual-machine:~/jupyter_notebook$ jupyter notebook
+</div><div class="hljs-line">[W <span class="hljs-number">15</span>:<span class="hljs-number">28</span>:<span class="hljs-number">46.681</span> NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+</div><div class="hljs-line">[I <span class="hljs-number">15</span>:<span class="hljs-number">28</span>:<span class="hljs-number">46.684</span> NotebookApp] 启动notebooks 在本地路径: /home/t/jupyter_notebook
+</div><div class="hljs-line">[I <span class="hljs-number">15</span>:<span class="hljs-number">28</span>:<span class="hljs-number">46.684</span> NotebookApp] Jupyter Notebook <span class="hljs-number">6.2</span>.<span class="hljs-number">0</span> is running at:
+</div><div class="hljs-line">[I <span class="hljs-number">15</span>:<span class="hljs-number">28</span>:<span class="hljs-number">46.685</span> NotebookApp] http://t-virtual-machine:<span class="hljs-number">8889</span>/
+</div><div class="hljs-line">[I <span class="hljs-number">15</span>:<span class="hljs-number">28</span>:<span class="hljs-number">46.685</span> NotebookApp] 使用control-c停止此服务器并关闭所有内核(两次跳过确认).
+</div></code></pre>
+
+<hr>
+
+<blockquote>
+  <p>问题：如何添加新环境到jupyter notebook – new中？ <br>
+  解答：<a href="https://www.cnblogs.com/keh123000/p/13955514.html" target="_blank">参考文档</a></p>
+</blockquote>
+
+<h3 id="3-总结">3 总结</h3>
+
+<ul><li><p>学习的命令：<code>cd</code>, <code>ls</code>, <code>bash</code>, <code>sudo chown -R</code>, <code>mkdir</code>, <code>vim</code>, <code>which</code>, <code>conda activate</code>, <code>conda create -n</code>, <code>echo</code>, <code>source</code></p></li>
+<li><p><strong>重点</strong>：了解常见问题的原理，及其解决方法，能够熟练实现环境配置，为代码的攻克打好基础！</p></li>
+<li><p><strong>说明</strong>：个人所学，过程记录，或有不当，烦请指点[<code>联系方式见主页</code><a href="https://tideal.github.io/" target="_blank">HomePage</a>]</p></li>
+</ul>
+
+<h2 id="目录">目录</h2>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><a href="#linux-安装-anaconda3-pytorch-以及-配置jupyter-notebook">Linux 安装 Anaconda3 &amp; Pytorch 以及 配置Jupyter Notebook</a><ul>
+<li><a href="#1-安装anaconda3-pytorchcpuonly">1 安装Anaconda3 &amp; Pytorch(CPUonly)</a><ul>
+<li><a href="#11-安装anaconda3-第一次尝试有问题">1.1 安装Anaconda3 第一次尝试（有问题）</a></li>
+<li><a href="#12-安装anaconda3-第二次尝试搞定">1.2 安装Anaconda3 第二次尝试（搞定）</a></li>
+</ul>
+</li>
+<li><a href="#2-安装并配置jupyter-notebook">2 安装并配置Jupyter Notebook</a></li>
+<li><a href="#3-总结">3 总结</a></li>
+</ul>
+</li>
+<li><a href="#目录">目录</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+									<!--))))Markdown内容结束-->
+
+
+								</div><!-- .entry-content -->
+
+							</article><!-- #post-## -->
+
+						</main><!-- #main -->
+
 					</div>
 					<!-- #primary -->
 
@@ -1169,21 +909,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>

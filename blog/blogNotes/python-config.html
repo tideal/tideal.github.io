@@ -4,39 +4,44 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
+	<link rel="shortcut icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="shortcut icon" href="../../blog/favicon4.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
-
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +218,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +268,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +315,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +366,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +376,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +457,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +473,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +481,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -526,600 +528,166 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+
+
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>Python-config 配置实例</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
+
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
+
+											</span>
+											&nbsp;&nbsp;
+											<time>Mar. 2021</time>
+										</span>
+
+									</div>
+								</header>
+								<!-- .entry-header -->
+
+
+								<div class="entry-content">
+
+									
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
+									
+									<!--Markdown内容开始((((-->
+	
+	<div id='preview-contents' class='note-content'>
+                        
+                   
+
+<blockquote>
+  <p><strong>情况Ⅰ</strong>：直接操作（不涉及文件读取，问题对象需要的代码较少时使用）</p>
+</blockquote>
+
+<p>解说：</p>
+
+<ul><li><p>变量<code>stringEg</code>的头部<code>[configSection]</code>为<code>Section</code>的名称，在调用时需要用到；</p></li>
+<li><p><strong>等号</strong>左边最终被解析为键(<code>key</code>)，右边被解析为值(<code>value</code>)，形成键值对(<code>key-value</code>)</p></li>
+</ul>
+
+<p><strong>脚本<code>config.py</code>内容</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> configparser
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># config learn step 1（变量定义）</span>
+</div><div class="hljs-line">param = {}
+</div><div class="hljs-line">stringEg =<span class="hljs-string">"""</span>
+</div><div class="hljs-line"><span class="hljs-string">[configSection]</span>
+</div><div class="hljs-line"><span class="hljs-string">SPATIAL_RAW_ROOT = data/t/</span>
+</div><div class="hljs-line"><span class="hljs-string">SPATIAL_PROCESSED_ROOT = data/hist2tscript-patch/</span>
+</div><div class="hljs-line"><span class="hljs-string">TCGA_RAW_ROOT = data/TCGA/</span>
+</div><div class="hljs-line"><span class="hljs-string">TCGA_PROCESSED_ROOT = data/TCGA-patch/</span>
+</div><div class="hljs-line"><span class="hljs-string">"""</span>
+</div><div class="hljs-line"><span class="hljs-comment"># config learn step 2</span>
+</div><div class="hljs-line">config = configparser.ConfigParser()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># config learn step 3</span>
+</div><div class="hljs-line">config.read_string(stringEg)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># config learn step 4</span>
+</div><div class="hljs-line">param = config[<span class="hljs-string">"configSection"</span>]
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># config learn step 5</span>
+</div><div class="hljs-line">print(list(config[<span class="hljs-string">"configSection"</span>].keys()))
+</div><div class="hljs-line">print(param.get(<span class="hljs-string">"SPATIAL_RAW_ROOT"</span>))
+</div><div class="hljs-line">print(param.get(<span class="hljs-string">"spatial_raw_root"</span>))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># config learn step 6 (key-value(default), fallback value)</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 即：获取param中的键par1对应的值，如果不存在，则获取备选值par2</span>
+</div><div class="hljs-line">print(param.get(<span class="hljs-string">"spatial_raw_root"</span>, <span class="hljs-string">"data/hist2tscript/"</span>))
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<hr>
+
+<blockquote>
+  <p><strong>情况Ⅱ</strong>：用.cfg文件外部操作（涉及文件读取，工程项目较大时使用，可以方便修改重要参数）</p>
+</blockquote>
+
+<p><strong>文件 <code>FilePath.cfg</code> 内容</strong></p>
+
+<p>解说：</p>
+
+<ul><li><p><strong>等号</strong>左边最终被解析为键(<code>key</code>)，右边被解析为值(<code>value</code>)，形成键值对(<code>key-value</code>)</p></li>
+<li><p>文件<code>FilePath.cfg</code>内部，不需要写入<code>section</code>的名称，代码中会指定名称；</p></li>
+</ul>
+
+<pre class="prettyprint hljs-dark"><code class="hljs haskell"><div class="hljs-line"><span class="hljs-type">SPATIAL_RAW_ROOT</span> = <span class="hljs-class"><span class="hljs-keyword">data</span>/t/</span>
+</div><div class="hljs-line"><span class="hljs-type">SPATIAL_PROCESSED_ROOT</span> = <span class="hljs-class"><span class="hljs-keyword">data</span>/hist2tscript-patch/</span>
+</div><div class="hljs-line"><span class="hljs-type">TCGA_RAW_ROOT</span> = <span class="hljs-class"><span class="hljs-keyword">data</span>/<span class="hljs-type">TCGA</span>/</span>
+</div><div class="hljs-line"><span class="hljs-type">TCGA_PROCESSED_ROOT</span> = <span class="hljs-class"><span class="hljs-keyword">data</span>/<span class="hljs-type">TCGA</span>-patch/</span>
+</div></code></pre>
+
+<p><strong>脚本<code>config.py</code>内容</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> os
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> configparser
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> types
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># config learn step 1</span>
+</div><div class="hljs-line">param = {}
+</div><div class="hljs-line">FILENAME = <span class="hljs-keyword">None</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># FilePath.cfg must be put into the same directory as config.py</span>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> filename <span class="hljs-keyword">in</span> [<span class="hljs-string">"FilePath.cfg"</span>,
+</div><div class="hljs-line">                 <span class="hljs-string">".FilePath.cfg"</span>,
+</div><div class="hljs-line">                 os.path.expanduser(<span class="hljs-string">"~/FilePath.cfg"</span>),
+</div><div class="hljs-line">                 os.path.expanduser(<span class="hljs-string">"~/.FilePath.cfg"</span>)]:
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> os.path.isfile(filename):
+</div><div class="hljs-line">        FILENAME = filename
+</div><div class="hljs-line">        <span class="hljs-comment"># config learn step 2</span>
+</div><div class="hljs-line">        config = configparser.ConfigParser()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">with</span> open(filename, <span class="hljs-string">"r"</span>) <span class="hljs-keyword">as</span> f:
+</div><div class="hljs-line">            <span class="hljs-comment"># config learn step 3</span>
+</div><div class="hljs-line">            config.read_string(<span class="hljs-string">"[configSection]\n"</span> + f.read())
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            <span class="hljs-comment"># config learn step 4</span>
+</div><div class="hljs-line">            param = config[<span class="hljs-string">"configSection"</span>]
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            print(list(config[<span class="hljs-string">"configSection"</span>].keys()))
+</div><div class="hljs-line">            print(param.get(<span class="hljs-string">"SPATIAL_RAW_ROOT"</span>))
+</div><div class="hljs-line">            print(param.get(<span class="hljs-string">"spatial_raw_root"</span>))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            <span class="hljs-comment"># config learn step 5</span>
+</div><div class="hljs-line">            print(param.get(<span class="hljs-string">"spatial_raw_root"</span>, <span class="hljs-string">"data/hist2tscript/"</span>))
+</div><div class="hljs-line">        <span class="hljs-keyword">break</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">config = types.SimpleNamespace(FILENAME = FILENAME,
+</div><div class="hljs-line">                               <span class="hljs-comment"># if the key exists, return default value; else return the new value determined by the second parameter(this parameter also is called fallback value)</span>
+</div><div class="hljs-line">                               SPATIAL_RAW_ROOT = param.get(<span class="hljs-string">"spatial_raw_root"</span>, <span class="hljs-string">"data/hist2tscript/"</span>),
+</div><div class="hljs-line">                               SPATIAL_PROCESSED_ROOT = param.get(<span class="hljs-string">"spatial_processed_root"</span>,<span class="hljs-string">"data/hist2tscript-patch/"</span>),
+</div><div class="hljs-line">                               TCGA_RAW_ROOT = param.get(<span class="hljs-string">"tcga_raw_root"</span>, <span class="hljs-string">"data/TCGA/"</span>),
+</div><div class="hljs-line">                               TCGA_PROCESSED_ROOT = param.get(<span class="hljs-string">"tcga_processed_root"</span>,<span class="hljs-string">"data/TCGA-patch/"</span>))
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<h3 id="参考资料">参考资料</h3>
+
+<p><a href="https://docs.python.org/zh-cn/3/library/configparser.html#quick-start" target="_blank">官方文档</a></p>
+
+</div>
+
+									<!--))))Markdown内容结束-->
+
+
+								</div><!-- .entry-content -->
+
+							</article><!-- #post-## -->
+
+						</main><!-- #main -->
 
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-pkl.html" title="pickle file 操作">
-												<img width="520" height="400" src="./blog/blogPic/python-pkl.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-pkl.html">
-													普通文件转.pkl文件
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>同时也可以举一反三，其他类型问题是否可以同样处理呢？</p>
-											<p>BlogID: [<font color='red'>Py03192</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-config.html" title="config使用方法">
-												<img width="520" height="400" src="./blog/blogPic/python-config.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-config.html">
-													Python-config 配置实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Python中config的使用方法的实际应用</p>
-											<p>BlogID: [<font color='red'>Py03191</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-parser.html" title="parser实例">
-												<img width="520" height="400" src="./blog/blogPic/python-parser.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-parser.html">
-													Python-parser 学习实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>用实际的例子，综合学习Python中parser以及setup.py的用法。</p>
-											<p>BlogID: [<font color='red'>Py03172</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-import.html" title="import导包">
-												<img width="520" height="400" src="./blog/blogPic/python-import.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-import.html">
-													关于导包的几种方式
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>在不同的文件中，import导入包的格式、作用有哪些不同？</p>
-											<p>BlogID: [<font color='red'>Py03171</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-											<p>BlogID: [<font color='red'>Py03151</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-<p>BlogID: [<font color='red'>Py03141</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-											<p>BlogID: [<font color='red'>Py03123</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-apj.html" title="Anaconda,pytorch,jupyter">
-												<img width="520" height="400" src="./blog/blogPic/python-apj.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-apj.html">
-													Linux下安装Anaconda3, pytorch, jupyter notebook
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Anaconda3, pytorch, jupyter notebook的安装与配置（就像是自己搭载了一个服务器的感觉）</p>
-											<p>BlogID: [<font color='red'>Py03122</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-
-
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-											<p>BlogID: [<font color='red'>Html03121</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-								</div>
-
-								
-
-
-
-							</section>
-
-						</main>
-						<!-- #main -->
 					</div>
 					<!-- #primary -->
 
@@ -1169,21 +737,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>
