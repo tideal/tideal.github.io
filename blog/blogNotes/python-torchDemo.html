@@ -4,39 +4,44 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
+	<link rel="shortcut icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="shortcut icon" href="../../blog/favicon4.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
-
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +218,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +268,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +315,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +366,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +376,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +457,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +473,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +481,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -526,665 +528,429 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
-
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo.html" title="一个完整的神经网络实例">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-02</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo.html">
-													一个PyTorch实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>多层全连接神经网络实现MNIST手写数字分类</p>
-											<p>BlogID: [<font color='red'>Py04021</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-pkl.html" title="pickle file 操作">
-												<img width="520" height="400" src="./blog/blogPic/python-pkl.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
 
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-pkl.html">
-													普通文件转.pkl文件
-												</a>
-											</h2>
 
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>同时也可以举一反三，其他类型问题是否可以同样处理呢？</p>
-											<p>BlogID: [<font color='red'>Py03192</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-config.html" title="config使用方法">
-												<img width="520" height="400" src="./blog/blogPic/python-config.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-config.html">
-													Python-config 配置实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Python中config的使用方法的实际应用</p>
-											<p>BlogID: [<font color='red'>Py03191</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-parser.html" title="parser实例">
-												<img width="520" height="400" src="./blog/blogPic/python-parser.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-parser.html">
-													Python-parser 学习实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>用实际的例子，综合学习Python中parser以及setup.py的用法。</p>
-											<p>BlogID: [<font color='red'>Py03172</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-import.html" title="import导包">
-												<img width="520" height="400" src="./blog/blogPic/python-import.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-import.html">
-													关于导包的几种方式
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>在不同的文件中，import导入包的格式、作用有哪些不同？</p>
-											<p>BlogID: [<font color='red'>Py03171</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-											<p>BlogID: [<font color='red'>Py03151</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-<p>BlogID: [<font color='red'>Py03141</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-											<p>BlogID: [<font color='red'>Py03123</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-apj.html" title="Anaconda,pytorch,jupyter">
-												<img width="520" height="400" src="./blog/blogPic/python-apj.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-apj.html">
-													Linux下安装Anaconda3, pytorch, jupyter notebook
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Anaconda3, pytorch, jupyter notebook的安装与配置（就像是自己搭载了一个服务器的感觉）</p>
-											<p>BlogID: [<font color='red'>Py03122</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-
-
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-											<p>BlogID: [<font color='red'>Html03121</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-								</div>
-
-								
-
-
-
-							</section>
-
-						</main>
-						<!-- #main -->
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>一个PyTorch实例 - MNIST</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
+
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
+
+											</span>
+											&nbsp;&nbsp;
+											<time>Apr. 2021</time>
+										</span>
+
+									</div>
+								</header>
+								<!-- .entry-header -->
+
+
+								<div class="entry-content">
+
+									
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
+									
+									<!--Markdown内容开始((((-->
+	
+	
+<div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+<blockquote>
+  <p><strong>前提</strong>：GPU版PyTorch已安装</p>
+</blockquote>
+
+<p>查看方法：</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line">print(torch.__version__) <span class="hljs-comment"># 查看Pytorch版本</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 1.7.1</span>
+</div><div class="hljs-line">print(torch.cuda.is_available()) <span class="hljs-comment"># 验证GPU版是否可用</span>
+</div><div class="hljs-line"><span class="hljs-comment"># True</span>
+</div></code></pre>
+
+<hr>
+
+
+
+<h2 id="part-12">Part 1/2</h2>
+
+<blockquote>
+  <p><strong>定义的神经网络</strong>：单独的一个脚本文件，供后期调用 <code>net.py</code></p>
+  
+  <ul><li><p><strong>注意</strong>：在Jupyter notebook中，建立<code>.py</code>文件的方法，可以先建立一个<code>.txt</code>文件，编辑完成后，改后缀为<code>.py</code>即可。</p></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 在PyTorch里面可以很简单地定义三层全连接神经网络</span>
+</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">simpleNet</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-comment"># 输入的维度，第一层网络的神经元个数、第二层网络神经元个数、以及第三层网络（输出层）神经元的个数</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_dim, n_hidden_1, n_hidden_2, out_dim)</span>:</span> 
+</div><div class="hljs-line">        super(simpleNet, self).__init__()
+</div><div class="hljs-line">        self.layer1 = nn.Linear(in_dim, n_hidden_1) 
+</div><div class="hljs-line">        self.layer2 = nn.Linear(n_hidden_1, n_hidden_2)
+</div><div class="hljs-line">        self.layer3 = nn.Linear(n_hidden_2, out_dim)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        x = self.layer1(x)
+</div><div class="hljs-line">        x = self.layer2(x)
+</div><div class="hljs-line">        x = self.layer3(x)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> x
+</div></code></pre>
+
+
+
+<h2 id="part-22">Part 2/2</h2>
+
+<blockquote>
+  <p><strong>添加激活函数</strong>（增加网络的非线性，只需在每层网络的输出部分增加激活函数就可以了）</p>
+  
+  <ul><li><p>激活函数就是神经元内部的激活处理，最后将结果输出变成第二层网络的输入</p></li>
+  <li><p>常用的激活函数：</p>
+  
+  <ol>
+  <li rel="1"><p><code>Sigmoid</code>（会造成梯度消失；输出不是以0为均值）</p></li>
+  <li rel="2"><p><code>Tanh</code>（仍然会造成梯度消失；<strong>输出已变成了0均值</strong>）</p></li>
+  <li rel="3"><p><code>ReLU</code>（Rectified Linear Unit, 可以<strong>极大地加速</strong>随机梯度下降法的收敛速度；因为它是线性的， 且<strong>不存在梯度消失</strong>的问题；相比Sigmoid &amp; Tanh, ReLU计算方法<strong>更加简单</strong>）（<strong>训练的时候很脆弱</strong>，比如一个很大的梯度，经过ReLU激活函数，更新参数之后，会使得这个神经元不会对任何数据有激活现象；本质上是一个不可逆的过程）</p></li>
+  <li rel="4"><p><code>Leaky ReLU</code>（ReLU激活函数的变式，主要是<strong>为了修复ReLU激活函数中训练比较脆弱的这个缺点</strong>）</p></li>
+  <li rel="5"><p><code>Maxout</code>（既有ReLU激活函数的优点，同时也避免了ReLU激活函数训练脆弱的缺点；But，<strong>它加倍了模型的参数，导致了模型的存储变大</strong>）</p></li></ol></li>
+  <li><p>这里<strong>只需要在每层网络的输出部分添加激活函数就可以了</strong>，用到<code>nn.Sequential()</code>, 这个函数是将网络的层组合到一起，比如将nn.Linear()和nn.ReLU()组合到一起作为self.layer</p></li>
+  <li><p><strong>最后一层输出层不能添加激活函数</strong>，因为输出的结果表示的是实际的得分</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Activation_Net</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_dim, n_hidden_1, n_hidden_2, out_dim)</span>:</span>
+</div><div class="hljs-line">        super(NeuralNetwork, self).__init__()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 将网络的层组合到一起，比如将nn.Linear() 和 nn.ReLU()组合到一起作为self.layer</span>
+</div><div class="hljs-line">        self.layer1 = nn.Sequential( nn.Linear(in_dim, n_hidden_1), nn.ReLU(<span class="hljs-keyword">True</span>) ) 
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        self.layer2 = nn.Sequential( nn.Linear(n_hidden_1, n_hidden_2), nn.ReLU(<span class="hljs-keyword">True</span>) )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 注意：最后一层输出层不能添加激活函数，因为输出的结果表示的是实际的得分</span>
+</div><div class="hljs-line">        self.layer3 = nn.Sequential( nn.Linear(n_hidden_2, out_dim) )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        x = self.layer1(x)
+</div><div class="hljs-line">        x = self.layer2(x)
+</div><div class="hljs-line">        x = self.layer3(x)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> x
+</div></code></pre>
+
+<blockquote>
+  <p><strong>添加批标准化</strong>（加快收敛速度的方法）</p>
+  
+  <ul><li><p>【<strong>数据的预处理</strong> 和 <strong>参数的初始化</strong>】</p></li>
+  <li><p><strong>数据的预处理</strong>（PCA和白噪声在卷积网络中基本不使用，因为卷积网络可以自动学习如何提取这些特征而不需要人工再去对其进行干预）</p></li>
+  <li><ul>
+  <li><p><code>中心化</code>（√）</p></li></ul></li>
+  <li><ul>
+  <li><p><code>标准化</code>（√）</p></li></ul></li>
+  <li><ul>
+  <li><p><code>PCA</code>（主成分分析）：对数据进行去相关性</p></li></ul></li>
+  <li><ul>
+  <li><p><code>白噪声</code></p></li></ul></li>
+  <li><p><strong>参数的预处理</strong>（在进入网络之前） – <strong>权重初始化</strong> </p></li>
+  <li><ul>
+  <li><p><code>全0初始化</code></p></li></ul></li>
+  <li><ul>
+  <li><p><code>随机初始化</code></p></li></ul></li>
+  <li><ul>
+  <li><p><code>稀疏初始化</code></p></li></ul></li>
+  <li><ul>
+  <li><p><code>初始化偏执</code></p></li></ul></li>
+  <li><ul>
+  <li><p><strong><code>批标准化</code></strong>（<strong>核心想法：标准化这个过程是可微的，减少了很多不合理初始化的问题</strong>；通常批标准化应用<code>在全连接层后面、非线性层前面</code>；实际中批标准化已变成了神经网络中的一个标准技术，特别是在卷积神经网络中，它对于很坏的初始化有很强的鲁棒性，同时还可以加快网络的收敛速度）</p></li></ul></li>
+  <li><p>使用<code>nn.Sequential()</code>将<code>nn.BatchNorm1d()</code>组合到网络层中</p></li>
+  <li><p>注意：批标准化一般放在全连接层的后面、非线性层（激活函数）的前面</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Batch_Net</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_dim, n_hidden_1, n_hidden_2, out_dim)</span>:</span>
+</div><div class="hljs-line">        super(Batch_Net, self).__init__()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 注意：批标准化一般放在全连接层的后面、非线性层（激活函数）</span>
+</div><div class="hljs-line">        self.layer1 = nn.Sequential( nn.Linear(in_dim, n_hidden_1), nn.BatchNorm1d(n_hidden_1), nn.ReLU(<span class="hljs-keyword">True</span>) )
+</div><div class="hljs-line">        self.layer2 = nn.Sequential( nn.Linear(n_hidden_1, n_hidden_2), nn.BatchNorm1d(n_hidden_2), nn.ReLU(<span class="hljs-keyword">True</span>) )
+</div><div class="hljs-line">        self.layer3 = nn.Sequential( nn.Linear(n_hidden_2, out_dim) )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        x = self.layer1(x)
+</div><div class="hljs-line">        x = self.layer2(x)
+</div><div class="hljs-line">        x = self.layer3(x)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> x
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn, optim
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision <span class="hljs-keyword">import</span> datasets, transforms
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> net
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">batch_size = <span class="hljs-number">64</span>
+</div><div class="hljs-line">learning_rate = <span class="hljs-number">1e-2</span>
+</div><div class="hljs-line">num_epoches = <span class="hljs-number">20</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># transforms.Compose() 将各种预处理操作组合到一起，</span>
+</div><div class="hljs-line"><span class="hljs-comment"># transforms.Normalize([0.5], [0.5]) 表示减去0.5再除以0.5，这样图片转化到了-1~1 之间</span>
+</div><div class="hljs-line">    <span class="hljs-comment"># 注意：因为图片是灰度图，所以只有一个通道，</span>
+</div><div class="hljs-line">    <span class="hljs-comment"># 如果是彩色的图片，有3通道，那么用transfomrs.Normalize([a, b, c], [d, e, f])来表示每个通道对应的均值和方差</span>
+</div><div class="hljs-line">data_tf = transforms.Compose(
+</div><div class="hljs-line">    [transforms.ToTensor(),
+</div><div class="hljs-line">     transforms.Normalize([<span class="hljs-number">0.5</span>], [<span class="hljs-number">0.5</span>])])
+</div></code></pre>
+
+<blockquote>
+  <p><strong>读取数据集</strong></p>
+  
+  <ul><li><p>通过PyTorch的内置函数 <code>torchvision.datasets.MNIST</code>导入数据集，传入数据预处理</p></li>
+  <li><p>接着使用<code>torch.utils.data.DataLoader</code>建立一个数据迭代器，传入数据集和<code>batch_size</code></p></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">train_dataset = datasets.MNIST(root = <span class="hljs-string">'./data'</span>, train = <span class="hljs-keyword">True</span>, transform = data_tf, download = <span class="hljs-keyword">False</span>)
+</div><div class="hljs-line">test_dataset = datasets.MNIST(root = <span class="hljs-string">'./data'</span>, train = <span class="hljs-keyword">False</span>, transform = data_tf)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_loader = DataLoader(train_dataset, batch_size = batch_size, shuffle = <span class="hljs-keyword">True</span>) <span class="hljs-comment"># shuffle = True来表示每次迭代数据的时候是否将数据打乱</span>
+</div><div class="hljs-line">test_loader = DataLoader(test_dataset, batch_size = batch_size, shuffle = <span class="hljs-keyword">False</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 数据集解释和查看方法 https://blog.csdn.net/qq_41185868/article/details/79094752</span>
+</div></code></pre>
+
+<blockquote>
+  <p><strong>导入网络、定义损失函数和优化方法</strong></p>
+  
+  <ul><li><p><code>net.simpleNet</code> 是定义的简单三层网络，里面的参数是<code>28x28</code>, <code>300</code>, <code>100</code>, <code>10</code></p></li>
+  <li><p>其中输入的维度是<code>28x28</code>,因为输入图片大小是<code>28x28</code>；</p></li>
+  <li><p>然后定义两个隐藏层分别是<code>300</code>和<code>100</code>；</p></li>
+  <li><p>最后输出的结果必须是<code>10</code>， 因为这是一个分类问题，一共有<code>0~9</code>这<code>10</code>个数字，所以是<code>10</code>分类</p></li>
+  </ul>
+  
+  <p><strong>防止过拟合</strong>：</p>
+  
+  <ul><li><p><code>正则化</code>（L2正则化-在损失函数中增加权重的二范数量级， L1正则化-在损失函数中增加权重的1范数）</p></li>
+  <li><p><code>Dropout</code>（核心思想：在训练网络的时候依概率P保留每个神经元，也就是说每次训练的时候有些神经元会被设置为0）</p></li>
+  </ul>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p><strong>关于torch.optim(优化)</strong></p>
+  
+  <blockquote>
+    <p>在机器学习或者深度学习中，我们需要通过<strong>修改参数</strong>使得<strong>损失函数最小化（或最大化）</strong>，<code>优化算法就是一种调整模型参数更新的策略</code>。 </p>
+    
+    <ul><li><p><strong>优化算法</strong>分为两大类：</p></li>
+    <li><p><code>一阶优化算法</code>（使用各个参数的梯度值来更新参数，最常用的一阶优化算法是<code>梯度下降</code>。<strong>所谓的梯度就是导数的多变量表达式</strong>，函数的梯度形成了一个向量场，同时也是一个方向，这个方向上方向导数最大，且等于梯度。<code>梯度下降的功能</code>是通过寻找最小值，控制方差，更新模型参数，最终使模型收敛。）</p></li>
+    <li><p><code>二阶优化算法</code>（使用了二阶导数<em>*</em>也叫做Hessian方法—，来最小化或最大化损失函数，主要<code>基于牛顿法</code>，但是由于二阶导数的计算成本很高，所以这种方法并没有广泛使用。）</p></li>
+    </ul>
+    
+    <p><code>torch.optim</code>是一个实现各种优化算法的包，大多数常见的算法都能够直接通过这个包来调用，比如<code>随机梯度下降</code>，以及<code>添加动量的随机梯度下降(SGD)</code>，<code>自适应学习率</code>等。</p>
+    
+    <ul><li><p><code>梯度下降法</code></p></li>
+    <li><p>梯度下降法的<strong>变式</strong>：</p></li>
+    <li><ul>
+    <li><p><code>随机梯度下降法</code>（<code>SGD</code>，梯度下降法的一个小变形，每次使用一批batch数据进行梯度的计算，而不是计算全部数据的梯度-可以避免运算时间特别长、增加随机性，容易跳出局部极小点）</p></li></ul></li>
+    <li><ul>
+    <li><p>增加<code>动量</code>（<code>Momentum</code>，参数更新不仅仅基于当前的梯度，也基于之前的梯度）&amp; 动量的另一个变形（Nesterov， 计算经过动量更新之后的位置的梯度）</p></li></ul></li>
+    <li><ul>
+    <li><p><code>自适应学习率</code>（<code>Adagrad</code>，缺点是在某些情况下一直递减的学习率并不好，会造成学习过早停止）</p></li></ul></li>
+    <li><ul>
+    <li><p><code>自适应学习率的改进方法</code>（<code>RMSprop</code>，通过一个衰减率将所有的梯度平方变小，使用了一种滑动平均的方式，越靠前面的梯度对自适应的学习率影响越小，这样就能更加有效地避免Adagrad学习率一直递减太多的问题，能够更快地收敛。） </p></li></ul></li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">model = net.simpleNet(<span class="hljs-number">28</span> * <span class="hljs-number">28</span>, <span class="hljs-number">300</span>, <span class="hljs-number">100</span>, <span class="hljs-number">10</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    model = model.cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">criterion = nn.CrossEntropyLoss() <span class="hljs-comment"># 损失函数定义为分类问题中最常见的损失函数交叉熵</span>
+</div><div class="hljs-line">optimizer = optim.SGD(model.parameters(), lr = learning_rate) <span class="hljs-comment"># 使用随机梯度下降（SGD）来优化损失函数</span>
+</div></code></pre>
+
+<blockquote>
+  <p><strong>开始训练网络</strong></p>
+  
+  <ul><li><p><code>Variable</code>(变量)：神经网络计算图里特有的一个概念，<code>Variable</code>提供了自动求导的功能；</p>
+  
+  <blockquote>
+    <ul>
+    <li><p>神经网络在做运算的时候需要先构造一个计算图谱，然后在里面进行前向传播和反向传播</p></li>
+    <li><p><code>Variable</code>和<code>Tensor</code>本质上没有区别，不过<code>Variable</code>会被放入一个计算图中，然后进行前向传播，反向传播，自动求导</p></li></ul>
+  </blockquote></li>
+  <li><p><code>Variable</code>是在 <code>torch.autograd.Variable</code>中，<code>tensor -&gt; Variable</code> 方法，例如<code>tensor a</code> 变成 <code>Variable</code>，只需要<code>Variable(a)</code>即可。</p></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">epoch = <span class="hljs-number">0</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> train_loader:
+</div><div class="hljs-line">    img, label = data
+</div><div class="hljs-line">    img = img.view(img.size(<span class="hljs-number">0</span>), <span class="hljs-number">-1</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">        img = img.cuda()
+</div><div class="hljs-line">        label = label.cuda()
+</div><div class="hljs-line">    <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">        img = Variable(img)
+</div><div class="hljs-line">        label = Variable(label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    out = model(img)
+</div><div class="hljs-line">    loss = criterion(out, label)
+</div><div class="hljs-line">    print_loss = loss.data.item()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    optimizer.zero_grad()
+</div><div class="hljs-line">    loss.backward()
+</div><div class="hljs-line">    optimizer.step()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    epoch += <span class="hljs-number">1</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> epoch % <span class="hljs-number">100</span> == <span class="hljs-number">0</span>:
+</div><div class="hljs-line">        print(<span class="hljs-string">'epoch: {}, loss: {:.4}'</span>.format(epoch, loss.data.item()))
+</div></code></pre>
+
+<p>运行结果：</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>epoch: 100, loss: 1.596
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>epoch: 200, loss: 1.015
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>epoch: 300, loss: 0.7385
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>epoch: 400, loss: 0.5793
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>epoch: 500, loss: 0.6007
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>epoch: 600, loss: 0.4507
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>epoch: 700, loss: 0.5527
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span>epoch: 800, loss: 0.3461
+</div><div class="hljs-line"><span class="hljs-comment line-number">9.</span>epoch: 900, loss: 0.5305
+</div></code></pre>
+
+<blockquote>
+  <p><strong>测试网络</strong> Code Version 1.0 - From Website</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">model.eval()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">eval_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">eval_acc = <span class="hljs-number">0</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> test_loader:
+</div><div class="hljs-line">    img, label = data
+</div><div class="hljs-line">    img = img.view(img.size(<span class="hljs-number">0</span>), <span class="hljs-number">-1</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">        img = img.cuda()
+</div><div class="hljs-line">        label = label.cuda()
+</div><div class="hljs-line">    <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">        img = Variable(img)
+</div><div class="hljs-line">        label = Variable(label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    out = model(img)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    loss = criterion(out, label)
+</div><div class="hljs-line">    eval_loss += loss.data.item() * label.size(<span class="hljs-number">0</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    _, pred = torch.max(out, <span class="hljs-number">1</span>)
+</div><div class="hljs-line">    num_correct = (pred == label).sum()
+</div><div class="hljs-line">    eval_acc += num_correct.item()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">print(<span class="hljs-string">'Test Loss: {:.6f}, Acc: {:.6f}'</span>.format(
+</div><div class="hljs-line">    eval_loss / (len(test_dataset)),
+</div><div class="hljs-line">    eval_acc / (len(test_dataset))
+</div><div class="hljs-line">))
+</div></code></pre>
+
+<blockquote>
+  <p><strong>测试网络</strong> Code Version 2.0 - From Book</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">model.eval()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">eval_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">eval_acc = <span class="hljs-number">0</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> test_loader:
+</div><div class="hljs-line">    img, label = data
+</div><div class="hljs-line">    img = img.view(img.size(<span class="hljs-number">0</span>), <span class="hljs-number">-1</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">        <span class="hljs-comment"># t</span>
+</div><div class="hljs-line">        <span class="hljs-comment"># volatile=True表示前向传播时不会保留缓存，因为对于测试集，不需要做反向传播，所以可以在前向传播时释放掉内存，节约内存空间</span>
+</div><div class="hljs-line">        img = Variable(img, volatile=<span class="hljs-keyword">True</span>).cuda()
+</div><div class="hljs-line">        label = Variable(label, volatile=<span class="hljs-keyword">True</span>).cuda() <span class="hljs-comment"># t</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">        img = Variable(img, volatile=<span class="hljs-keyword">True</span>) <span class="hljs-comment"># t</span>
+</div><div class="hljs-line">        label = Variable(label, volatile=<span class="hljs-keyword">True</span>) <span class="hljs-comment"># t</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    out = model(img)
+</div><div class="hljs-line">    loss = criterion(out, label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    eval_loss += loss.data[<span class="hljs-number">0</span>]*label.size(<span class="hljs-number">0</span>) <span class="hljs-comment"># t</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    _, pred = torch.max(out, <span class="hljs-number">1</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    num_correct = (pred == label).sum()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    eval_acc += num_correct.data[<span class="hljs-number">0</span>] <span class="hljs-comment"># t</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">print(<span class="hljs-string">'Test Loss: {:.6f}, Acc: {:.6f}'</span>.format(
+</div><div class="hljs-line">    eval_loss / (len(test_dataset)),
+</div><div class="hljs-line">    eval_acc / (len(test_dataset))
+</div><div class="hljs-line">))
+</div></code></pre>
+
+<p>运行结果：</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>Test Loss: 0.379588, Acc: 0.892300
+</div></code></pre>
+
+</div>
+
+	
+									<!--))))Markdown内容结束-->
+
+
+								</div><!-- .entry-content -->
+
+							</article><!-- #post-## -->
+
+						</main><!-- #main -->
+
 					</div>
 					<!-- #primary -->
 
@@ -1234,21 +1000,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>
