@@ -535,7 +535,7 @@
 								<header class="entry-header">
 									<h1 class="entry-title">
 										<!--此处要修改blog标题-->
-										<span>一个PyTorch实例 - MNIST</span>
+										<span>PyTorch实例Ⅱ（卷积神经网络）</span>
 									</h1>
 									<div class="entry-meta">
 										<span class="byline">
@@ -562,19 +562,18 @@
 									
 									<!--Markdown内容开始((((-->
 	
-	
+
 <div id='preview-contents' class='note-content'>
                         
                     
 
-
 <blockquote>
+  <p>★ 利用<code>CNN</code>再现MNIST手写数字分类</p>
+  
   <p><strong>前提</strong>：GPU版PyTorch已安装</p>
 </blockquote>
 
 <p>查看方法：</p>
-
-
 
 <pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
 </div><div class="hljs-line">print(torch.__version__) <span class="hljs-comment"># 查看Pytorch版本</span>
@@ -587,246 +586,380 @@
 
 
 
-<h2 id="part-12">Part 1/2</h2>
+<h2 id="part-13-定义网络">Part 1/3 定义网络</h2>
 
 <blockquote>
-  <p><strong>定义的神经网络</strong>：单独的一个脚本文件，供后期调用 <code>net.py</code></p>
+  <p><code>netCNN.py</code> —— <strong>定义的神经网络</strong>，单独的一个脚本文件，供后期调用 </p>
   
   <ul><li><p><strong>注意</strong>：在Jupyter notebook中，建立<code>.py</code>文件的方法，可以先建立一个<code>.txt</code>文件，编辑完成后，改后缀为<code>.py</code>即可。</p></li>
   </ul>
 </blockquote>
 
-
-
-<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 在PyTorch里面可以很简单地定义三层全连接神经网络</span>
-</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">simpleNet</span><span class="hljs-params">(nn.Module)</span>:</span>
-</div><div class="hljs-line">    <span class="hljs-comment"># 输入的维度，第一层网络的神经元个数、第二层网络神经元个数、以及第三层网络（输出层）神经元的个数</span>
-</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_dim, n_hidden_1, n_hidden_2, out_dim)</span>:</span> 
-</div><div class="hljs-line">        super(simpleNet, self).__init__()
-</div><div class="hljs-line">        self.layer1 = nn.Linear(in_dim, n_hidden_1) 
-</div><div class="hljs-line">        self.layer2 = nn.Linear(n_hidden_1, n_hidden_2)
-</div><div class="hljs-line">        self.layer3 = nn.Linear(n_hidden_2, out_dim)
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch.nn <span class="hljs-keyword">as</span> nn
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CNN</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+</div><div class="hljs-line">        super(CNN, self).__init__()
+</div><div class="hljs-line">        self.layer1 = nn.Sequential(
+</div><div class="hljs-line">            nn.Conv2d(<span class="hljs-number">1</span>, <span class="hljs-number">16</span>, kernel_size=<span class="hljs-number">3</span>), <span class="hljs-comment"># b, 16, 26, 26   卷积层 1/4</span>
+</div><div class="hljs-line">            nn.BatchNorm2d(<span class="hljs-number">16</span>),
+</div><div class="hljs-line">            nn.ReLU(inplace=<span class="hljs-keyword">True</span>)
+</div><div class="hljs-line">        )
+</div><div class="hljs-line">        self.layer2 = nn.Sequential(
+</div><div class="hljs-line">            nn.Conv2d(<span class="hljs-number">16</span>, <span class="hljs-number">32</span>, kernel_size=<span class="hljs-number">3</span>), <span class="hljs-comment"># b, 32, 24, 24  卷积层 2/4</span>
+</div><div class="hljs-line">            nn.BatchNorm2d(<span class="hljs-number">32</span>),
+</div><div class="hljs-line">            nn.ReLU(inplace=<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>, stride=<span class="hljs-number">2</span>) <span class="hljs-comment"># b, 32, 12, 12  最大池化层1/2</span>
+</div><div class="hljs-line">        )
+</div><div class="hljs-line">        self.layer3 = nn.Sequential(
+</div><div class="hljs-line">            nn.Conv2d(<span class="hljs-number">32</span>, <span class="hljs-number">64</span>, kernel_size=<span class="hljs-number">3</span>), <span class="hljs-comment"># b, 64, 10, 10  卷积层 3/4</span>
+</div><div class="hljs-line">            nn.BatchNorm2d(<span class="hljs-number">64</span>),
+</div><div class="hljs-line">            nn.ReLU(inplace=<span class="hljs-keyword">True</span>)
+</div><div class="hljs-line">        )
+</div><div class="hljs-line">        self.layer4 = nn.Sequential(
+</div><div class="hljs-line">            nn.Conv2d(<span class="hljs-number">64</span>, <span class="hljs-number">128</span>, kernel_size=<span class="hljs-number">3</span>), <span class="hljs-comment"># b, 128, 8, 8  卷积层 4/4</span>
+</div><div class="hljs-line">            nn.BatchNorm2d(<span class="hljs-number">128</span>),
+</div><div class="hljs-line">            nn.ReLU(inplace=<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>, stride=<span class="hljs-number">2</span>) <span class="hljs-comment"># b, 128, 4, 4  最大池化层2/2</span>
+</div><div class="hljs-line">        ) 
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        self.fc = nn.Sequential(
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">128</span> * <span class="hljs-number">4</span> * <span class="hljs-number">4</span>, <span class="hljs-number">1024</span>),
+</div><div class="hljs-line">            nn.ReLU(inplace=<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">1024</span>, <span class="hljs-number">128</span>),
+</div><div class="hljs-line">            nn.ReLU(inplace=<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">128</span>, <span class="hljs-number">10</span>)            
+</div><div class="hljs-line">        )
+</div><div class="hljs-line"><wbr>
 </div><div class="hljs-line"><wbr>
 </div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
 </div><div class="hljs-line">        x = self.layer1(x)
 </div><div class="hljs-line">        x = self.layer2(x)
 </div><div class="hljs-line">        x = self.layer3(x)
+</div><div class="hljs-line">        x = self.layer4(x)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        x = x.view(x.size(<span class="hljs-number">0</span>), <span class="hljs-number">-1</span>)
+</div><div class="hljs-line">        x = self.fc(x)
+</div><div class="hljs-line"><wbr>
 </div><div class="hljs-line">        <span class="hljs-keyword">return</span> x
 </div></code></pre>
 
 
 
-<h2 id="part-22">Part 2/2</h2>
+<h2 id="part-23-载入数据和模型">Part 2/3  载入数据和模型</h2>
 
-<blockquote>
-  <p><strong>添加激活函数</strong>（增加网络的非线性，只需在每层网络的输出部分增加激活函数就可以了）</p>
-  
-  <ul><li><p>激活函数就是神经元内部的激活处理，最后将结果输出变成第二层网络的输入</p></li>
-  <li><p>常用的激活函数：</p>
-  
-  <ol>
-  <li rel="1"><p><code>Sigmoid</code>（会造成梯度消失；输出不是以0为均值）</p></li>
-  <li rel="2"><p><code>Tanh</code>（仍然会造成梯度消失；<strong>输出已变成了0均值</strong>）</p></li>
-  <li rel="3"><p><code>ReLU</code>（Rectified Linear Unit, 可以<strong>极大地加速</strong>随机梯度下降法的收敛速度；因为它是线性的， 且<strong>不存在梯度消失</strong>的问题；相比Sigmoid &amp; Tanh, ReLU计算方法<strong>更加简单</strong>）（<strong>训练的时候很脆弱</strong>，比如一个很大的梯度，经过ReLU激活函数，更新参数之后，会使得这个神经元不会对任何数据有激活现象；本质上是一个不可逆的过程）</p></li>
-  <li rel="4"><p><code>Leaky ReLU</code>（ReLU激活函数的变式，主要是<strong>为了修复ReLU激活函数中训练比较脆弱的这个缺点</strong>）</p></li>
-  <li rel="5"><p><code>Maxout</code>（既有ReLU激活函数的优点，同时也避免了ReLU激活函数训练脆弱的缺点；But，<strong>它加倍了模型的参数，导致了模型的存储变大</strong>）</p></li></ol></li>
-  <li><p>这里<strong>只需要在每层网络的输出部分添加激活函数就可以了</strong>，用到<code>nn.Sequential()</code>, 这个函数是将网络的层组合到一起，比如将nn.Linear()和nn.ReLU()组合到一起作为self.layer</p></li>
-  <li><p><strong>最后一层输出层不能添加激活函数</strong>，因为输出的结果表示的是实际的得分</p></li>
-  </ul>
-</blockquote>
 
-<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Activation_Net</span><span class="hljs-params">(nn.Module)</span>:</span>
-</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_dim, n_hidden_1, n_hidden_2, out_dim)</span>:</span>
-</div><div class="hljs-line">        super(NeuralNetwork, self).__init__()
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">        <span class="hljs-comment"># 将网络的层组合到一起，比如将nn.Linear() 和 nn.ReLU()组合到一起作为self.layer</span>
-</div><div class="hljs-line">        self.layer1 = nn.Sequential( nn.Linear(in_dim, n_hidden_1), nn.ReLU(<span class="hljs-keyword">True</span>) ) 
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">        self.layer2 = nn.Sequential( nn.Linear(n_hidden_1, n_hidden_2), nn.ReLU(<span class="hljs-keyword">True</span>) )
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">        <span class="hljs-comment"># 注意：最后一层输出层不能添加激活函数，因为输出的结果表示的是实际的得分</span>
-</div><div class="hljs-line">        self.layer3 = nn.Sequential( nn.Linear(n_hidden_2, out_dim) )
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
-</div><div class="hljs-line">        x = self.layer1(x)
-</div><div class="hljs-line">        x = self.layer2(x)
-</div><div class="hljs-line">        x = self.layer3(x)
-</div><div class="hljs-line">        <span class="hljs-keyword">return</span> x
-</div></code></pre>
 
-<blockquote>
-  <p><strong>添加批标准化</strong>（加快收敛速度的方法）</p>
-  
-  <ul><li><p>【<strong>数据的预处理</strong> 和 <strong>参数的初始化</strong>】</p></li>
-  <li><p><strong>数据的预处理</strong>（PCA和白噪声在卷积网络中基本不使用，因为卷积网络可以自动学习如何提取这些特征而不需要人工再去对其进行干预）</p></li>
-  <li><ul>
-  <li><p><code>中心化</code>（√）</p></li></ul></li>
-  <li><ul>
-  <li><p><code>标准化</code>（√）</p></li></ul></li>
-  <li><ul>
-  <li><p><code>PCA</code>（主成分分析）：对数据进行去相关性</p></li></ul></li>
-  <li><ul>
-  <li><p><code>白噪声</code></p></li></ul></li>
-  <li><p><strong>参数的预处理</strong>（在进入网络之前） – <strong>权重初始化</strong> </p></li>
-  <li><ul>
-  <li><p><code>全0初始化</code></p></li></ul></li>
-  <li><ul>
-  <li><p><code>随机初始化</code></p></li></ul></li>
-  <li><ul>
-  <li><p><code>稀疏初始化</code></p></li></ul></li>
-  <li><ul>
-  <li><p><code>初始化偏执</code></p></li></ul></li>
-  <li><ul>
-  <li><p><strong><code>批标准化</code></strong>（<strong>核心想法：标准化这个过程是可微的，减少了很多不合理初始化的问题</strong>；通常批标准化应用<code>在全连接层后面、非线性层前面</code>；实际中批标准化已变成了神经网络中的一个标准技术，特别是在卷积神经网络中，它对于很坏的初始化有很强的鲁棒性，同时还可以加快网络的收敛速度）</p></li></ul></li>
-  <li><p>使用<code>nn.Sequential()</code>将<code>nn.BatchNorm1d()</code>组合到网络层中</p></li>
-  <li><p>注意：批标准化一般放在全连接层的后面、非线性层（激活函数）的前面</p></li>
-  </ul>
-</blockquote>
-
-<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Batch_Net</span><span class="hljs-params">(nn.Module)</span>:</span>
-</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_dim, n_hidden_1, n_hidden_2, out_dim)</span>:</span>
-</div><div class="hljs-line">        super(Batch_Net, self).__init__()
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">        <span class="hljs-comment"># 注意：批标准化一般放在全连接层的后面、非线性层（激活函数）</span>
-</div><div class="hljs-line">        self.layer1 = nn.Sequential( nn.Linear(in_dim, n_hidden_1), nn.BatchNorm1d(n_hidden_1), nn.ReLU(<span class="hljs-keyword">True</span>) )
-</div><div class="hljs-line">        self.layer2 = nn.Sequential( nn.Linear(n_hidden_1, n_hidden_2), nn.BatchNorm1d(n_hidden_2), nn.ReLU(<span class="hljs-keyword">True</span>) )
-</div><div class="hljs-line">        self.layer3 = nn.Sequential( nn.Linear(n_hidden_2, out_dim) )
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
-</div><div class="hljs-line">        x = self.layer1(x)
-</div><div class="hljs-line">        x = self.layer2(x)
-</div><div class="hljs-line">        x = self.layer3(x)
-</div><div class="hljs-line">        <span class="hljs-keyword">return</span> x
-</div></code></pre>
-
-<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
-</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn, optim
-</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
-</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader
-</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision <span class="hljs-keyword">import</span> datasets, transforms
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line"><span class="hljs-keyword">import</span> net
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">batch_size = <span class="hljs-number">64</span>
-</div><div class="hljs-line">learning_rate = <span class="hljs-number">1e-2</span>
-</div><div class="hljs-line">num_epoches = <span class="hljs-number">20</span>
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line"><span class="hljs-comment"># transforms.Compose() 将各种预处理操作组合到一起，</span>
-</div><div class="hljs-line"><span class="hljs-comment"># transforms.Normalize([0.5], [0.5]) 表示减去0.5再除以0.5，这样图片转化到了-1~1 之间</span>
-</div><div class="hljs-line">    <span class="hljs-comment"># 注意：因为图片是灰度图，所以只有一个通道，</span>
-</div><div class="hljs-line">    <span class="hljs-comment"># 如果是彩色的图片，有3通道，那么用transfomrs.Normalize([a, b, c], [d, e, f])来表示每个通道对应的均值和方差</span>
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 预处理 -&gt; 将各种预处理组合在一起</span>
 </div><div class="hljs-line">data_tf = transforms.Compose(
-</div><div class="hljs-line">    [transforms.ToTensor(),
-</div><div class="hljs-line">     transforms.Normalize([<span class="hljs-number">0.5</span>], [<span class="hljs-number">0.5</span>])])
-</div></code></pre>
-
-<blockquote>
-  <p><strong>读取数据集</strong></p>
-  
-  <ul><li><p>通过PyTorch的内置函数 <code>torchvision.datasets.MNIST</code>导入数据集，传入数据预处理</p></li>
-  <li><p>接着使用<code>torch.utils.data.DataLoader</code>建立一个数据迭代器，传入数据集和<code>batch_size</code></p></li>
-  </ul>
-</blockquote>
-
-
-
-<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">train_dataset = datasets.MNIST(root = <span class="hljs-string">'./data'</span>, train = <span class="hljs-keyword">True</span>, transform = data_tf, download = <span class="hljs-keyword">False</span>)
-</div><div class="hljs-line">test_dataset = datasets.MNIST(root = <span class="hljs-string">'./data'</span>, train = <span class="hljs-keyword">False</span>, transform = data_tf)
+</div><div class="hljs-line">                [transforms.ToTensor(),
+</div><div class="hljs-line">                 transforms.Normalize([<span class="hljs-number">0.5</span>],[<span class="hljs-number">0.5</span>])])
 </div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">train_loader = DataLoader(train_dataset, batch_size = batch_size, shuffle = <span class="hljs-keyword">True</span>) <span class="hljs-comment"># shuffle = True来表示每次迭代数据的时候是否将数据打乱</span>
-</div><div class="hljs-line">test_loader = DataLoader(test_dataset, batch_size = batch_size, shuffle = <span class="hljs-keyword">False</span>)
+</div><div class="hljs-line">train_set = mnist.MNIST(<span class="hljs-string">'./data'</span>,train=<span class="hljs-keyword">True</span>,transform=data_tf,download=<span class="hljs-keyword">True</span>)
+</div><div class="hljs-line">test_set = mnist.MNIST(<span class="hljs-string">'./data'</span>,train=<span class="hljs-keyword">False</span>,transform=data_tf,download=<span class="hljs-keyword">True</span>)
 </div><div class="hljs-line"><wbr>
-</div><div class="hljs-line"><span class="hljs-comment"># 数据集解释和查看方法 https://blog.csdn.net/qq_41185868/article/details/79094752</span>
-</div></code></pre>
-
-<blockquote>
-  <p><strong>导入网络、定义损失函数和优化方法</strong></p>
-  
-  <ul><li><p><code>net.simpleNet</code> 是定义的简单三层网络，里面的参数是<code>28x28</code>, <code>300</code>, <code>100</code>, <code>10</code></p></li>
-  <li><p>其中输入的维度是<code>28x28</code>,因为输入图片大小是<code>28x28</code>；</p></li>
-  <li><p>然后定义两个隐藏层分别是<code>300</code>和<code>100</code>；</p></li>
-  <li><p>最后输出的结果必须是<code>10</code>， 因为这是一个分类问题，一共有<code>0~9</code>这<code>10</code>个数字，所以是<code>10</code>分类</p></li>
-  </ul>
-  
-  <p><strong>防止过拟合</strong>：</p>
-  
-  <ul><li><p><code>正则化</code>（L2正则化-在损失函数中增加权重的二范数量级， L1正则化-在损失函数中增加权重的1范数）</p></li>
-  <li><p><code>Dropout</code>（核心思想：在训练网络的时候依概率P保留每个神经元，也就是说每次训练的时候有些神经元会被设置为0）</p></li>
-  </ul>
-</blockquote>
-
-<hr>
-
-<blockquote>
-  <p><strong>关于torch.optim(优化)</strong></p>
-  
-  <blockquote>
-    <p>在机器学习或者深度学习中，我们需要通过<strong>修改参数</strong>使得<strong>损失函数最小化（或最大化）</strong>，<code>优化算法就是一种调整模型参数更新的策略</code>。 </p>
-    
-    <ul><li><p><strong>优化算法</strong>分为两大类：</p></li>
-    <li><p><code>一阶优化算法</code>（使用各个参数的梯度值来更新参数，最常用的一阶优化算法是<code>梯度下降</code>。<strong>所谓的梯度就是导数的多变量表达式</strong>，函数的梯度形成了一个向量场，同时也是一个方向，这个方向上方向导数最大，且等于梯度。<code>梯度下降的功能</code>是通过寻找最小值，控制方差，更新模型参数，最终使模型收敛。）</p></li>
-    <li><p><code>二阶优化算法</code>（使用了二阶导数<em>*</em>也叫做Hessian方法—，来最小化或最大化损失函数，主要<code>基于牛顿法</code>，但是由于二阶导数的计算成本很高，所以这种方法并没有广泛使用。）</p></li>
-    </ul>
-    
-    <p><code>torch.optim</code>是一个实现各种优化算法的包，大多数常见的算法都能够直接通过这个包来调用，比如<code>随机梯度下降</code>，以及<code>添加动量的随机梯度下降(SGD)</code>，<code>自适应学习率</code>等。</p>
-    
-    <ul><li><p><code>梯度下降法</code></p></li>
-    <li><p>梯度下降法的<strong>变式</strong>：</p></li>
-    <li><ul>
-    <li><p><code>随机梯度下降法</code>（<code>SGD</code>，梯度下降法的一个小变形，每次使用一批batch数据进行梯度的计算，而不是计算全部数据的梯度-可以避免运算时间特别长、增加随机性，容易跳出局部极小点）</p></li></ul></li>
-    <li><ul>
-    <li><p>增加<code>动量</code>（<code>Momentum</code>，参数更新不仅仅基于当前的梯度，也基于之前的梯度）&amp; 动量的另一个变形（Nesterov， 计算经过动量更新之后的位置的梯度）</p></li></ul></li>
-    <li><ul>
-    <li><p><code>自适应学习率</code>（<code>Adagrad</code>，缺点是在某些情况下一直递减的学习率并不好，会造成学习过早停止）</p></li></ul></li>
-    <li><ul>
-    <li><p><code>自适应学习率的改进方法</code>（<code>RMSprop</code>，通过一个衰减率将所有的梯度平方变小，使用了一种滑动平均的方式，越靠前面的梯度对自适应的学习率影响越小，这样就能更加有效地避免Adagrad学习率一直递减太多的问题，能够更快地收敛。） </p></li></ul></li>
-    </ul>
-  </blockquote>
-</blockquote>
-
-<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">model = net.simpleNet(<span class="hljs-number">28</span> * <span class="hljs-number">28</span>, <span class="hljs-number">300</span>, <span class="hljs-number">100</span>, <span class="hljs-number">10</span>)
+</div><div class="hljs-line"><span class="hljs-comment"># batch_size是一个参数，可以提前定义</span>
+</div><div class="hljs-line">train_data = DataLoader(train_set,batch_size=<span class="hljs-number">64</span>,shuffle=<span class="hljs-keyword">True</span>)
+</div><div class="hljs-line">test_data = DataLoader(test_set,batch_size=<span class="hljs-number">128</span>,shuffle=<span class="hljs-keyword">False</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">net = netCNN.CNN()
+</div><div class="hljs-line"><span class="hljs-comment"># net = CNN()</span>
 </div><div class="hljs-line"><wbr>
 </div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
-</div><div class="hljs-line">    model = model.cuda()
+</div><div class="hljs-line">    print(<span class="hljs-string">"GPU Available"</span>)
+</div><div class="hljs-line">    net = net.cuda()
 </div><div class="hljs-line"><wbr>
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">criterion = nn.CrossEntropyLoss() <span class="hljs-comment"># 损失函数定义为分类问题中最常见的损失函数交叉熵</span>
-</div><div class="hljs-line">optimizer = optim.SGD(model.parameters(), lr = learning_rate) <span class="hljs-comment"># 使用随机梯度下降（SGD）来优化损失函数</span>
+</div><div class="hljs-line"><span class="hljs-comment"># learning_rate = 1e-1 # 可以提前定义，也可以直接指定</span>
+</div><div class="hljs-line">criterion = nn.CrossEntropyLoss()
+</div><div class="hljs-line">optimizer = optim.SGD(net.parameters(),<span class="hljs-number">1e-1</span>)
 </div></code></pre>
 
+<h2 id="part-33-version-10">Part 3/3  Version 1.0</h2>
+
 <blockquote>
-  <p><strong>开始训练网络</strong></p>
-  
-  <ul><li><p><code>Variable</code>(变量)：神经网络计算图里特有的一个概念，<code>Variable</code>提供了自动求导的功能；</p>
-  
-  <blockquote>
-    <ul>
-    <li><p>神经网络在做运算的时候需要先构造一个计算图谱，然后在里面进行前向传播和反向传播</p></li>
-    <li><p><code>Variable</code>和<code>Tensor</code>本质上没有区别，不过<code>Variable</code>会被放入一个计算图中，然后进行前向传播，反向传播，自动求导</p></li></ul>
-  </blockquote></li>
-  <li><p><code>Variable</code>是在 <code>torch.autograd.Variable</code>中，<code>tensor -&gt; Variable</code> 方法，例如<code>tensor a</code> 变成 <code>Variable</code>，只需要<code>Variable(a)</code>即可。</p></li>
-  </ul>
+  <p>代码参考网络，训练和测试同时进行。</p>
 </blockquote>
 
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">nums_epoch = <span class="hljs-number">20</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 开始训练</span>
+</div><div class="hljs-line">losses =[]
+</div><div class="hljs-line">acces = []
+</div><div class="hljs-line">eval_losses = []
+</div><div class="hljs-line">eval_acces = []
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> range(nums_epoch):
+</div><div class="hljs-line">    train_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    train_acc = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    net = net.train()
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> img , label <span class="hljs-keyword">in</span> train_data:
+</div><div class="hljs-line">        <span class="hljs-comment">#img = img.reshape(img.size(0),-1) </span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">            img = Variable(img).cuda()
+</div><div class="hljs-line">            label = Variable(label).cuda()
+</div><div class="hljs-line">        <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">            img = Variable(img)
+</div><div class="hljs-line">            label = Variable(label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">        out = net(img)
+</div><div class="hljs-line">        loss = criterion(out,label)
+</div><div class="hljs-line">        <span class="hljs-comment"># 反向传播</span>
+</div><div class="hljs-line">        optimizer.zero_grad()
+</div><div class="hljs-line">        loss.backward()
+</div><div class="hljs-line">        optimizer.step()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 记录误差</span>
+</div><div class="hljs-line">        train_loss += loss.item()
+</div><div class="hljs-line">        <span class="hljs-comment"># 计算分类的准确率</span>
+</div><div class="hljs-line">        _,pred = out.max(<span class="hljs-number">1</span>)
+</div><div class="hljs-line">        num_correct = (pred == label).sum().item()
+</div><div class="hljs-line">        acc = num_correct / img.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        train_acc += acc
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    losses.append(train_loss / len(train_data))
+</div><div class="hljs-line">    acces.append(train_acc / len(train_data))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    eval_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    eval_acc = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    <span class="hljs-comment"># 测试集不训练</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> img , label <span class="hljs-keyword">in</span> test_data:
+</div><div class="hljs-line">        <span class="hljs-comment">#img = img.reshape(img.size(0),-1)</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">            img = Variable(img).cuda()
+</div><div class="hljs-line">            label = Variable(label).cuda()
+</div><div class="hljs-line">        <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">            img = Variable(img)
+</div><div class="hljs-line">            label = Variable(label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        out = net(img)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        loss = criterion(out,label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 记录误差</span>
+</div><div class="hljs-line">        eval_loss += loss.item()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        _ , pred = out.max(<span class="hljs-number">1</span>)
+</div><div class="hljs-line">        num_correct = (pred==label).sum().item()
+</div><div class="hljs-line">        acc = num_correct / img.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        eval_acc += acc
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    eval_losses.append(eval_loss / len(test_data))
+</div><div class="hljs-line">    eval_acces.append(eval_acc / len(test_data))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    print(<span class="hljs-string">'Epoch {} Train Loss {} Train  Accuracy {} Test Loss {} Test Accuracy {}'</span>.format(
+</div><div class="hljs-line">        epoch+<span class="hljs-number">1</span>, train_loss / len(train_data),train_acc / len(train_data), eval_loss / len(test_data), eval_acc / len(test_data)))
+</div></code></pre>
 
 
-<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">epoch = <span class="hljs-number">0</span>
+
+<h2 id="part-33-version-10-输出结果">Part 3/3  Version 1.0 输出结果</h2>
+
+<blockquote>
+  <p>训练和测试同时进行的代码输出结果</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>Epoch 1 Train Loss 0.1200949283268825 Train  Accuracy 0.9624033848614072 Test Loss 0.03021998926547733 Test Accuracy 0.9894185126582279
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>Epoch 2 Train Loss 0.03246538862835483 Train  Accuracy 0.9897054904051172 Test Loss 0.02885316127356395 Test Accuracy 0.990506329113924
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>Epoch 3 Train Loss 0.022931524569345916 Train  Accuracy 0.9926872334754797 Test Loss 0.021938524580220956 Test Accuracy 0.9924841772151899
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>Epoch 4 Train Loss 0.016952382484600178 Train  Accuracy 0.9947694562899787 Test Loss 0.022626916710163918 Test Accuracy 0.9923852848101266
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>Epoch 5 Train Loss 0.012722379837827043 Train  Accuracy 0.9958855277185501 Test Loss 0.02963682129401478 Test Accuracy 0.9887262658227848
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>Epoch 6 Train Loss 0.00933914151214313 Train  Accuracy 0.9971515191897654 Teat Loss 0.016077996881098375 Test Accuracy 0.9943631329113924
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>Epoch 7 Train Loss 0.0073814120018459725 Train  Accuracy 0.9978011727078892 Test Loss 0.020331518359456176 Test Accuracy 0.9937697784810127
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span>Epoch 8 Train Loss 0.006885198775323313 Train  Accuracy 0.9978011727078892 Test Loss 0.018373859318625698 Test Accuracy 0.993868670886076
+</div><div class="hljs-line"><span class="hljs-comment line-number">9.</span>Epoch 9 Train Loss 0.0038942436833549476 Train  Accuracy 0.9990005330490405 Test Loss 0.016592746393847606 Test Accuracy 0.9956487341772152
+</div><div class="hljs-line"><span class="hljs-comment line-number">10.</span>Epoch 10 Train Loss 0.002232599869024773 Train  Accuracy 0.9994003198294243 Test Loss 0.015350714311217657 Test Accuracy 0.995253164556962
+</div><div class="hljs-line"><span class="hljs-comment line-number">11.</span>Epoch 11 Train Loss 0.0017868314392756248 Train  Accuracy 0.9995169243070362 Test Loss 0.018393577383369466 Test Accuracy 0.9948575949367089
+</div><div class="hljs-line"><span class="hljs-comment line-number">12.</span>Epoch 12 Train Loss 0.0016904843163558175 Train  Accuracy 0.9995668976545842 Test Loss 0.016470837249351892 Test Accuracy 0.9956487341772152
+</div><div class="hljs-line"><span class="hljs-comment line-number">13.</span>Epoch 13 Train Loss 0.0009593032377107248 Train  Accuracy 0.9997168176972282 Test Loss 0.017069807002093356 Test Accuracy 0.9956487341772152
+</div><div class="hljs-line"><span class="hljs-comment line-number">14.</span>Epoch 14 Train Loss 0.0005009614711480778 Train  Accuracy 0.9999167110874201 Test Loss 0.017695282020998935 Test Accuracy 0.9951542721518988
+</div><div class="hljs-line"><span class="hljs-comment line-number">15.</span>Epoch 15 Train Loss 0.000283710520967615 Train  Accuracy 0.999950026652452 Test Loss 0.017179816710221504 Test Accuracy 0.9956487341772152
+</div><div class="hljs-line"><span class="hljs-comment line-number">16.</span>Epoch 16 Train Loss 0.000170343950114149 Train  Accuracy 1.0 Test Loss 0.01801280932005637 Test Accuracy 0.9954509493670886
+</div><div class="hljs-line"><span class="hljs-comment line-number">17.</span>Epoch 17 Train Loss 0.0001393258903054915 Train  Accuracy 0.999983342217484 Test Loss 0.01771450764791116 Test Accuracy 0.9958465189873418
+</div><div class="hljs-line"><span class="hljs-comment line-number">18.</span>Epoch 18 Train Loss 0.00018152690381616592 Train  Accuracy 0.999950026652452 Test Loss 0.018631271707387376 Test Accuracy 0.9958465189873418
+</div><div class="hljs-line"><span class="hljs-comment line-number">19.</span>Epoch 19 Train Loss 9.018222667412523e-05 Train  Accuracy 1.0 Test Loss 0.018682040436009194 Test Accuracy 0.9957476265822784
+</div><div class="hljs-line"><span class="hljs-comment line-number">20.</span>Epoch 20 Train Loss 7.264835773966668e-05 Train  Accuracy 1.0 Test Loss 0.01840561395100387 Test Accuracy 0.9956487341772152
+</div></code></pre>
+
+
+
+<h2 id="part-33-version-20-train">Part 3/3  Version 2.0 - Train</h2>
+
+<blockquote>
+  <p>代码修改自网络，将训练部分和测试部分分开。这里是<strong><code>训练部分</code></strong></p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">nums_epoch = <span class="hljs-number">20</span>
 </div><div class="hljs-line"><wbr>
-</div><div class="hljs-line"><span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> train_loader:
-</div><div class="hljs-line">    img, label = data
-</div><div class="hljs-line">    img = img.view(img.size(<span class="hljs-number">0</span>), <span class="hljs-number">-1</span>)
 </div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 开始训练</span>
+</div><div class="hljs-line">losses =[]
+</div><div class="hljs-line">acces = []
+</div><div class="hljs-line">eval_losses = []
+</div><div class="hljs-line">eval_acces = []
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> range(nums_epoch):
+</div><div class="hljs-line">    train_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    train_acc = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    epoch_bar = <span class="hljs-number">0</span> <span class="hljs-comment"># t</span>
+</div><div class="hljs-line">    net = net.train()
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> img , label <span class="hljs-keyword">in</span> train_data:
+</div><div class="hljs-line">        <span class="hljs-comment">#img = img.reshape(img.size(0),-1) </span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">            img = Variable(img).cuda()
+</div><div class="hljs-line">            label = Variable(label).cuda()
+</div><div class="hljs-line">        <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">            img = Variable(img)
+</div><div class="hljs-line">            label = Variable(label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">        out = net(img)
+</div><div class="hljs-line">        loss = criterion(out,label)
+</div><div class="hljs-line">        <span class="hljs-comment"># 反向传播</span>
+</div><div class="hljs-line">        optimizer.zero_grad()
+</div><div class="hljs-line">        loss.backward()
+</div><div class="hljs-line">        optimizer.step()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 记录误差</span>
+</div><div class="hljs-line">        train_loss += loss.item()
+</div><div class="hljs-line">        <span class="hljs-comment"># 计算分类的准确率</span>
+</div><div class="hljs-line">        _,pred = out.max(<span class="hljs-number">1</span>)
+</div><div class="hljs-line">        num_correct = (pred == label).sum().item()
+</div><div class="hljs-line">        acc = num_correct / img.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        train_acc += acc
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#         epoch_bar += 1  # t</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#         if epoch_bar % 100 == 0:</span>
+</div><div class="hljs-line"><span class="hljs-comment">#             print('epoch: {}, loss: {:.4}'.format(epoch_bar, loss.data.item()))  # t</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 注意对齐方式，和第二个for循环对齐    </span>
+</div><div class="hljs-line">    losses.append(train_loss / len(train_data))
+</div><div class="hljs-line">    acces.append(train_acc / len(train_data))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    print(<span class="hljs-string">'Epoch {} Train Loss {} Train  Accuracy {}'</span>.format(
+</div><div class="hljs-line">        epoch+<span class="hljs-number">1</span>, train_loss / len(train_data), train_acc / len(train_data)))
+</div></code></pre>
+
+
+
+<h2 id="part-33-version-20-train-输出结果">Part 3/3  Version 2.0 - Train 输出结果</h2>
+
+<blockquote>
+  <p>训练部分的输出结果</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>Epoch 1 Train Loss 3.330065098466196e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>Epoch 2 Train Loss 3.848856647202233e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>Epoch 3 Train Loss 3.249672247295006e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>Epoch 4 Train Loss 3.181019142470626e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>Epoch 5 Train Loss 2.7420538388295905e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>Epoch 6 Train Loss 2.7395371789663205e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>Epoch 7 Train Loss 2.3074768167839898e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span>Epoch 8 Train Loss 2.5261873254028975e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">9.</span>Epoch 9 Train Loss 2.3468322291219845e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">10.</span>Epoch 10 Train Loss 2.5787879148294842e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">11.</span>Epoch 11 Train Loss 2.2100263572805158e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">12.</span>Epoch 12 Train Loss 2.1043419593538925e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">13.</span>Epoch 13 Train Loss 1.919428202949172e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">14.</span>Epoch 14 Train Loss 2.0986426386100698e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">15.</span>Epoch 15 Train Loss 1.882315135082913e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">16.</span>Epoch 16 Train Loss 1.8170344417382568e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">17.</span>Epoch 17 Train Loss 1.8023049316377245e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">18.</span>Epoch 18 Train Loss 1.893510798163638e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">19.</span>Epoch 19 Train Loss 1.5729498005578122e-05 Train  Accuracy 1.0
+</div><div class="hljs-line"><span class="hljs-comment line-number">20.</span>Epoch 20 Train Loss 1.623870315189797e-05 Train  Accuracy 1.0
+</div></code></pre>
+
+
+
+<h2 id="part-33-version-20-test">Part 3/3  Version 2.0 - Test</h2>
+
+<blockquote>
+  <p>代码修改自网络，将训练部分和测试部分分开。这里是<strong><code>测试部分</code></strong></p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">eval_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line">eval_acc = <span class="hljs-number">0</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 测试集不训练</span>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> img , label <span class="hljs-keyword">in</span> test_data:
+</div><div class="hljs-line">    <span class="hljs-comment">#img = img.reshape(img.size(0),-1)</span>
 </div><div class="hljs-line">    <span class="hljs-keyword">if</span> torch.cuda.is_available():
-</div><div class="hljs-line">        img = img.cuda()
-</div><div class="hljs-line">        label = label.cuda()
+</div><div class="hljs-line">        img = Variable(img).cuda()
+</div><div class="hljs-line">        label = Variable(label).cuda()
 </div><div class="hljs-line">    <span class="hljs-keyword">else</span>:
 </div><div class="hljs-line">        img = Variable(img)
 </div><div class="hljs-line">        label = Variable(label)
 </div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    out = model(img)
-</div><div class="hljs-line">    loss = criterion(out, label)
-</div><div class="hljs-line">    print_loss = loss.data.item()
 </div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    out = net(img)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    loss = criterion(out,label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录误差</span>
+</div><div class="hljs-line">    eval_loss += loss.item()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    _ , pred = out.max(<span class="hljs-number">1</span>)
+</div><div class="hljs-line">    num_correct = (pred==label).sum().item()
+</div><div class="hljs-line">    acc = num_correct / img.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    eval_acc += acc
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">eval_losses.append(eval_loss / len(test_data))
+</div><div class="hljs-line">eval_acces.append(eval_acc / len(test_data))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">print(<span class="hljs-string">'Test Loss {} Test Accuracy {}'</span>.format(
+</div><div class="hljs-line">    eval_loss / len(test_data), eval_acc / len(test_data)))
+</div></code></pre>
+
+
+
+<h2 id="part-33-version-20-test-输出结果">Part 3/3  Version 2.0 - Test 输出结果</h2>
+
+<blockquote>
+  <p>测试部分的输出结果</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>Test Loss 0.02094335074422509 Test Accuracy 0.9949564873417721
+</div></code></pre>
+
+
+
+<h2 id="part-33-version-30-train">Part 3/3  Version 3.0 Train</h2>
+
+<blockquote>
+  <p>参考实例Ⅰ部分的代码——<strong><code>训练部分</code></strong></p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">epoch = <span class="hljs-number">0</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> train_data:
+</div><div class="hljs-line">    img, label = data
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">        img = Variable(img).cuda()
+</div><div class="hljs-line">        label = Variable(label).cuda()
+</div><div class="hljs-line">    <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">        img = Variable(img)
+</div><div class="hljs-line">        label = Variable(label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">    out = net(img)
+</div><div class="hljs-line">    loss = criterion(out,label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 反向传播</span>
 </div><div class="hljs-line">    optimizer.zero_grad()
 </div><div class="hljs-line">    loss.backward()
 </div><div class="hljs-line">    optimizer.step()
@@ -837,107 +970,117 @@
 </div><div class="hljs-line">        print(<span class="hljs-string">'epoch: {}, loss: {:.4}'</span>.format(epoch, loss.data.item()))
 </div></code></pre>
 
-<p>运行结果：</p>
 
-<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>epoch: 100, loss: 1.596
-</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>epoch: 200, loss: 1.015
-</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>epoch: 300, loss: 0.7385
-</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>epoch: 400, loss: 0.5793
-</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>epoch: 500, loss: 0.6007
-</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>epoch: 600, loss: 0.4507
-</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>epoch: 700, loss: 0.5527
-</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span>epoch: 800, loss: 0.3461
-</div><div class="hljs-line"><span class="hljs-comment line-number">9.</span>epoch: 900, loss: 0.5305
-</div></code></pre>
+
+<h2 id="part-33-version-30-train-输出结果">Part 3/3  Version 3.0 Train 输出结果</h2>
 
 <blockquote>
-  <p><strong>测试网络</strong> Code Version 1.0 - From Website</p>
+  <p>训练部分的输出结果</p>
 </blockquote>
 
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>epoch: 100, loss: 0.1181
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>epoch: 200, loss: 0.03296
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>epoch: 300, loss: 0.0591
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>epoch: 400, loss: 0.04722
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>epoch: 500, loss: 0.08721
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>epoch: 600, loss: 0.06054
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>epoch: 700, loss: 0.05327
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span>epoch: 800, loss: 0.03804
+</div><div class="hljs-line"><span class="hljs-comment line-number">9.</span>epoch: 900, loss: 0.06624
+</div></code></pre>
 
 
-<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">model.eval()
+
+<h2 id="part-33-version-30-test">Part 3/3  Version 3.0 Test</h2>
+
+<blockquote>
+  <p>参考实例Ⅰ部分的代码——<strong><code>测试部分</code></strong></p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 测试</span>
 </div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">net.eval()
 </div><div class="hljs-line">eval_loss = <span class="hljs-number">0</span>
-</div><div class="hljs-line"><wbr>
 </div><div class="hljs-line">eval_acc = <span class="hljs-number">0</span>
 </div><div class="hljs-line"><wbr>
-</div><div class="hljs-line"><span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> test_loader:
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> test_data:
 </div><div class="hljs-line">    img, label = data
-</div><div class="hljs-line">    img = img.view(img.size(<span class="hljs-number">0</span>), <span class="hljs-number">-1</span>)
-</div><div class="hljs-line"><wbr>
 </div><div class="hljs-line">    <span class="hljs-keyword">if</span> torch.cuda.is_available():
-</div><div class="hljs-line">        img = img.cuda()
-</div><div class="hljs-line">        label = label.cuda()
+</div><div class="hljs-line">        img = Variable(img).cuda()
+</div><div class="hljs-line">        label = Variable(label).cuda()
 </div><div class="hljs-line">    <span class="hljs-keyword">else</span>:
 </div><div class="hljs-line">        img = Variable(img)
 </div><div class="hljs-line">        label = Variable(label)
 </div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    out = model(img)
+</div><div class="hljs-line">    <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">    out = net(img)
+</div><div class="hljs-line">    loss = criterion(out,label)
 </div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    loss = criterion(out, label)
-</div><div class="hljs-line">    eval_loss += loss.data.item() * label.size(<span class="hljs-number">0</span>)
 </div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    _, pred = torch.max(out, <span class="hljs-number">1</span>)
-</div><div class="hljs-line">    num_correct = (pred == label).sum()
-</div><div class="hljs-line">    eval_acc += num_correct.item()
+</div><div class="hljs-line"><span class="hljs-comment"># # code block: run OK</span>
 </div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#     # 记录误差</span>
+</div><div class="hljs-line"><span class="hljs-comment">#     eval_loss += loss.item()</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#     _ , pred = out.max(1)</span>
+</div><div class="hljs-line"><span class="hljs-comment">#     num_correct = (pred==label).sum().item()</span>
+</div><div class="hljs-line"><span class="hljs-comment">#     acc = num_correct / img.shape[0]</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#     eval_acc += acc</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录误差</span>
+</div><div class="hljs-line">    eval_loss += loss.data.item() <span class="hljs-comment"># different</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    _ , pred = torch.max(out, <span class="hljs-number">1</span>)
+</div><div class="hljs-line">    num_correct = (pred==label).sum()
+</div><div class="hljs-line">    acc = num_correct / img.shape[<span class="hljs-number">0</span>] <span class="hljs-comment"># different</span>
+</div><div class="hljs-line">    eval_acc += acc
 </div><div class="hljs-line"><wbr>
 </div><div class="hljs-line">print(<span class="hljs-string">'Test Loss: {:.6f}, Acc: {:.6f}'</span>.format(
-</div><div class="hljs-line">    eval_loss / (len(test_dataset)),
-</div><div class="hljs-line">    eval_acc / (len(test_dataset))
+</div><div class="hljs-line">    eval_loss / (len(test_data)),
+</div><div class="hljs-line">    eval_acc / (len(test_data))
 </div><div class="hljs-line">))
 </div></code></pre>
+
+
+
+<h2 id="part-33-version-30-test-输出结果">Part 3/3  Version 3.0 Test 输出结果</h2>
 
 <blockquote>
-  <p><strong>测试网络</strong> Code Version 2.0 - From Book</p>
+  <p>测试部分的输出结果</p>
 </blockquote>
 
-
-
-<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">model.eval()
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">eval_loss = <span class="hljs-number">0</span>
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">eval_acc = <span class="hljs-number">0</span>
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line"><span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> test_loader:
-</div><div class="hljs-line">    img, label = data
-</div><div class="hljs-line">    img = img.view(img.size(<span class="hljs-number">0</span>), <span class="hljs-number">-1</span>)
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    <span class="hljs-keyword">if</span> torch.cuda.is_available():
-</div><div class="hljs-line">        <span class="hljs-comment"># t</span>
-</div><div class="hljs-line">        <span class="hljs-comment"># volatile=True表示前向传播时不会保留缓存，因为对于测试集，不需要做反向传播，所以可以在前向传播时释放掉内存，节约内存空间</span>
-</div><div class="hljs-line">        img = Variable(img, volatile=<span class="hljs-keyword">True</span>).cuda()
-</div><div class="hljs-line">        label = Variable(label, volatile=<span class="hljs-keyword">True</span>).cuda() <span class="hljs-comment"># t</span>
-</div><div class="hljs-line">    <span class="hljs-keyword">else</span>:
-</div><div class="hljs-line">        img = Variable(img, volatile=<span class="hljs-keyword">True</span>) <span class="hljs-comment"># t</span>
-</div><div class="hljs-line">        label = Variable(label, volatile=<span class="hljs-keyword">True</span>) <span class="hljs-comment"># t</span>
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    out = model(img)
-</div><div class="hljs-line">    loss = criterion(out, label)
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    eval_loss += loss.data[<span class="hljs-number">0</span>]*label.size(<span class="hljs-number">0</span>) <span class="hljs-comment"># t</span>
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    _, pred = torch.max(out, <span class="hljs-number">1</span>)
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    num_correct = (pred == label).sum()
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">    eval_acc += num_correct.data[<span class="hljs-number">0</span>] <span class="hljs-comment"># t</span>
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line"><wbr>
-</div><div class="hljs-line">print(<span class="hljs-string">'Test Loss: {:.6f}, Acc: {:.6f}'</span>.format(
-</div><div class="hljs-line">    eval_loss / (len(test_dataset)),
-</div><div class="hljs-line">    eval_acc / (len(test_dataset))
-</div><div class="hljs-line">))
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>Test Loss: 0.028490, Acc: 0.991495
 </div></code></pre>
 
-<p>运行结果：</p>
 
 
+<h2 id="目录">目录</h2>
 
-<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>Test Loss: 0.379588, Acc: 0.892300
-</div></code></pre>
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><a href="#pytorch实例ⅱ卷积神经网络">PyTorch实例Ⅱ（卷积神经网络）</a></li>
+<li><a href="#part-13-定义网络">Part 1/3 定义网络</a></li>
+<li><a href="#part-23-载入数据和模型">Part 2/3  载入数据和模型</a></li>
+<li><a href="#part-33-version-10">Part 3/3  Version 1.0</a></li>
+<li><a href="#part-33-version-10-输出结果">Part 3/3  Version 1.0 输出结果</a></li>
+<li><a href="#part-33-version-20-train">Part 3/3  Version 2.0 - Train</a></li>
+<li><a href="#part-33-version-20-train-输出结果">Part 3/3  Version 2.0 - Train 输出结果</a></li>
+<li><a href="#part-33-version-20-test">Part 3/3  Version 2.0 - Test</a></li>
+<li><a href="#part-33-version-20-test-输出结果">Part 3/3  Version 2.0 - Test 输出结果</a></li>
+<li><a href="#part-33-version-30-train">Part 3/3  Version 3.0 Train</a></li>
+<li><a href="#part-33-version-30-train-输出结果">Part 3/3  Version 3.0 Train 输出结果</a></li>
+<li><a href="#part-33-version-30-test">Part 3/3  Version 3.0 Test</a></li>
+<li><a href="#part-33-version-30-test-输出结果">Part 3/3  Version 3.0 Test 输出结果</a></li>
+<li><a href="#目录">目录</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
 
 </div>
 
