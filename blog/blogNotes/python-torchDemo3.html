@@ -4,39 +4,44 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
+	<link rel="shortcut icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="shortcut icon" href="../../blog/favicon4.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
-
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +218,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +268,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +315,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +366,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +376,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +457,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +473,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +481,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -494,10 +496,10 @@
 									<a href="#">Python</a>
 								</li>
 								<li>
-									<a href="#">DL</a>
+									<a href="#">HTML</a>
 								</li>
 								<li>
-									<a href="#">HTML</a>
+									<a href="#">#</a>
 								</li>
 								<li>
 									<a href="#">#</a>
@@ -526,867 +528,509 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
-
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo3.html" title="一个完整的神经网络实例3">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo3.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-11</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo3.html">
-													PyTorch 实例Ⅲ-1（循环神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用RNN实现MNIST手写数字分类（图片类型的数据）</p>
-											<p>BlogID: [<font color='red'>Py04111</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-Learning01.html" title="Python语法学习实例01">
-												<img width="520" height="400" src="./blog/blogPic/python-eg01.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-												
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-08</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-Learning01.html">
-													Python 语法 01（用编程学习）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>编程解决实际的小任务/小问题，借此学习Python常用语法</p>
-											<p>BlogID: [<font color='red'>Py04081</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-														
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo2.html" title="一个完整的神经网络实例2">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo2.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/DeepLearning.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-05</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo2.html">
-													PyTorch实例Ⅱ（卷积神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用CNN再现MNIST手写数字分类</p>
-											<p>BlogID: [<font color='red'>Py04051</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo1.html" title="一个完整的神经网络实例1">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo1.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/DeepLearning.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-02</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo1.html">
-													PyTorch 实例Ⅰ（全连接神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>多层全连接神经网络实现MNIST手写数字分类</p>
-											<p>BlogID: [<font color='red'>Py04021</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-pkl.html" title="pickle file 操作">
-												<img width="520" height="400" src="./blog/blogPic/python-pkl.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-pkl.html">
-													普通文件转.pkl文件
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>同时也可以举一反三，其他类型问题是否可以同样处理呢？</p>
-											<p>BlogID: [<font color='red'>Py03192</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-config.html" title="config使用方法">
-												<img width="520" height="400" src="./blog/blogPic/python-config.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-config.html">
-													Python-config 配置实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Python中config的使用方法的实际应用</p>
-											<p>BlogID: [<font color='red'>Py03191</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-parser.html" title="parser实例">
-												<img width="520" height="400" src="./blog/blogPic/python-parser.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-parser.html">
-													Python-parser 学习实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>用实际的例子，综合学习Python中parser以及setup.py的用法。</p>
-											<p>BlogID: [<font color='red'>Py03172</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-import.html" title="import导包">
-												<img width="520" height="400" src="./blog/blogPic/python-import.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-import.html">
-													关于导包的几种方式
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>在不同的文件中，import导入包的格式、作用有哪些不同？</p>
-											<p>BlogID: [<font color='red'>Py03171</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-											<p>BlogID: [<font color='red'>Py03151</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-<p>BlogID: [<font color='red'>Py03141</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-											<p>BlogID: [<font color='red'>Py03123</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-apj.html" title="Anaconda,pytorch,jupyter">
-												<img width="520" height="400" src="./blog/blogPic/python-apj.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-apj.html">
-													Linux下安装Anaconda3, pytorch, jupyter notebook
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Anaconda3, pytorch, jupyter notebook的安装与配置（就像是自己搭载了一个服务器的感觉）</p>
-											<p>BlogID: [<font color='red'>Py03122</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-
-
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-											<p>BlogID: [<font color='red'>Html03121</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-								</div>
-
-								
-
-
-
-							</section>
-
-						</main>
-						<!-- #main -->
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+
+
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>PyTorch 实例Ⅲ-1（循环神经网络）</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
+
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
+
+											</span>
+											&nbsp;&nbsp;
+											<time>Apr. 2021</time>
+										</span>
+
+									</div>
+								</header>
+								<!-- .entry-header -->
+
+
+								<div class="entry-content">
+
+									
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
+									
+									<!--Markdown内容开始((((-->
+	
+	
+
+<div id='preview-contents' class='note-content'>
+                        
+                    
+
+<blockquote>
+  <p>★ 利用<code>RNN</code>实现MNIST手写数字分类（图片类型的数据）</p>
+  
+  <p><strong>前提</strong>：GPU版PyTorch已安装</p>
+</blockquote>
+
+<p>查看方法：</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line">print(torch.__version__) <span class="hljs-comment"># 查看Pytorch版本</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 1.7.1</span>
+</div><div class="hljs-line">print(torch.cuda.is_available()) <span class="hljs-comment"># 验证GPU版是否可用</span>
+</div><div class="hljs-line"><span class="hljs-comment"># True</span>
+</div></code></pre>
+
+<hr>
+
+<p><strong>参考书目</strong>：深度学习入门之PyTorch@page127  <br>
+ <strong>参考网页</strong>：<a href="https://www.jb51.net/article/178199.htm" target="_blank">https://www.jb51.net/article/178199.htm</a></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn, optim
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision.datasets <span class="hljs-keyword">import</span> mnist
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision <span class="hljs-keyword">import</span> transforms
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt 
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> datetime
+</div></code></pre>
+
+<blockquote>
+  <p><strong>解说</strong></p>
+  
+  <ul><li><p>该网络定义主要由LSTM网络和线性网络构成，LSTM网络接受图片序列，线性网络将它输出成最后的概率向量</p></li>
+  <li><p>定义一个用于图片分类的循环神经网络</p></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rnn</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_dim = <span class="hljs-number">28</span>, hidden_dim = <span class="hljs-number">100</span>, n_layer = <span class="hljs-number">2</span>, n_class = <span class="hljs-number">10</span>)</span>:</span>  <span class="hljs-comment"># tao, 指定了参数的数值，参考网页↑</span>
+</div><div class="hljs-line">        super(Rnn, self).__init__()
+</div><div class="hljs-line">        self.n_layer = n_layer
+</div><div class="hljs-line">        self.hidden_dim = hidden_dim
+</div><div class="hljs-line">        self.lstm = nn.LSTM(in_dim, hidden_dim, n_layer)  <span class="hljs-comment"># LSTM网络：接受图片序列  # tao, delete postfix -&gt;【, batch_first = True】</span>
+</div><div class="hljs-line">        self.classifier = nn.Linear(hidden_dim, n_class)  <span class="hljs-comment"># 线性网络：将它输出成最后的概率向量</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        <span class="hljs-comment"># h0 = Variable(torch.zeros(self.n_layer, x.size(1), self.hidden_dim)).cuda()</span>
+</div><div class="hljs-line">        <span class="hljs-comment"># c0 = Variable(torch.zeros(self.n_layer, x.size(1), self.hidden_dim)).cuda()</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># tao修改代码块（参考自网页 https://www.jb51.net/article/178199.htm）</span>
+</div><div class="hljs-line">        x = x.squeeze() <span class="hljs-comment">#去掉（batch，1,28,28）中的1，变成（batch， 28,28）</span>
+</div><div class="hljs-line">        x = x.permute(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>)<span class="hljs-comment">#将最后一维放到第一维，变成（batch，28,28）</span>
+</div><div class="hljs-line">        out, _ = self.lstm(x) <span class="hljs-comment">#使用默认的隐藏状态，得到的out是（28， batch， hidden_feature）</span>
+</div><div class="hljs-line">        out = out[<span class="hljs-number">-1</span>,:,:]<span class="hljs-comment">#取序列中的最后一个，大小是（batch， hidden_feature)</span>
+</div><div class="hljs-line">        out = self.classifier(out) <span class="hljs-comment">#得到分类结果</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> out
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#         # 原书代码</span>
+</div><div class="hljs-line"><span class="hljs-comment">#         out, _ = self.lstm(x)</span>
+</div><div class="hljs-line"><span class="hljs-comment">#         # 注意这个细节,这是因为循环神经网络的输出也是一个序列</span>
+</div><div class="hljs-line"><span class="hljs-comment">#         out = out[:, -1, :]  # 这一行代码是取出输出序列中的最后一个，在应用线性层作为最后的输出结果</span>
+</div><div class="hljs-line"><span class="hljs-comment">#         out = self.classifier(out)</span>
+</div><div class="hljs-line"><span class="hljs-comment">#         return out</span>
+</div></code></pre>
+
+<blockquote>
+  <p>Indispensable code block 【数据准备1/2】</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 预处理=&gt;将各种预处理组合在一起</span>
+</div><div class="hljs-line">data_tf = transforms.Compose(
+</div><div class="hljs-line">                [transforms.ToTensor(),
+</div><div class="hljs-line">                 transforms.Normalize([<span class="hljs-number">0.5</span>],[<span class="hljs-number">0.5</span>])])
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_set = mnist.MNIST(<span class="hljs-string">'./data'</span>,train=<span class="hljs-keyword">True</span>,transform=data_tf,download=<span class="hljs-keyword">True</span>)
+</div><div class="hljs-line">test_set = mnist.MNIST(<span class="hljs-string">'./data'</span>,train=<span class="hljs-keyword">False</span>,transform=data_tf,download=<span class="hljs-keyword">True</span>)
+</div></code></pre>
+
+<blockquote>
+  <p>Skip or Not 【中间变量/图形图像查看】</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 查看数据详情</span>
+</div><div class="hljs-line">print(train_set.data.size())
+</div><div class="hljs-line">print(train_set.targets.size())
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 图片数据，打印一张出来看看    </span>
+</div><div class="hljs-line">plt.imshow(train_set.data[<span class="hljs-number">0</span>].numpy(),cmap=<span class="hljs-string">'gray'</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">plt.title(<span class="hljs-string">'%i'</span> % train_set.targets[<span class="hljs-number">0</span>])              <span class="hljs-comment"># 图片名称，显示真实标签，%i %d十进制整数，有区别，深入请查阅资料</span>
+</div><div class="hljs-line">plt.show()
+</div></code></pre>
+
+<p>Output</p>
+
+<pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line"><span class="hljs-selector-tag">torch</span><span class="hljs-selector-class">.Size</span>(<span class="hljs-selector-attr">[60000, 28, 28]</span>)
+</div><div class="hljs-line"><span class="hljs-selector-tag">torch</span><span class="hljs-selector-class">.Size</span>(<span class="hljs-selector-attr">[60000]</span>)
+</div></code></pre>
+
+
+
+<p>
+<img src="../blogPic/python-torchDemo3-1.png" alt="Alt text" title="" type="image/png"  class=""></p>
+
+
+<blockquote>
+  <p>Indispensable code block 【数据准备2/2】</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">train_data = DataLoader(train_set,batch_size=<span class="hljs-number">64</span>,shuffle=<span class="hljs-keyword">True</span>)
+</div><div class="hljs-line">test_data = DataLoader(test_set,batch_size=<span class="hljs-number">128</span>,shuffle=<span class="hljs-keyword">False</span>)
+</div></code></pre>
+
+<blockquote>
+  <p>Skip or Not </p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">print(train_set)
+</div><div class="hljs-line">print(test_set)
+</div><div class="hljs-line">print(<span class="hljs-string">"------------"</span>)
+</div><div class="hljs-line">print(type(train_set))
+</div><div class="hljs-line">print(type(train_data))
+</div></code></pre>
+
+<p>Output</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs asciidoc"><div class="hljs-line">Dataset MNIST
+</div><div class="hljs-line"><span class="hljs-code">    Number of datapoints: 60000</span>
+</div><div class="hljs-line"><span class="hljs-code">    Root location: ./data</span>
+</div><div class="hljs-line"><span class="hljs-code">    Split: Train</span>
+</div><div class="hljs-line"><span class="hljs-code">    StandardTransform</span>
+</div><div class="hljs-line">Transform: Compose(
+</div><div class="hljs-line"><span class="hljs-code">               ToTensor()</span>
+</div><div class="hljs-line"><span class="hljs-code">               Normalize(mean=[0.5], std=[0.5])</span>
+</div><div class="hljs-line"><span class="hljs-code">           )</span>
+</div><div class="hljs-line">Dataset MNIST
+</div><div class="hljs-line"><span class="hljs-code">    Number of datapoints: 10000</span>
+</div><div class="hljs-line"><span class="hljs-code">    Root location: ./data</span>
+</div><div class="hljs-line"><span class="hljs-code">    Split: Test</span>
+</div><div class="hljs-line"><span class="hljs-code">    StandardTransform</span>
+</div><div class="hljs-line">Transform: Compose(
+</div><div class="hljs-line"><span class="hljs-code">               ToTensor()</span>
+</div><div class="hljs-line"><span class="hljs-code">               Normalize(mean=[0.5], std=[0.5])</span>
+</div><div class="hljs-line"><span class="hljs-section">           )</span>
+</div><div class="hljs-line"><span class="hljs-section">------------</span>
+</div><div class="hljs-line">torchvision.datasets.mnist.MNIST
+</div><div class="hljs-line">torch.utils.data.dataloader.DataLoader
+</div></code></pre>
+
+<blockquote>
+  <p>Skip or Not 【<code>iter</code>, <code>next</code>】</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">dataiter= iter(train_data)
+</div><div class="hljs-line">imgs,labs = next(dataiter)
+</div><div class="hljs-line">print(imgs)<span class="hljs-comment">#imgs.size()=torch.Size([64, 1, 28, 28])</span>
+</div><div class="hljs-line">print(labs)<span class="hljs-comment">#图片的标签，就是类别，mnist一共有10个类别，故其取值分布在[0,9]之间</span>
+</div></code></pre>
+
+<p>Output</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs lsl"><div class="hljs-line">tensor([[[[<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          ...,
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>]]],
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        [[[<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          ...,
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>]]],
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        [[[<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          ...,
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>]]],
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        ...,
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        [[[<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          ...,
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>]]],
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        [[[<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          ...,
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>]]],
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        [[[<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          ...,
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>],
+</div><div class="hljs-line">          [<span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>,  ..., <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>, <span class="hljs-number">-1.</span>]]]])
+</div><div class="hljs-line">tensor([<span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>,
+</div><div class="hljs-line">        <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">9</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>,
+</div><div class="hljs-line">        <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">6</span>, <span class="hljs-number">3</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>])
+</div></code></pre>
+
+<blockquote>
+  <p>Skip or Not 【<code>enumerate</code>, <code>next</code>】</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 一批测试数据组成内容</span>
+</div><div class="hljs-line">examples = enumerate(test_data)
+</div><div class="hljs-line">batch_idx, (example_data, example_targets) = next(examples)
+</div><div class="hljs-line">print(example_targets)
+</div><div class="hljs-line">print(example_data.shape)
+</div></code></pre>
+
+<p>Output</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs lsl"><div class="hljs-line">tensor([<span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">6</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>,
+</div><div class="hljs-line">        <span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>,
+</div><div class="hljs-line">        <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">3</span>, <span class="hljs-number">7</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">0</span>,
+</div><div class="hljs-line">        <span class="hljs-number">2</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>,
+</div><div class="hljs-line">        <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>,
+</div><div class="hljs-line">        <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>])
+</div><div class="hljs-line">torch.Size([<span class="hljs-number">128</span>, <span class="hljs-number">1</span>, <span class="hljs-number">28</span>, <span class="hljs-number">28</span>])
+</div></code></pre>
+
+<blockquote>
+  <p>Skip or Not 【绘图：<code>plt</code> @ <code>import matplotlib.pyplot as plt</code> 】</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 取一部分查看</span>
+</div><div class="hljs-line">fig = plt.figure()
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">6</span>):
+</div><div class="hljs-line">    plt.subplot(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,i+<span class="hljs-number">1</span>)
+</div><div class="hljs-line">    plt.tight_layout()
+</div><div class="hljs-line">    plt.imshow(example_data[i][<span class="hljs-number">0</span>], cmap=<span class="hljs-string">'gray'</span>, interpolation=<span class="hljs-string">'none'</span>)
+</div><div class="hljs-line">    plt.title(<span class="hljs-string">"Ground Truth: {}"</span>.format(example_targets[i]))
+</div><div class="hljs-line">    plt.xticks([])
+</div><div class="hljs-line">    plt.yticks([])
+</div><div class="hljs-line">plt.show()
+</div></code></pre>
+
+<p>Output</p>
+
+<p><img src="../blogPic/python-torchDemo3-2.png" alt="Alt text" title="" type="image/png"  class=""></p>
+
+<blockquote>
+  <p>Indispensable code block【模型调用】</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">net = Rnn()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">print(net)  <span class="hljs-comment"># 可以查看模型结构</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    print(<span class="hljs-string">"GPU Available"</span>)
+</div><div class="hljs-line">    net = net.cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">criterion = nn.CrossEntropyLoss()
+</div><div class="hljs-line">optimizer = optim.SGD(net.parameters(),<span class="hljs-number">1e-1</span>)
+</div></code></pre>
+
+<p>Output</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs lisp"><div class="hljs-line">Rnn(
+</div><div class="hljs-line">  (<span class="hljs-name">lstm</span>): LSTM(<span class="hljs-number">28</span>, <span class="hljs-number">100</span>, num_layers=2)
+</div><div class="hljs-line">  (<span class="hljs-name">classifier</span>): Linear(<span class="hljs-name">in_features=100</span>, out_features=10, bias=True)
+</div><div class="hljs-line">)
+</div><div class="hljs-line">GPU Available
+</div></code></pre>
+
+<blockquote>
+  <p>Indispensable code block【训练&amp;测试】</p>
+  
+  <ul><li><p>代码运行时间记录方法 -&gt; 记录时间消耗4步 @ <code>import datetime</code></p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">nums_epoch = <span class="hljs-number">20</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 开始训练</span>
+</div><div class="hljs-line">losses =[]
+</div><div class="hljs-line">acces = []
+</div><div class="hljs-line">eval_losses = []
+</div><div class="hljs-line">eval_acces = []
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 记录时间消耗 1/4</span>
+</div><div class="hljs-line">prev_time = datetime.datetime.now()  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> range(nums_epoch):
+</div><div class="hljs-line">    train_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    train_acc = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    net = net.train()
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> img, label <span class="hljs-keyword">in</span> train_data:
+</div><div class="hljs-line">        <span class="hljs-comment">#img = img.reshape(img.size(0),-1) </span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">            img = Variable(img).cuda()
+</div><div class="hljs-line">            label = Variable(label).cuda()
+</div><div class="hljs-line">        <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">            img = Variable(img)
+</div><div class="hljs-line">            label = Variable(label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">        out = net(img)
+</div><div class="hljs-line">        loss = criterion(out,label)
+</div><div class="hljs-line">        <span class="hljs-comment"># 反向传播</span>
+</div><div class="hljs-line">        optimizer.zero_grad()
+</div><div class="hljs-line">        loss.backward()
+</div><div class="hljs-line">        optimizer.step()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 记录误差</span>
+</div><div class="hljs-line">        train_loss += loss.item()
+</div><div class="hljs-line">        <span class="hljs-comment"># 计算分类的准确率</span>
+</div><div class="hljs-line">        _,pred = out.max(<span class="hljs-number">1</span>)
+</div><div class="hljs-line">        num_correct = (pred == label).sum().item()
+</div><div class="hljs-line">        acc = num_correct / img.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        train_acc += acc
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    losses.append(train_loss / len(train_data))
+</div><div class="hljs-line">    acces.append(train_acc / len(train_data))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录时间消耗 2/4</span>
+</div><div class="hljs-line">    cur_time = datetime.datetime.now()  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    hhh, remainder = divmod((cur_time - prev_time).seconds, <span class="hljs-number">3600</span>)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    mmm, sss = divmod(remainder, <span class="hljs-number">60</span>)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    time_str = <span class="hljs-string">"Time %02d:%02d:%02d"</span> % (hhh, mmm, sss)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    eval_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    eval_acc = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    <span class="hljs-comment"># 测试集不训练</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> img , label <span class="hljs-keyword">in</span> test_data:
+</div><div class="hljs-line">        <span class="hljs-comment">#img = img.reshape(img.size(0),-1)</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">            img = Variable(img).cuda()
+</div><div class="hljs-line">            label = Variable(label).cuda()
+</div><div class="hljs-line">        <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">            img = Variable(img)
+</div><div class="hljs-line">            label = Variable(label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        out = net(img)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        loss = criterion(out,label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 记录误差</span>
+</div><div class="hljs-line">        eval_loss += loss.item()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        _ , pred = out.max(<span class="hljs-number">1</span>)
+</div><div class="hljs-line">        num_correct = (pred==label).sum().item()
+</div><div class="hljs-line">        acc = num_correct / img.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        eval_acc += acc
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录时间消耗 3/4</span>
+</div><div class="hljs-line">    prev_time = cur_time
+</div><div class="hljs-line">    eval_losses.append(eval_loss / len(test_data))
+</div><div class="hljs-line">    eval_acces.append(eval_acc / len(test_data))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    print(<span class="hljs-string">'Epoch {} Train Loss {} Train  Accuracy {} Test Loss {} Test Accuracy {}'</span>.format(
+</div><div class="hljs-line">        epoch+<span class="hljs-number">1</span>, train_loss / len(train_data),train_acc / len(train_data), eval_loss / len(test_data), eval_acc / len(test_data)))
+</div><div class="hljs-line">    print(cur_time) <span class="hljs-comment"># 记录时间消耗 4/4</span>
+</div></code></pre>
+
+<blockquote>
+  <p>结果输出</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>Epoch 1 Train Loss 1.7209380644597987 Train  Accuracy 0.36350613006396587 Test Loss 0.674197974838788 Test Accuracy 0.7854034810126582
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>2021-04-11 11:27:40.920542
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>Epoch 2 Train Loss 0.30949205364277366 Train  Accuracy 0.9076492537313433 Test Loss 0.17407198870389523 Test Accuracy 0.950059335443038
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>2021-04-11 11:27:56.628108
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>Epoch 3 Train Loss 0.13884762286055666 Train  Accuracy 0.9594216417910447 Test Loss 0.13562022487904074 Test Accuracy 0.9610363924050633
+</div><div class="hljs-line"><span class="hljs-comment line-number">6.</span>2021-04-11 11:28:12.395561
+</div><div class="hljs-line"><span class="hljs-comment line-number">7.</span>Epoch 4 Train Loss 0.101547363801484 Train  Accuracy 0.9693663379530917 Test Loss 0.09922966387276125 Test Accuracy 0.9707278481012658
+</div><div class="hljs-line"><span class="hljs-comment line-number">8.</span>2021-04-11 11:28:28.192915
+</div><div class="hljs-line"><span class="hljs-comment line-number">9.</span>Epoch 5 Train Loss 0.0815562306389983 Train  Accuracy 0.9756629797441365 Test Loss 0.09412724761398439 Test Accuracy 0.9709256329113924
+</div><div class="hljs-line"><span class="hljs-comment line-number">10.</span>2021-04-11 11:28:44.020164
+</div><div class="hljs-line"><span class="hljs-comment line-number">11.</span>Epoch 6 Train Loss 0.0687523225897244 Train  Accuracy 0.9792610607675906 Test Loss 0.07506146606741639 Test Accuracy 0.9765625
+</div><div class="hljs-line"><span class="hljs-comment line-number">12.</span>2021-04-11 11:28:59.820516
+</div><div class="hljs-line"><span class="hljs-comment line-number">13.</span>Epoch 7 Train Loss 0.05848293340102688 Train  Accuracy 0.9826759061833689 Test Loss 0.06827540622870851 Test Accuracy 0.9798259493670886
+</div><div class="hljs-line"><span class="hljs-comment line-number">14.</span>2021-04-11 11:29:15.627318
+</div><div class="hljs-line"><span class="hljs-comment line-number">15.</span>Epoch 8 Train Loss 0.049010571555918585 Train  Accuracy 0.9849913379530917 Test Loss 0.06305017933850707 Test Accuracy 0.9811115506329114
+</div><div class="hljs-line"><span class="hljs-comment line-number">16.</span>2021-04-11 11:29:31.420040
+</div><div class="hljs-line"><span class="hljs-comment line-number">17.</span>Epoch 9 Train Loss 0.043739378950851504 Train  Accuracy 0.9866404584221748 Test Loss 0.06487459723861251 Test Accuracy 0.9788370253164557
+</div><div class="hljs-line"><span class="hljs-comment line-number">18.</span>2021-04-11 11:29:47.206276
+</div><div class="hljs-line"><span class="hljs-comment line-number">19.</span>Epoch 10 Train Loss 0.03890312307671622 Train  Accuracy 0.9879231076759062 Test Loss 0.08851856838460846 Test Accuracy 0.974881329113924
+</div><div class="hljs-line"><span class="hljs-comment line-number">20.</span>2021-04-11 11:30:02.971917
+</div><div class="hljs-line"><span class="hljs-comment line-number">21.</span>Epoch 11 Train Loss 0.035701624276776756 Train  Accuracy 0.9890058635394456 Test Loss 0.058823986216212466 Test Accuracy 0.9832871835443038
+</div><div class="hljs-line"><span class="hljs-comment line-number">22.</span>2021-04-11 11:30:18.733420
+</div><div class="hljs-line"><span class="hljs-comment line-number">23.</span>Epoch 12 Train Loss 0.032145718470087216 Train  Accuracy 0.9898554104477612 Test Loss 0.05840251735806512 Test Accuracy 0.9840783227848101
+</div><div class="hljs-line"><span class="hljs-comment line-number">24.</span>2021-04-11 11:30:34.496777
+</div><div class="hljs-line"><span class="hljs-comment line-number">25.</span>Epoch 13 Train Loss 0.02828378130949022 Train  Accuracy 0.9912046908315565 Test Loss 0.055727175945309994 Test Accuracy 0.9831882911392406
+</div><div class="hljs-line"><span class="hljs-comment line-number">26.</span>2021-04-11 11:30:50.290992
+</div><div class="hljs-line"><span class="hljs-comment line-number">27.</span>Epoch 14 Train Loss 0.024952145273621475 Train  Accuracy 0.9922208155650319 Test Loss 0.09268021784115676 Test Accuracy 0.9747824367088608
+</div><div class="hljs-line"><span class="hljs-comment line-number">28.</span>2021-04-11 11:31:06.054200
+</div><div class="hljs-line"><span class="hljs-comment line-number">29.</span>Epoch 15 Train Loss 0.024101163034447964 Train  Accuracy 0.9924373667377399 Test Loss 0.04986062547088088 Test Accuracy 0.9848694620253164
+</div><div class="hljs-line"><span class="hljs-comment line-number">30.</span>2021-04-11 11:31:21.813121
+</div><div class="hljs-line"><span class="hljs-comment line-number">31.</span>Epoch 16 Train Loss 0.021454994980583904 Train  Accuracy 0.9932369402985075 Test Loss 0.06417481121319771 Test Accuracy 0.9817049050632911
+</div><div class="hljs-line"><span class="hljs-comment line-number">32.</span>2021-04-11 11:31:37.632915
+</div><div class="hljs-line"><span class="hljs-comment line-number">33.</span>Epoch 17 Train Loss 0.01850110391111571 Train  Accuracy 0.9944363006396588 Test Loss 0.05086001321799387 Test Accuracy 0.9862539556962026
+</div><div class="hljs-line"><span class="hljs-comment line-number">34.</span>2021-04-11 11:31:53.919065
+</div><div class="hljs-line"><span class="hljs-comment line-number">35.</span>Epoch 18 Train Loss 0.016031143488548595 Train  Accuracy 0.9951525852878464 Test Loss 0.04880191164041127 Test Accuracy 0.9863528481012658
+</div><div class="hljs-line"><span class="hljs-comment line-number">36.</span>2021-04-11 11:32:10.174033
+</div><div class="hljs-line"><span class="hljs-comment line-number">37.</span>Epoch 19 Train Loss 0.014600724598591668 Train  Accuracy 0.9956023454157783 Test Loss 0.051668307816634056 Test Accuracy 0.9861550632911392
+</div><div class="hljs-line"><span class="hljs-comment line-number">38.</span>2021-04-11 11:32:25.947818
+</div><div class="hljs-line"><span class="hljs-comment line-number">39.</span>Epoch 20 Train Loss 0.01331954812350522 Train  Accuracy 0.995985474413646 Test Loss 0.05343886803516225 Test Accuracy 0.986056170886076
+</div><div class="hljs-line"><span class="hljs-comment line-number">40.</span>2021-04-11 11:32:41.710178
+</div></code></pre>
+</div>
+
+	
+									<!--))))Markdown内容结束-->
+
+
+								</div><!-- .entry-content -->
+
+							</article><!-- #post-## -->
+
+						</main><!-- #main -->
+
 					</div>
 					<!-- #primary -->
 
@@ -1436,21 +1080,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>
