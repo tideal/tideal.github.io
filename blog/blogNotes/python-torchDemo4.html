@@ -4,39 +4,44 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
+	<link rel="shortcut icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="shortcut icon" href="../../blog/favicon4.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
-
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +218,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +268,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +315,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +366,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +376,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +457,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +473,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +481,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -494,10 +496,10 @@
 									<a href="#">Python</a>
 								</li>
 								<li>
-									<a href="#">DL</a>
+									<a href="#">HTML</a>
 								</li>
 								<li>
-									<a href="#">HTML</a>
+									<a href="#">#</a>
 								</li>
 								<li>
 									<a href="#">#</a>
@@ -526,933 +528,515 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
-
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo4.html" title="一个完整的神经网络实例4">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo4.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-11</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo4.html">
-													PyTorch 实例Ⅲ-2（循环神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用RNN预测飞机月流量（序列数据）</p>
-											<p>BlogID: [<font color='red'>Py04112</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo3.html" title="一个完整的神经网络实例3">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo3.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-11</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo3.html">
-													PyTorch 实例Ⅲ-1（循环神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用RNN实现MNIST手写数字分类（图片类型的数据）</p>
-											<p>BlogID: [<font color='red'>Py04111</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-Learning01.html" title="Python语法学习实例01">
-												<img width="520" height="400" src="./blog/blogPic/python-eg01.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-												
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-08</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-Learning01.html">
-													Python 语法 01（用编程学习）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>编程解决实际的小任务/小问题，借此学习Python常用语法</p>
-											<p>BlogID: [<font color='red'>Py04081</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-														
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo2.html" title="一个完整的神经网络实例2">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo2.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/DeepLearning.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-05</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo2.html">
-													PyTorch实例Ⅱ（卷积神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用CNN再现MNIST手写数字分类</p>
-											<p>BlogID: [<font color='red'>Py04051</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo1.html" title="一个完整的神经网络实例1">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo1.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/DeepLearning.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-02</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo1.html">
-													PyTorch 实例Ⅰ（全连接神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>多层全连接神经网络实现MNIST手写数字分类</p>
-											<p>BlogID: [<font color='red'>Py04021</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-pkl.html" title="pickle file 操作">
-												<img width="520" height="400" src="./blog/blogPic/python-pkl.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-pkl.html">
-													普通文件转.pkl文件
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>同时也可以举一反三，其他类型问题是否可以同样处理呢？</p>
-											<p>BlogID: [<font color='red'>Py03192</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-config.html" title="config使用方法">
-												<img width="520" height="400" src="./blog/blogPic/python-config.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-config.html">
-													Python-config 配置实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Python中config的使用方法的实际应用</p>
-											<p>BlogID: [<font color='red'>Py03191</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-parser.html" title="parser实例">
-												<img width="520" height="400" src="./blog/blogPic/python-parser.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-parser.html">
-													Python-parser 学习实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>用实际的例子，综合学习Python中parser以及setup.py的用法。</p>
-											<p>BlogID: [<font color='red'>Py03172</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-import.html" title="import导包">
-												<img width="520" height="400" src="./blog/blogPic/python-import.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-import.html">
-													关于导包的几种方式
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>在不同的文件中，import导入包的格式、作用有哪些不同？</p>
-											<p>BlogID: [<font color='red'>Py03171</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-											<p>BlogID: [<font color='red'>Py03151</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-<p>BlogID: [<font color='red'>Py03141</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-											<p>BlogID: [<font color='red'>Py03123</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-apj.html" title="Anaconda,pytorch,jupyter">
-												<img width="520" height="400" src="./blog/blogPic/python-apj.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-apj.html">
-													Linux下安装Anaconda3, pytorch, jupyter notebook
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Anaconda3, pytorch, jupyter notebook的安装与配置（就像是自己搭载了一个服务器的感觉）</p>
-											<p>BlogID: [<font color='red'>Py03122</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-
-
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-											<p>BlogID: [<font color='red'>Html03121</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-								</div>
-
-								
-
-
-
-							</section>
-
-						</main>
-						<!-- #main -->
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+
+
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>PyTorch 实例Ⅲ-2（循环神经网络）</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
+
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
+
+											</span>
+											&nbsp;&nbsp;
+											<time>Apr. 2021</time>
+										</span>
+
+									</div>
+								</header>
+								<!-- .entry-header -->
+
+
+								<div class="entry-content">
+
+									
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
+									
+									<!--Markdown内容开始((((-->
+	
+	
+<div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h3 id="pytorch-实例ⅲ-2循环神经网络">PyTorch 实例Ⅲ-2（循环神经网络）</h3>
+
+<blockquote>
+  <p>★ 利用<code>RNN</code>预测飞机月流量（序列数据）</p>
+  
+  <ul><li><p>具有时序性的数据，即前面的数据对后面的数据有影响，所以LSTM的记忆性能够适用于这种场景</p></li>
+  </ul>
+</blockquote>
+
+<p><strong>前提</strong>：GPU版PyTorch已安装 <br>
+查看方法：</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line">print(torch.__version__) <span class="hljs-comment"># 查看Pytorch版本</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 1.7.1</span>
+</div><div class="hljs-line">print(torch.cuda.is_available()) <span class="hljs-comment"># 验证GPU版是否可用</span>
+</div><div class="hljs-line"><span class="hljs-comment"># True</span>
+</div></code></pre>
+
+<hr>
+
+
+
+<h4 id="1-数据读取">1 数据读取</h4>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+</div><div class="hljs-line">%matplotlib inline
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> datetime
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 数据文件（.CSV文件）和脚本放在同一目录下</span>
+</div><div class="hljs-line">data_csv = pd.read_csv(<span class="hljs-string">'./data.csv'</span>, usecols=[<span class="hljs-number">1</span>])
+</div><div class="hljs-line">plt.plot(data_csv)  <span class="hljs-comment"># 画出来看看</span>
+</div></code></pre>
+
+<p>Output</p>
+
+
+
+<p><img src="./python-torchDemo4/org.png" alt="Alt text" title="" type="image/png" ></p>
+
+
+
+<h4 id="2-数据预处理">2 数据预处理</h4>
+
+<blockquote>
+  <ul><li><p>进行预处理，将数据中 na 的数据去掉；</p></li>
+  <li><p>然后将数据标准化到 0 ~ 1 之间。</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 数据预处理</span>
+</div><div class="hljs-line">data_csv = data_csv.dropna()
+</div><div class="hljs-line">dataset = data_csv.values
+</div><div class="hljs-line">dataset = dataset.astype(<span class="hljs-string">'float32'</span>)
+</div><div class="hljs-line">max_value = np.max(dataset)
+</div><div class="hljs-line">min_value = np.min(dataset)
+</div><div class="hljs-line">scalar = max_value - min_value
+</div><div class="hljs-line">dataset = list(map(<span class="hljs-keyword">lambda</span> x: x / scalar, dataset))
+</div></code></pre>
+
+
+
+<h4 id="3-数据集创建">3 数据集创建</h4>
+
+<blockquote>
+  <ul><li><p>我们想通过前面几个月的流量来预测当月的流量，比如我们希望通过前两个月的流量来预测当月的流量，我们可以将前两个月的流量当做输入，当月的流量当做输出。</p></li>
+  <li><p>同时我们需要将我们的数据集分为训练集和测试集，通过测试集的效果来测试模型的性能，这里我们简单的将前面几年的数据作为训练集，后面两年的数据作为测试集。</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_dataset</span><span class="hljs-params">(dataset, look_back=<span class="hljs-number">2</span>)</span>:</span>
+</div><div class="hljs-line">    dataX, dataY = [], []
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(dataset) - look_back):
+</div><div class="hljs-line">        a = dataset[i:(i + look_back)]
+</div><div class="hljs-line">        dataX.append(a)
+</div><div class="hljs-line">        dataY.append(dataset[i + look_back])
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> np.array(dataX), np.array(dataY)
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 创建好输入输出</span>
+</div><div class="hljs-line">data_X, data_Y = create_dataset(dataset)
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 划分训练集和测试集，70% 作为训练集</span>
+</div><div class="hljs-line">train_size = int(len(data_X) * <span class="hljs-number">0.7</span>)
+</div><div class="hljs-line">test_size = len(data_X) - train_size
+</div><div class="hljs-line">train_X = data_X[:train_size]
+</div><div class="hljs-line">train_Y = data_Y[:train_size]
+</div><div class="hljs-line">test_X = data_X[train_size:]
+</div><div class="hljs-line">test_Y = data_Y[train_size:]
+</div></code></pre>
+
+<blockquote>
+  <p><strong>数据改变形状</strong></p>
+  
+  <ul><li><p>最后，我们需要将数据改变一下形状，因为 RNN 读入的数据维度是 (<code>seq</code>, <code>batch</code>, <code>feature</code>)，所以要重新改变一下数据的维度，这里只有一个序列，所以 <code>batch</code> 是 <code>1</code>，而输入的 <code>feature</code> 就是我们希望依据的几个月份，这里我们定的是两个月份，所以 <code>feature</code> 就是 <code>2</code>.</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_X = train_X.reshape(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+</div><div class="hljs-line">train_Y = train_Y.reshape(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
+</div><div class="hljs-line">test_X = test_X.reshape(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_x = torch.from_numpy(train_X)
+</div><div class="hljs-line">train_y = torch.from_numpy(train_Y)
+</div><div class="hljs-line">test_x = torch.from_numpy(test_X)
+</div></code></pre>
+
+
+
+<h4 id="4-模型定义">4 模型定义</h4>
+
+<blockquote>
+  <ul><li><p>模型的第一部分是一个两层的 RNN，每一步模型接受两个月的输入作为特征，得到一个输出特征。</p></li>
+  <li><p>接着通过一个线性层将 RNN 的输出回归到流量的具体数值 <br>
+  <em>这里我们需要用 <code>view</code> 来重新排列，因为 <code>nn.Linear</code> 不接受三维的输入，所以我们先将前两维合并在一起，然后经过线性层之后再将其分开，最后输出结果。</em></p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 定义模型</span>
+</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">lstm_reg</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, input_size, hidden_size, output_size=<span class="hljs-number">1</span>, num_layers=<span class="hljs-number">2</span>)</span>:</span>
+</div><div class="hljs-line">        <span class="hljs-comment"># 输入是两个月的数据input_size=2，输出是下一个月的数据output_size=1，中间隐藏层的层数任意指定为4</span>
+</div><div class="hljs-line">        <span class="hljs-comment"># input_size, hidden_size, output_size = 2,4,1</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        super(lstm_reg, self).__init__()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#         self.rnn = nn.RNN(input_size,hidden_size,num_layers)  # RNN</span>
+</div><div class="hljs-line"><span class="hljs-comment">#         self.rnn = nn.LSTM(input_size, hidden_size, num_layers)  # LSTM</span>
+</div><div class="hljs-line">        self.rnn = nn.GRU(input_size,hidden_size,num_layers)  <span class="hljs-comment"># GRU</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        self.reg = nn.Linear(hidden_size, output_size) <span class="hljs-comment"># 回归</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        x, _ = self.rnn(x) <span class="hljs-comment"># (seq, batch, hidden)</span>
+</div><div class="hljs-line">        s, b, h = x.shape
+</div><div class="hljs-line">        x = x.view(s*b, h) <span class="hljs-comment"># 转换成线性层的输入格式</span>
+</div><div class="hljs-line">        x = self.reg(x)
+</div><div class="hljs-line">        x = x.view(s, b, <span class="hljs-number">-1</span>)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> x
+</div></code></pre>
+
+<blockquote>
+  <p><strong>额外补充学习</strong> <br>
+  <strong><code>OPT</code></strong>: 设置使用GPU，并将模型导入！（特别注意，数据和模型要同步，即都需要放到GPU上）</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line"># 设置使用GPU
+</div><div class="hljs-line">device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+</div><div class="hljs-line"># 使用定义好的RNN
+</div><div class="hljs-line">model = rnn_model()
+</div><div class="hljs-line"># 注意模型和输入数据都需要to device，训练数据后面传入
+</div><div class="hljs-line">mode  = model.to(device)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">...
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"># 数据送入GPU
+</div><div class="hljs-line">var_x = train_x.to(device)
+</div><div class="hljs-line">var_y = train_y.to(device)
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">net = lstm_reg(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># tao(放到GPU上)</span>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    net = net.cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">criterion = nn.MSELoss()
+</div><div class="hljs-line">optimizer = torch.optim.Adam(net.parameters(), lr=<span class="hljs-number">1e-2</span>)
+</div></code></pre>
+
+<h4 id="5-模型训练">5 模型训练</h4>
+
+<blockquote>
+  <p>定义好网络结构，输入的维度是 2，因为我们使用两个月的流量作为输入，隐藏层的维度可以任意指定，这里我们选的 4</p>
+  
+  <p><strong>模型训练一般包含几个步骤</strong></p>
+  
+  <ul><li><p>取出数据及标签并均送入GPU或CPU</p></li>
+  <li><p>前向传播</p></li>
+  <li><p>计算损失函数</p></li>
+  <li><p>清空上一轮梯度</p></li>
+  <li><p>反向传播</p></li>
+  <li><p>参数更新</p></li>
+  <li><p>周期打印loss值或tensorboard数据保存绘图</p></li>
+  <li><p>保存模型参数（非必要）</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 开始训练</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 记录时间消耗 1/4</span>
+</div><div class="hljs-line">prev_time = datetime.datetime.now()  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> range(<span class="hljs-number">1000</span>):
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># tao -&gt; 数据送入GPU </span>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">        var_x = Variable(train_x).cuda()
+</div><div class="hljs-line">        var_y = Variable(train_y).cuda()
+</div><div class="hljs-line">    <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">        var_x = Variable(train_x)
+</div><div class="hljs-line">        var_y = Variable(train_y)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#     var_x = Variable(train_x)</span>
+</div><div class="hljs-line"><span class="hljs-comment">#     var_y = Variable(train_y)</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">    out = net(var_x)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 计算损失函数，传入的是预测值和真实值</span>
+</div><div class="hljs-line">    loss = criterion(out, var_y)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 反向传播</span>
+</div><div class="hljs-line">    <span class="hljs-comment"># 反向传播之前先清空上一轮的梯度，在pytorch里边需要注意这个</span>
+</div><div class="hljs-line">    optimizer.zero_grad()    
+</div><div class="hljs-line">    <span class="hljs-comment"># 反向传播</span>
+</div><div class="hljs-line">    loss.backward()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 参数更新</span>
+</div><div class="hljs-line">    optimizer.step()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录时间消耗 2/4</span>
+</div><div class="hljs-line">    cur_time = datetime.datetime.now()  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    hhh, remainder = divmod((cur_time - prev_time).seconds, <span class="hljs-number">3600</span>)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    mmm, sss = divmod(remainder, <span class="hljs-number">60</span>)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    time_str = <span class="hljs-string">"Time %02d:%02d:%02d"</span> % (hhh, mmm, sss)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录时间消耗 3/4</span>
+</div><div class="hljs-line">    prev_time = cur_time
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># loss值打印</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> (e + <span class="hljs-number">1</span>) % <span class="hljs-number">100</span> == <span class="hljs-number">0</span>: <span class="hljs-comment"># 每 100 次输出结果</span>
+</div><div class="hljs-line">        print(<span class="hljs-string">'Epoch: {}, Loss: {:.5f}, Elapsed time：{}\n'</span>.format(e + <span class="hljs-number">1</span>, loss.item(), cur_time))  <span class="hljs-comment"># tao 修改： data[0] -&gt; item()</span>
+</div><div class="hljs-line"><span class="hljs-comment">#         print(cur_time) # 记录时间消耗 4/4</span>
+</div></code></pre>
+
+<p>Output</p>
+
+<pre class="prettyprint hljs-dark"><code class="hljs css"><div class="hljs-line">### <span class="hljs-selector-tag">GPU</span><span class="hljs-selector-class">.Elapsed</span> <span class="hljs-selector-tag">time</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 100, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00025</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:05.236643</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 200, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00025</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:05.967594</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 300, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00024</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:06.717355</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 400, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00025</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:07.444206</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 500, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00022</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:08.175883</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 600, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00022</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:08.902753</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 700, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00022</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:09.635347</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 800, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00021</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:10.363685</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 900, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00023</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:11.115815</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 1000, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00020</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:21</span><span class="hljs-selector-pseudo">:11.855426</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">### <span class="hljs-selector-tag">CPU</span><span class="hljs-selector-class">.Elapsed</span> <span class="hljs-selector-tag">time</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 100, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00560</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:07.924255</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 200, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00378</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:10.740028</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 300, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00334</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:13.554055</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 400, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00344</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:16.364253</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 500, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00170</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:19.174960</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 600, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00148</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:21.981696</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 700, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00131</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:24.801310</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 800, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00147</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:27.607101</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 900, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00110</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:30.412770</span>
+</div><div class="hljs-line"><span class="hljs-selector-tag">Epoch</span>: 1000, <span class="hljs-selector-tag">Loss</span>: 0<span class="hljs-selector-class">.00103</span>, <span class="hljs-selector-tag">Elapsed</span> <span class="hljs-selector-tag">time</span>：2021<span class="hljs-selector-tag">-04-11</span> 17<span class="hljs-selector-pseudo">:22</span><span class="hljs-selector-pseudo">:33.220409</span>
+</div></code></pre>
+
+
+
+<h4 id="6-预测结果">6 预测结果</h4>
+
+<blockquote>
+  <ul><li><p>训练完成之后，我们可以用训练好的模型去预测后面的结果</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># eval()会自动把BN和DropOut固定住，不会取平均，而是用训练好的值</span>
+</div><div class="hljs-line">net = net.eval() <span class="hljs-comment"># 转换成测试模式</span>
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">data_X = data_X.reshape(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+</div><div class="hljs-line">data_X = torch.from_numpy(data_X)
+</div><div class="hljs-line">var_data = Variable(data_X)
+</div><div class="hljs-line">pred_test = net(var_data.cuda()) <span class="hljs-comment"># 测试集的预测结果 # tao -&gt;  cuda()</span>
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 改变输出的格式</span>
+</div><div class="hljs-line">pred_test = pred_test.view(<span class="hljs-number">-1</span>).data.cpu().numpy() <span class="hljs-comment"># tao -&gt; .cpu()</span>
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 画出实际结果和预测的结果</span>
+</div><div class="hljs-line">plt.plot(pred_test, <span class="hljs-string">'r'</span>, label=<span class="hljs-string">'prediction'</span>)
+</div><div class="hljs-line">plt.plot(dataset, <span class="hljs-string">'b'</span>, label=<span class="hljs-string">'real'</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 添加图例，可以指定图例名，没有参数时默认上面的标签就是图例名</span>
+</div><div class="hljs-line">plt.legend(loc=<span class="hljs-string">'best'</span>)
+</div><div class="hljs-line"><span class="hljs-comment"># plt.legend(['Prediction','Real'])</span>
+</div></code></pre>
+
+<p>Output - LSTM@GPU</p>
+
+<p><img src="./python-torchDemo4/LSTM-GPU.png" alt="Alt text" title="" type="image/png" ></p>
+
+<blockquote>
+  <p><strong>结果解读</strong></p>
+  
+  <ul><li><p>蓝色的是真实的数据集，红色的是预测的结果;</p></li>
+  <li><p>我们能够看到，使用 lstm 能够得到比较相近的结果，预测的趋势也与真实的数据集是相同的，因为其能够记忆之前的信息，而单纯的使用线性回归并不能得到较好的结果，从这个例子也说明了 循环神经网络（<code>RNN</code>） 对于序列有着非常好的性能。</p></li>
+  <li><p>RNN模型比传统线性回归和多项式的非线性回归效果如何？下面给出结果代码和图！结果可以看出，RNN相较于对比的两种算法，优势十分明显，更能适应特征各异的数据！</p></li>
+  </ul>
+</blockquote>
+
+<h4 id="cmp01-传统线性回归模型">Cmp01  传统线性回归模型</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 传统线性回归模型</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+</div><div class="hljs-line"><span class="hljs-comment">#% matplotlib inline</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 加载数据</span>
+</div><div class="hljs-line">data_csv = pd.read_csv(<span class="hljs-string">'./data.csv'</span>, usecols=[<span class="hljs-number">1</span>])
+</div><div class="hljs-line"><span class="hljs-comment">#print(data.head())</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">data_csv = data_csv.dropna()
+</div><div class="hljs-line">dataset = data_csv.values
+</div><div class="hljs-line">dataset_ori = dataset.astype(<span class="hljs-string">'float32'</span>)
+</div><div class="hljs-line"><span class="hljs-comment"># print(dataset_ori)</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 线性回归</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> sklearn <span class="hljs-keyword">import</span> linear_model 
+</div><div class="hljs-line">model = linear_model.LinearRegression()
+</div><div class="hljs-line">y = dataset_ori
+</div><div class="hljs-line">x = [[x] <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, len(y)+<span class="hljs-number">1</span>)]
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># print(x)</span>
+</div><div class="hljs-line"><span class="hljs-comment"># print("---")</span>
+</div><div class="hljs-line"><span class="hljs-comment"># print(y)</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_size = int(len(x) * <span class="hljs-number">0.7</span>)
+</div><div class="hljs-line">train_x = x[:train_size]
+</div><div class="hljs-line">train_y = y[:train_size]
+</div><div class="hljs-line">model.fit(train_x, train_y)
+</div><div class="hljs-line">y = model.predict(x)
+</div><div class="hljs-line"><span class="hljs-comment"># print(y)</span>
+</div><div class="hljs-line">plt.plot(x, y)
+</div><div class="hljs-line">plt.plot(dataset_ori)
+</div><div class="hljs-line">plt.show()
+</div></code></pre>
+
+<p>Output</p>
+
+
+
+<p><img src="./python-torchDemo4/Linear.png" alt="Alt text" title="" type="image/png" ></p>
+
+<h4 id="cmp02-多项式的非线性回归模型">Cmp02  多项式的非线性回归模型</h4>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 多项式的非线性回归模型</span>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+</div><div class="hljs-line"><span class="hljs-comment">#% matplotlib inline</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 加载数据</span>
+</div><div class="hljs-line">data_csv = pd.read_csv(<span class="hljs-string">'./data.csv'</span>, usecols=[<span class="hljs-number">1</span>])
+</div><div class="hljs-line"><span class="hljs-comment">#print(data.head())</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">data_csv = data_csv.dropna()
+</div><div class="hljs-line">dataset = data_csv.values
+</div><div class="hljs-line">dataset_ori = dataset.astype(<span class="hljs-string">'float32'</span>)
+</div><div class="hljs-line"><span class="hljs-comment"># print(dataset_ori)</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 非线性回归</span>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> PolynomialFeatures
+</div><div class="hljs-line"><span class="hljs-comment"># 0-3次方</span>
+</div><div class="hljs-line">poly_reg = PolynomialFeatures(degree=<span class="hljs-number">3</span>)
+</div><div class="hljs-line">x_poly = poly_reg.fit_transform(x)
+</div><div class="hljs-line"><span class="hljs-comment"># print(x_poly)</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_x_poly = x_poly[:train_size]
+</div><div class="hljs-line">model = linear_model.LinearRegression()
+</div><div class="hljs-line">model.fit(train_x_poly, train_y)
+</div><div class="hljs-line">y = model.predict(x_poly)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">#print(len(x))</span>
+</div><div class="hljs-line"><span class="hljs-comment">#print(len(y))</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">plt.plot(x, y)
+</div><div class="hljs-line">plt.plot(dataset_ori)
+</div><div class="hljs-line">plt.show()
+</div></code></pre>
+
+<p>Output</p>
+
+
+
+<p><img src="./python-torchDemo4/Polynomial.png" alt="Alt text" title="" type="image/png" ></p>
+
+<h4 id="参考网页-1">☆ 参考网页</h4>
+
+<ul><li><p><a href="https://pytorch-cn.readthedocs.io/zh/latest/torchvision/torchvision-datasets/" target="_blank">torchvision.datasets</a></p></li>
+<li><p><a href="https://cloud.tencent.com/developer/news/268734" target="_blank">LSTM长短期记忆网络</a></p></li>
+<li><p><a href="https://www.it610.com/article/1295255202718359552.htm" target="_blank">RNN之飞机乘客预测</a></p></li>
+<li><p><a href="https://blog.csdn.net/weixin_40123108/article/details/88767763" target="_blank">RNN之时间预测（数组数据）</a></p></li>
+<li><p><a href="https://blog.csdn.net/w18165269429/article/details/115293161" target="_blank">RNN 实现机场流量预测（序列预测）</a></p></li>
+</ul>
+
+<h4 id="资源下载">★ 资源下载</h4>
+
+<blockquote>
+  <p><a href="http://tideal.github.io" target="_blank">源代码 - 原书配套代码</a> <br>
+  <a href="http://tideal.github.io" target="_blank">数据集 -飞机月流量数据</a></p>
+</blockquote>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><ul>
+<li><a href="#pytorch-实例ⅲ-2循环神经网络">PyTorch 实例Ⅲ-2（循环神经网络）</a><ul>
+<li><a href="#1-数据读取">1 数据读取</a></li>
+<li><a href="#2-数据预处理">2 数据预处理</a></li>
+<li><a href="#3-数据集创建">3 数据集创建</a></li>
+<li><a href="#4-模型定义">4 模型定义</a></li>
+<li><a href="#5-模型训练">5 模型训练</a></li>
+<li><a href="#6-预测结果">6 预测结果</a></li>
+<li><a href="#cmp01-传统线性回归模型">Cmp01  传统线性回归模型</a></li>
+<li><a href="#cmp02-多项式的非线性回归模型">Cmp02  多项式的非线性回归模型</a></li>
+<li><a href="#参考网页-1">☆ 参考网页</a></li>
+<li><a href="#资源下载">★ 资源下载</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+	
+									<!--))))Markdown内容结束-->
+
+
+								</div><!-- .entry-content -->
+
+							</article><!-- #post-## -->
+
+						</main><!-- #main -->
+
 					</div>
 					<!-- #primary -->
 
@@ -1502,21 +1086,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>
