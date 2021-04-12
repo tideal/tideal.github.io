@@ -4,39 +4,44 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
+	<link rel="shortcut icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="shortcut icon" href="../../blog/favicon4.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
-
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +218,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +268,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +315,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +366,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +376,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +457,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +473,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +481,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -494,10 +496,10 @@
 									<a href="#">Python</a>
 								</li>
 								<li>
-									<a href="#">DL</a>
+									<a href="#">HTML</a>
 								</li>
 								<li>
-									<a href="#">HTML</a>
+									<a href="#">#</a>
 								</li>
 								<li>
 									<a href="#">#</a>
@@ -526,1002 +528,700 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
 
-											
-								
-								
-								<div class="post-wrapper col-12">
 
-									<article id="#" class="list-post hentry">
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>3个自然语言问题的处理（循环神经网络）</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
 
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
 
-											<a href="./blog/blogNotes/python-NLP3.html" title="三个NLP实例(RNN)">
-												<img width="520" height="400" src="./blog/blogPic/python-NLP3.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
+											</span>
+											&nbsp;&nbsp;
+											<time>Apr. 2021</time>
+										</span>
 
-										</figure>
+									</div>
+								</header>
+								<!-- .entry-header -->
 
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
 
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-NLP3.html">
-													3个自然语言问题的处理（循环神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>RNN在NLP中的3个小应用（PyTorch实现）</p>
-											<p>BlogID: [<font color='red'>Py04121</font>]</p>
-										</div><!-- .entry-content -->
+								<div class="entry-content">
 
 									
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo4.html" title="一个完整的神经网络实例4">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo4.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-11</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo4.html">
-													PyTorch 实例Ⅲ-2（循环神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用RNN预测飞机月流量（序列数据）</p>
-											<p>BlogID: [<font color='red'>Py04112</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo3.html" title="一个完整的神经网络实例3">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo3.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-11</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo3.html">
-													PyTorch 实例Ⅲ-1（循环神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用RNN实现MNIST手写数字分类（图片类型的数据）</p>
-											<p>BlogID: [<font color='red'>Py04111</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-Learning01.html" title="Python语法学习实例01">
-												<img width="520" height="400" src="./blog/blogPic/python-eg01.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-												
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-08</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-Learning01.html">
-													Python 语法 01（用编程学习）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>编程解决实际的小任务/小问题，借此学习Python常用语法</p>
-											<p>BlogID: [<font color='red'>Py04081</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-														
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo2.html" title="一个完整的神经网络实例2">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo2.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/DeepLearning.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-05</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo2.html">
-													PyTorch实例Ⅱ（卷积神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用CNN再现MNIST手写数字分类</p>
-											<p>BlogID: [<font color='red'>Py04051</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo1.html" title="一个完整的神经网络实例1">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo1.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/DeepLearning.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-02</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo1.html">
-													PyTorch 实例Ⅰ（全连接神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>多层全连接神经网络实现MNIST手写数字分类</p>
-											<p>BlogID: [<font color='red'>Py04021</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-pkl.html" title="pickle file 操作">
-												<img width="520" height="400" src="./blog/blogPic/python-pkl.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-pkl.html">
-													普通文件转.pkl文件
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>同时也可以举一反三，其他类型问题是否可以同样处理呢？</p>
-											<p>BlogID: [<font color='red'>Py03192</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-config.html" title="config使用方法">
-												<img width="520" height="400" src="./blog/blogPic/python-config.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-config.html">
-													Python-config 配置实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Python中config的使用方法的实际应用</p>
-											<p>BlogID: [<font color='red'>Py03191</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-parser.html" title="parser实例">
-												<img width="520" height="400" src="./blog/blogPic/python-parser.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-parser.html">
-													Python-parser 学习实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>用实际的例子，综合学习Python中parser以及setup.py的用法。</p>
-											<p>BlogID: [<font color='red'>Py03172</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-import.html" title="import导包">
-												<img width="520" height="400" src="./blog/blogPic/python-import.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-import.html">
-													关于导包的几种方式
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>在不同的文件中，import导入包的格式、作用有哪些不同？</p>
-											<p>BlogID: [<font color='red'>Py03171</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-											<p>BlogID: [<font color='red'>Py03151</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-<p>BlogID: [<font color='red'>Py03141</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-											<p>BlogID: [<font color='red'>Py03123</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-apj.html" title="Anaconda,pytorch,jupyter">
-												<img width="520" height="400" src="./blog/blogPic/python-apj.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-apj.html">
-													Linux下安装Anaconda3, pytorch, jupyter notebook
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Anaconda3, pytorch, jupyter notebook的安装与配置（就像是自己搭载了一个服务器的感觉）</p>
-											<p>BlogID: [<font color='red'>Py03122</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-
-
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-											<p>BlogID: [<font color='red'>Html03121</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-								</div>
-
-								
-
-
-
-							</section>
-
-						</main>
-						<!-- #main -->
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
+									
+									<!--Markdown内容开始((((-->
+	
+	
+<div id='preview-contents' class='note-content'>
+                        
+                    
+<blockquote>
+  <p>★ <code>RNN</code>在<code>NLP</code>中的3个小应用（PyTorch实现）</p>
+  
+  <ul><li><p>自然语言处理( Natural Language Processing, NLP)是计算机科学领域与人工智能领域中的一个重要方向。</p></li>
+  </ul>
+</blockquote>
+
+<p><strong>前提</strong>：GPU版PyTorch已安装 <br>
+查看方法：</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line">print(torch.__version__) <span class="hljs-comment"># 查看Pytorch版本</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 1.7.1</span>
+</div><div class="hljs-line">print(torch.cuda.is_available()) <span class="hljs-comment"># 验证GPU版是否可用</span>
+</div><div class="hljs-line"><span class="hljs-comment"># True</span>
+</div></code></pre>
+
+<hr>
+
+
+
+<h3 id="1-词嵌入-pytorch实现">1 <code>词嵌入</code> - PyTorch实现</h3>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">word_to_ix = {<span class="hljs-string">'hello'</span>: <span class="hljs-number">0</span>, <span class="hljs-string">'world'</span>: <span class="hljs-number">1</span>}
+</div><div class="hljs-line">embeds = nn.Embedding(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>)
+</div><div class="hljs-line">hello_idx = torch.LongTensor([word_to_ix[<span class="hljs-string">'hello'</span>]])
+</div><div class="hljs-line">hello_idx = Variable(hello_idx)
+</div><div class="hljs-line">hello_embed = embeds(hello_idx)
+</div><div class="hljs-line">print(hello_embed)
+</div></code></pre>
+
+<p><strong>输出结果</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">tensor([[ 1.0135, -0.2385,  0.2811,  0.3737,  0.8869]],
+</div><div class="hljs-line">       grad_fn=&lt;EmbeddingBackward&gt;)
+</div></code></pre>
+
+<h3 id="2-单词预测-n-gram语言模型">2 <code>单词预测</code> - N Gram语言模型</h3>
+
+<blockquote>
+  <p>词嵌入是如何更新的，以及它如何结合N Gram语言模型进行预测 <br>
+  马尔可夫假设：某个待预测单词只与所在位置前面的几个单词有关系，并不是和前面所有的词都有关系</p>
+  
+  <ul><li><p>条件概率的传统解决方法：统计语料中每个单词出行的频率，据此来估计这个条件概率(根据贝叶斯定理来估计这个条件概率)</p></li>
+  <li><p>使用词嵌入的方法：直接在语料中计算这个条件概率，然后<strong>最大化条件概率</strong>从而优化词向量，据此进行预测。</p>
+  
+  <blockquote>
+    <p><em>即用词嵌入对估计条件概率的方法进行代替，然后使用 RNN 进行条件概率的计算，然后最大化这个条件概率不仅修改词嵌入，同时能够使得模型可以依据计算的条件概率对其中的一个单词进行预测。</em></p>
+  </blockquote></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> torch.nn.functional <span class="hljs-keyword">as</span> F
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># CONTEXT_SIZE 表示我们希望由前面几个单词来预测这个单词，这里使用两个单词，EMBEDDING_DIM 表示词嵌入的维度。</span>
+</div><div class="hljs-line">CONTEXT_SIZE = <span class="hljs-number">2</span>
+</div><div class="hljs-line">EMBEDDING_DIM = <span class="hljs-number">10</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># We will use Shakespeare Sonnet 2</span>
+</div><div class="hljs-line">test_sentence = <span class="hljs-string">"""When forty winters shall besiege thy brow,</span>
+</div><div class="hljs-line"><span class="hljs-string">    And dig deep trenches in thy beauty's field,</span>
+</div><div class="hljs-line"><span class="hljs-string">    Thy youth's proud livery so gazed on now,</span>
+</div><div class="hljs-line"><span class="hljs-string">    Will be a totter'd weed of small worth held:</span>
+</div><div class="hljs-line"><span class="hljs-string">    Then being asked, where all thy beauty lies,</span>
+</div><div class="hljs-line"><span class="hljs-string">    Where all the treasure of thy lusty days;</span>
+</div><div class="hljs-line"><span class="hljs-string">    To say, within thine own deep sunken eyes,</span>
+</div><div class="hljs-line"><span class="hljs-string">    Were an all-eating shame, and thriftless praise.</span>
+</div><div class="hljs-line"><span class="hljs-string">    How much more praise deserv'd thy beauty's use,</span>
+</div><div class="hljs-line"><span class="hljs-string">    If thou couldst answer 'This fair child of mine</span>
+</div><div class="hljs-line"><span class="hljs-string">    Shall sum my count, and make my old excuse,'</span>
+</div><div class="hljs-line"><span class="hljs-string">    Proving his beauty by succession thine!</span>
+</div><div class="hljs-line"><span class="hljs-string">    This were to be new made when thou art old,</span>
+</div><div class="hljs-line"><span class="hljs-string">    And see thy blood warm when thou feel'st it cold."""</span>.split()
+</div></code></pre>
+
+<p><strong>Step1 建立训练集</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 需要将单词分为3个组，每个组前两个作为传入的数据，而最后一个作为预测的结果</span>
+</div><div class="hljs-line">trigram = [((test_sentence[i], test_sentence[i+<span class="hljs-number">1</span>]), test_sentence[i+<span class="hljs-number">2</span>]) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(test_sentence) - <span class="hljs-number">2</span>)]
+</div></code></pre>
+
+<p><em>变量查看</em></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 总的数据量</span>
+</div><div class="hljs-line">len(trigram)  <span class="hljs-comment"># 113</span>
+</div></code></pre>
+
+<p><em>变量查看</em></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 取出第一个数据看看</span>
+</div><div class="hljs-line">trigram[<span class="hljs-number">0</span>]  <span class="hljs-comment"># (('When', 'forty'), 'winters')</span>
+</div></code></pre>
+
+<p><strong>Step2 将每个单词编码</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 将每个单词编码，即用数字来表示每个单词，只有这样猜能够传入nn.Embedding得到词向量</span>
+</div><div class="hljs-line">vocb = set(test_sentence) <span class="hljs-comment"># 通过set将重复的单词去掉</span>
+</div><div class="hljs-line">word_to_idx = {word: i <span class="hljs-keyword">for</span> i, word <span class="hljs-keyword">in</span> enumerate(vocb)}
+</div><div class="hljs-line">idx_to_word = {word_to_idx[word]: word <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> word_to_idx}
+</div></code></pre>
+
+<p><em>变量查看</em></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">idx_to_word  <span class="hljs-comment"># 可以看到每个词都对应一个数字，且这里的单词都各不相同</span>
+</div></code></pre>
+
+<p><em>变量查看</em> -&gt; Output</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">{0: 'on',
+</div><div class="hljs-line"> 1: 'answer',
+</div><div class="hljs-line"> 2: 'sunken',
+</div><div class="hljs-line"> 3: 'livery',
+</div><div class="hljs-line"> 4: 'Proving',
+</div><div class="hljs-line"> 5: 'new',
+</div><div class="hljs-line"> 6: 'old',
+</div><div class="hljs-line"> 7: "feel'st",
+</div><div class="hljs-line"> 8: 'couldst',
+</div><div class="hljs-line"> 9: 'This',
+</div><div class="hljs-line"> 10: 'now,',
+</div><div class="hljs-line"> 11: 'proud',
+</div><div class="hljs-line"> 12: 'To',
+</div><div class="hljs-line"> 13: 'a',
+</div><div class="hljs-line"> 14: "deserv'd",
+</div><div class="hljs-line"> 15: 'it',
+</div><div class="hljs-line"> 16: 'thine!',
+</div><div class="hljs-line"> 17: 'when',
+</div><div class="hljs-line"> 18: 'count,',
+</div><div class="hljs-line"> 19: 'an',
+</div><div class="hljs-line"> 20: 'treasure',
+</div><div class="hljs-line"> 21: 'to',
+</div><div class="hljs-line"> 22: "'This",
+</div><div class="hljs-line"> 23: 'How',
+</div><div class="hljs-line"> 24: 'field,',
+</div><div class="hljs-line"> 25: 'being',
+</div><div class="hljs-line"> 26: 'fair',
+</div><div class="hljs-line"> 27: 'be',
+</div><div class="hljs-line"> 28: 'more',
+</div><div class="hljs-line"> 29: 'see',
+</div><div class="hljs-line"> 30: 'all-eating',
+</div><div class="hljs-line"> 31: 'in',
+</div><div class="hljs-line"> 32: 'lies,',
+</div><div class="hljs-line"> 33: 'dig',
+</div><div class="hljs-line"> 34: 'make',
+</div><div class="hljs-line"> 35: 'If',
+</div><div class="hljs-line"> 36: 'beauty',
+</div><div class="hljs-line"> 37: 'thriftless',
+</div><div class="hljs-line"> 38: 'small',
+</div><div class="hljs-line"> 39: "excuse,'",
+</div><div class="hljs-line"> 40: 'were',
+</div><div class="hljs-line"> 41: 'And',
+</div><div class="hljs-line"> 42: 'of',
+</div><div class="hljs-line"> 43: 'deep',
+</div><div class="hljs-line"> 44: 'and',
+</div><div class="hljs-line"> 45: "beauty's",
+</div><div class="hljs-line"> 46: "youth's",
+</div><div class="hljs-line"> 47: 'days;',
+</div><div class="hljs-line"> 48: 'gazed',
+</div><div class="hljs-line"> 49: 'shame,',
+</div><div class="hljs-line"> 50: "totter'd",
+</div><div class="hljs-line"> 51: 'shall',
+</div><div class="hljs-line"> 52: 'lusty',
+</div><div class="hljs-line"> 53: 'thou',
+</div><div class="hljs-line"> 54: 'When',
+</div><div class="hljs-line"> 55: 'succession',
+</div><div class="hljs-line"> 56: 'the',
+</div><div class="hljs-line"> 57: 'his',
+</div><div class="hljs-line"> 58: 'forty',
+</div><div class="hljs-line"> 59: 'Will',
+</div><div class="hljs-line"> 60: 'Shall',
+</div><div class="hljs-line"> 61: 'use,',
+</div><div class="hljs-line"> 62: 'warm',
+</div><div class="hljs-line"> 63: 'thy',
+</div><div class="hljs-line"> 64: 'winters',
+</div><div class="hljs-line"> 65: 'weed',
+</div><div class="hljs-line"> 66: 'besiege',
+</div><div class="hljs-line"> 67: 'made',
+</div><div class="hljs-line"> 68: 'asked,',
+</div><div class="hljs-line"> 69: 'Then',
+</div><div class="hljs-line"> 70: 'cold.',
+</div><div class="hljs-line"> 71: 'brow,',
+</div><div class="hljs-line"> 72: 'art',
+</div><div class="hljs-line"> 73: 'say,',
+</div><div class="hljs-line"> 74: 'child',
+</div><div class="hljs-line"> 75: 'where',
+</div><div class="hljs-line"> 76: 'praise.',
+</div><div class="hljs-line"> 77: 'own',
+</div><div class="hljs-line"> 78: 'much',
+</div><div class="hljs-line"> 79: 'within',
+</div><div class="hljs-line"> 80: 'sum',
+</div><div class="hljs-line"> 81: 'trenches',
+</div><div class="hljs-line"> 82: 'mine',
+</div><div class="hljs-line"> 83: 'Thy',
+</div><div class="hljs-line"> 84: 'blood',
+</div><div class="hljs-line"> 85: 'Were',
+</div><div class="hljs-line"> 86: 'by',
+</div><div class="hljs-line"> 87: 'my',
+</div><div class="hljs-line"> 88: 'thine',
+</div><div class="hljs-line"> 89: 'praise',
+</div><div class="hljs-line"> 90: 'old,',
+</div><div class="hljs-line"> 91: 'all',
+</div><div class="hljs-line"> 92: 'worth',
+</div><div class="hljs-line"> 93: 'Where',
+</div><div class="hljs-line"> 94: 'eyes,',
+</div><div class="hljs-line"> 95: 'held:',
+</div><div class="hljs-line"> 96: 'so'}
+</div></code></pre>
+
+<p><strong>Step3 定义 N Gram 模型</strong></p>
+
+<blockquote>
+  <p>模型的输入就是前面的两个词，输出就是预测单词的概率</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 原书代码 + 小修 by tao</span>
+</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NgramModel</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, vocb_size, context_size=CONTEXT_SIZE, n_dim=EMBEDDING_DIM)</span>:</span>
+</div><div class="hljs-line">        super(NgramModel, self).__init__()
+</div><div class="hljs-line">        self.n_word = vocb_size
+</div><div class="hljs-line">        self.embedding = nn.Embedding(self.n_word, n_dim)
+</div><div class="hljs-line">        self.linear1 = nn.Linear(context_size * n_dim, <span class="hljs-number">128</span>)
+</div><div class="hljs-line">        self.linear2 = nn.Linear(<span class="hljs-number">128</span>, self.n_word)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        emb = self.embedding(x)
+</div><div class="hljs-line">        emb = emb.view(<span class="hljs-number">1</span>, <span class="hljs-number">-1</span>)
+</div><div class="hljs-line">        out = self.linear1(emb)
+</div><div class="hljs-line">        out = F.relu(out)
+</div><div class="hljs-line">        out = self.linear2(out)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> out
+</div><div class="hljs-line"><span class="hljs-comment">#         log_prob = F.log_softmax(out)</span>
+</div><div class="hljs-line"><span class="hljs-comment">#         return log_prob</span>
+</div></code></pre>
+
+<p><strong>作者代码 v2.0更新版</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line"># 定义 N Gram模型
+</div><div class="hljs-line"># 模型的输入就是前面的两个词，输出就是预测单词的概率
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">class n_gram(nn.Module):
+</div><div class="hljs-line">    def __init__(self, vocab_size, context_size=CONTEXT_SIZE, n_dim=EMBEDDING_DIM):
+</div><div class="hljs-line">        super(n_gram, self).__init__()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        self.embed = nn.Embedding(vocab_size, n_dim)
+</div><div class="hljs-line">        self.classify = nn.Sequential(
+</div><div class="hljs-line">            nn.Linear(context_size * n_dim, 128),
+</div><div class="hljs-line">            nn.ReLU(True),
+</div><div class="hljs-line">            nn.Linear(128, vocab_size)
+</div><div class="hljs-line">        )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    def forward(self, x):
+</div><div class="hljs-line">        voc_embed = self.embed(x) # 得到词嵌入
+</div><div class="hljs-line">        voc_embed = voc_embed.view(1, -1) # 将两个词向量拼在一起
+</div><div class="hljs-line">        out = self.classify(voc_embed)
+</div><div class="hljs-line">        return out
+</div></code></pre>
+
+<p><strong>Step4 开始训练</strong></p>
+
+<blockquote>
+  <p>最后我们输出就是条件概率，相当于是一个分类问题，我们可以使用交叉熵来方便地衡量误差</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">net = NgramModel(len(word_to_idx))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">criterion = nn.CrossEntropyLoss()
+</div><div class="hljs-line">optimizer = torch.optim.SGD(net.parameters(), lr=<span class="hljs-number">1e-2</span>, weight_decay=<span class="hljs-number">1e-5</span>)
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):
+</div><div class="hljs-line">    train_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> word, label <span class="hljs-keyword">in</span> trigram: <span class="hljs-comment"># 使用前 100 个作为训练集</span>
+</div><div class="hljs-line">        word = Variable(torch.LongTensor([word_to_idx[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> word])) <span class="hljs-comment"># 将两个词作为输入</span>
+</div><div class="hljs-line">        label = Variable(torch.LongTensor([word_to_idx[label]]))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">        out = net(word)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        loss = criterion(out, label)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        train_loss += loss.item()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 反向传播</span>
+</div><div class="hljs-line">        optimizer.zero_grad()
+</div><div class="hljs-line">        loss.backward()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        optimizer.step()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> (e + <span class="hljs-number">1</span>) % <span class="hljs-number">20</span> == <span class="hljs-number">0</span>:
+</div><div class="hljs-line">        print(<span class="hljs-string">'epoch: {}, Loss: {:.6f}'</span>.format(e + <span class="hljs-number">1</span>, train_loss / len(trigram)))
+</div></code></pre>
+
+<p><strong>输出结果</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">epoch: 20, Loss: 0.738774
+</div><div class="hljs-line">epoch: 40, Loss: 0.140150
+</div><div class="hljs-line">epoch: 60, Loss: 0.089768
+</div><div class="hljs-line">epoch: 80, Loss: 0.072926
+</div><div class="hljs-line">epoch: 100, Loss: 0.064004
+</div></code></pre>
+
+<p><strong>Step5 模型测试</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">net = net.eval()
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 测试一下结果</span>
+</div><div class="hljs-line">word, label = trigram[<span class="hljs-number">19</span>]
+</div><div class="hljs-line">print(<span class="hljs-string">'input: {}'</span>.format(word))
+</div><div class="hljs-line">print(<span class="hljs-string">'label: {}'</span>.format(label))
+</div><div class="hljs-line">print()
+</div><div class="hljs-line">word = Variable(torch.LongTensor([word_to_idx[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> word]))
+</div><div class="hljs-line">out = net(word)
+</div><div class="hljs-line">pred_label_idx = out.max(<span class="hljs-number">1</span>)[<span class="hljs-number">1</span>].item()
+</div><div class="hljs-line">predict_word = idx_to_word[pred_label_idx]
+</div><div class="hljs-line">print(<span class="hljs-string">'real word is {}, predicted word is {}'</span>.format(label, predict_word))
+</div></code></pre>
+
+<p><strong>输出结果 例1</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">input: ('so', 'gazed')
+</div><div class="hljs-line">label: on
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">real word is on, predicted word is on
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">word, label = trigram[<span class="hljs-number">75</span>]
+</div><div class="hljs-line">print(<span class="hljs-string">'input: {}'</span>.format(word))
+</div><div class="hljs-line">print(<span class="hljs-string">'label: {}'</span>.format(label))
+</div><div class="hljs-line">print()
+</div><div class="hljs-line">word = Variable(torch.LongTensor([word_to_idx[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> word]))
+</div><div class="hljs-line">out = net(word)
+</div><div class="hljs-line">pred_label_idx = out.max(<span class="hljs-number">1</span>)[<span class="hljs-number">1</span>].item()
+</div><div class="hljs-line">predict_word = idx_to_word[pred_label_idx]
+</div><div class="hljs-line">print(<span class="hljs-string">'real word is {}, predicted word is {}'</span>.format(label, predict_word))
+</div></code></pre>
+
+<p><strong>输出结果 例2</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">input: ("'This", 'fair')
+</div><div class="hljs-line">label: child
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">real word is child, predicted word is child
+</div></code></pre>
+
+<p><strong>Step6 结果分析</strong></p>
+
+<blockquote>
+  <p><strong>结果：</strong> 在训练集上基本能够预测准确； <br>
+  <strong>可能存在的问题：</strong> 不过这里样本太少，特别容易过拟合。</p>
+</blockquote>
+
+<h3 id="3-词性预测判断-基于lstm">3 <code>词性预测/判断</code> - 基于LSTM</h3>
+
+<p>前面两部分主要介绍<strong>词嵌入</strong> &amp; <strong>N Gram模型</strong>，接下来，结合 1 &amp; 2，利用RNN（借助LSTM）来进行词性预测/判断</p>
+
+<blockquote>
+  <p><strong>分析</strong>：</p>
+  
+  <ul><li><p>一个相同的单词可以表示两种不同的词性，比如 book 既可以表示名词，也可以表示动词，所以到底这个词是什么词性需要结合前后文来具体判断。</p></li>
+  <li><p>对于一个单词，会有这不同的词性，首先能够根据一个单词的后缀来初步判断，比如 -ly 这种后缀，很大概率是一个副词。</p></li>
+  </ul>
+  
+  <p><strong>结论</strong>：可以使用 lstm 模型来进行预测</p>
+  
+  <ul><li><p>首先对于一个单词，可以将其看作一个序列，比如 apple 是由 a p p l e 这 5 个单词构成，这就形成了 5 的序列，我们可以对这些字符构建词嵌入；</p></li>
+  <li><p>然后输入 lstm，就像 lstm 做图像分类一样，只取最后一个输出作为预测结果，整个单词的字符串能够形成一种记忆的特性，帮助我们更好的预测词性；</p></li>
+  <li><p>接着我们把这个单词和其前面几个单词构成序列，可以对这些单词构建新的词嵌入；</p></li>
+  <li><p>最后输出结果是单词的词性，也就是根据前面几个词的信息对这个词的词性进行分类。</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+</div></code></pre>
+
+<p><strong>Step1 导入训练集（简单两句话）</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">training_data = [(<span class="hljs-string">"The dog ate the apple"</span>.split(),
+</div><div class="hljs-line">                  [<span class="hljs-string">"DET"</span>, <span class="hljs-string">"NN"</span>, <span class="hljs-string">"V"</span>, <span class="hljs-string">"DET"</span>, <span class="hljs-string">"NN"</span>]),
+</div><div class="hljs-line">                 (<span class="hljs-string">"Everybody read that book"</span>.split(), 
+</div><div class="hljs-line">                  [<span class="hljs-string">"NN"</span>, <span class="hljs-string">"V"</span>, <span class="hljs-string">"DET"</span>, <span class="hljs-string">"NN"</span>])]
+</div></code></pre>
+
+<p><strong>Step2 对单词和标签进行编码</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">word_to_idx = {}
+</div><div class="hljs-line">tag_to_idx = {}
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> context, tag <span class="hljs-keyword">in</span> training_data:
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> context:
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> word.lower() <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> word_to_idx:
+</div><div class="hljs-line">            word_to_idx[word.lower()] = len(word_to_idx)
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> label <span class="hljs-keyword">in</span> tag:
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> label.lower() <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> tag_to_idx:
+</div><div class="hljs-line">            tag_to_idx[label.lower()] = len(tag_to_idx)
+</div></code></pre>
+
+<p><em>变量查看</em></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">word_to_idx
+</div></code></pre>
+
+<p><em>变量查看</em> -&gt; Output</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">{'the': 0,
+</div><div class="hljs-line"> 'dog': 1,
+</div><div class="hljs-line"> 'ate': 2,
+</div><div class="hljs-line"> 'apple': 3,
+</div><div class="hljs-line"> 'everybody': 4,
+</div><div class="hljs-line"> 'read': 5,
+</div><div class="hljs-line"> 'that': 6,
+</div><div class="hljs-line"> 'book': 7}
+</div></code></pre>
+
+<p><em>变量查看</em></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">tag_to_idx  <span class="hljs-comment"># {'det': 0, 'nn': 1, 'v': 2}</span>
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 对字母进行编码</span>
+</div><div class="hljs-line">alphabet = <span class="hljs-string">'abcdefghijklmnopqrstuvwxyz'</span>
+</div><div class="hljs-line">char_to_idx = {}
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(alphabet)):
+</div><div class="hljs-line">    char_to_idx[alphabet[i]] = i
+</div></code></pre>
+
+<p><em>变量查看</em></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">char_to_idx
+</div></code></pre>
+
+<p><em>变量查看</em> -&gt; Output</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">{'a': 0,
+</div><div class="hljs-line"> 'b': 1,
+</div><div class="hljs-line"> 'c': 2,
+</div><div class="hljs-line"> 'd': 3,
+</div><div class="hljs-line"> 'e': 4,
+</div><div class="hljs-line"> 'f': 5,
+</div><div class="hljs-line"> 'g': 6,
+</div><div class="hljs-line"> 'h': 7,
+</div><div class="hljs-line"> 'i': 8,
+</div><div class="hljs-line"> 'j': 9,
+</div><div class="hljs-line"> 'k': 10,
+</div><div class="hljs-line"> 'l': 11,
+</div><div class="hljs-line"> 'm': 12,
+</div><div class="hljs-line"> 'n': 13,
+</div><div class="hljs-line"> 'o': 14,
+</div><div class="hljs-line"> 'p': 15,
+</div><div class="hljs-line"> 'q': 16,
+</div><div class="hljs-line"> 'r': 17,
+</div><div class="hljs-line"> 's': 18,
+</div><div class="hljs-line"> 't': 19,
+</div><div class="hljs-line"> 'u': 20,
+</div><div class="hljs-line"> 'v': 21,
+</div><div class="hljs-line"> 'w': 22,
+</div><div class="hljs-line"> 'x': 23,
+</div><div class="hljs-line"> 'y': 24,
+</div><div class="hljs-line"> 'z': 25}
+</div></code></pre>
+
+<p><strong>Step3 构建训练数据</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_sequence</span><span class="hljs-params">(x, dic)</span>:</span> <span class="hljs-comment"># 字符编码</span>
+</div><div class="hljs-line">    idx = [dic[i.lower()] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+</div><div class="hljs-line">    idx = torch.LongTensor(idx)
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> idx
+</div></code></pre>
+
+<p><em>变量查看</em> </p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">make_sequence(<span class="hljs-string">'apple'</span>, char_to_idx)  <span class="hljs-comment"># tensor([ 0, 15, 15, 11,  4])</span>
+</div></code></pre>
+
+<p><em>变量查看</em> </p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">training_data[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]  <span class="hljs-comment"># ['Everybody', 'read', 'that', 'book']</span>
+</div></code></pre>
+
+<p><em>变量查看</em> </p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">make_sequence(training_data[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>], word_to_idx)  <span class="hljs-comment"># tensor([4, 5, 6, 7])</span>
+</div></code></pre>
+
+<p><strong>Step4 构建单个字符的 lstm 模型</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">char_lstm</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, n_char, char_dim, char_hidden)</span>:</span>
+</div><div class="hljs-line">        super(char_lstm, self).__init__()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        self.char_embed = nn.Embedding(n_char, char_dim)
+</div><div class="hljs-line">        self.lstm = nn.LSTM(char_dim, char_hidden)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        x = self.char_embed(x)
+</div><div class="hljs-line">        out, _ = self.lstm(x)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> out[<span class="hljs-number">-1</span>] <span class="hljs-comment"># (batch, hidden)</span>
+</div></code></pre>
+
+<p><strong>Step5 构建词性分类的 lstm 模型</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">lstm_tagger</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, n_word, n_char, char_dim, word_dim, </span></span>
+</div><div class="hljs-line"><span class="hljs-function">                 char_hidden, word_hidden, n_tag):</span>
+</div><div class="hljs-line">        super(lstm_tagger, self).__init__()
+</div><div class="hljs-line">        self.word_embed = nn.Embedding(n_word, word_dim)
+</div><div class="hljs-line">        self.char_lstm = char_lstm(n_char, char_dim, char_hidden)
+</div><div class="hljs-line">        self.word_lstm = nn.LSTM(word_dim + char_hidden, word_hidden)
+</div><div class="hljs-line">        self.classify = nn.Linear(word_hidden, n_tag)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x, word)</span>:</span>
+</div><div class="hljs-line">        char = []
+</div><div class="hljs-line">        <span class="hljs-keyword">for</span> w <span class="hljs-keyword">in</span> word: <span class="hljs-comment"># 对于每个单词做字符的 lstm</span>
+</div><div class="hljs-line">            char_list = make_sequence(w, char_to_idx)
+</div><div class="hljs-line">            char_list = char_list.unsqueeze(<span class="hljs-number">1</span>) <span class="hljs-comment"># (seq, batch, feature) 满足 lstm 输入条件</span>
+</div><div class="hljs-line">            char_infor = self.char_lstm(Variable(char_list)) <span class="hljs-comment"># (batch, char_hidden)</span>
+</div><div class="hljs-line">            char.append(char_infor)
+</div><div class="hljs-line">        char = torch.stack(char, dim=<span class="hljs-number">0</span>) <span class="hljs-comment"># (seq, batch, feature)</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        x = self.word_embed(x) <span class="hljs-comment"># (batch, seq, word_dim)</span>
+</div><div class="hljs-line">        x = x.permute(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>) <span class="hljs-comment"># 改变顺序</span>
+</div><div class="hljs-line">        x = torch.cat((x, char), dim=<span class="hljs-number">2</span>) <span class="hljs-comment"># 沿着特征通道将每个词的词嵌入和字符 lstm 输出的结果拼接在一起</span>
+</div><div class="hljs-line">        x, _ = self.word_lstm(x)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        s, b, h = x.shape
+</div><div class="hljs-line">        x = x.view(<span class="hljs-number">-1</span>, h) <span class="hljs-comment"># 重新 reshape 进行分类线性层</span>
+</div><div class="hljs-line">        out = self.classify(x)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> out
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">net = lstm_tagger(len(word_to_idx), len(char_to_idx), <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">50</span>, <span class="hljs-number">128</span>, len(tag_to_idx))
+</div><div class="hljs-line">criterion = nn.CrossEntropyLoss()
+</div><div class="hljs-line">optimizer = torch.optim.SGD(net.parameters(), lr=<span class="hljs-number">1e-2</span>)
+</div></code></pre>
+
+<p><strong>Step6 开始训练</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> range(<span class="hljs-number">300</span>):
+</div><div class="hljs-line">    train_loss = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> word, tag <span class="hljs-keyword">in</span> training_data:
+</div><div class="hljs-line">        word_list = make_sequence(word, word_to_idx).unsqueeze(<span class="hljs-number">0</span>) <span class="hljs-comment"># 添加第一维 batch</span>
+</div><div class="hljs-line">        tag = make_sequence(tag, tag_to_idx)
+</div><div class="hljs-line">        word_list = Variable(word_list)
+</div><div class="hljs-line">        tag = Variable(tag)
+</div><div class="hljs-line">        <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">        out = net(word_list, word)
+</div><div class="hljs-line">        loss = criterion(out, tag)
+</div><div class="hljs-line">        train_loss += loss.item()
+</div><div class="hljs-line">        <span class="hljs-comment"># 反向传播</span>
+</div><div class="hljs-line">        optimizer.zero_grad()
+</div><div class="hljs-line">        loss.backward()
+</div><div class="hljs-line">        optimizer.step()
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> (e + <span class="hljs-number">1</span>) % <span class="hljs-number">50</span> == <span class="hljs-number">0</span>:
+</div><div class="hljs-line">        print(<span class="hljs-string">'Epoch: {}, Loss: {:.5f}'</span>.format(e + <span class="hljs-number">1</span>, train_loss / len(training_data)))
+</div></code></pre>
+
+<p><strong>输出结果</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">Epoch: 50, Loss: 0.91244
+</div><div class="hljs-line">Epoch: 100, Loss: 0.71033
+</div><div class="hljs-line">Epoch: 150, Loss: 0.50279
+</div><div class="hljs-line">Epoch: 200, Loss: 0.33263
+</div><div class="hljs-line">Epoch: 250, Loss: 0.21957
+</div><div class="hljs-line">Epoch: 300, Loss: 0.15108
+</div></code></pre>
+
+<p><strong>Step7 进行预测</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">net = net.eval()
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">test_sent = <span class="hljs-string">'Everybody ate the apple'</span>
+</div><div class="hljs-line">test = make_sequence(test_sent.split(), word_to_idx).unsqueeze(<span class="hljs-number">0</span>)
+</div><div class="hljs-line">out = net(Variable(test), test_sent.split())
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">print(tag_to_idx)
+</div><div class="hljs-line">print(<span class="hljs-string">"============="</span>)
+</div><div class="hljs-line">print(out)
+</div></code></pre>
+
+<p><strong>输出结果</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">{'det': 0, 'nn': 1, 'v': 2}
+</div><div class="hljs-line">=============
+</div><div class="hljs-line">tensor([[-0.9732,  1.7271, -0.7776],
+</div><div class="hljs-line">        [-1.0362, -0.6175,  1.5954],
+</div><div class="hljs-line">        [ 1.6785, -0.5793, -0.9897],
+</div><div class="hljs-line">        [-0.2566,  1.6937, -1.4471]], grad_fn=&lt;AddmmBackward&gt;)
+</div></code></pre>
+
+<p><strong>Step8 结果解释</strong></p>
+
+<blockquote>
+  <ul><li><p>因为最后一层的线性层没有使用 <code>softmax</code>，所以数值不太像一个概率；</p></li>
+  <li><p>但是每一行数值最大的就表示属于该类，可以看到第一个单词 ‘Everybody’ 属于 <code>nn</code>，第二个单词 ‘ate’ 属于 <code>v</code>，第三个单词 ‘the’ 属于<code>det</code>，第四个单词 ‘apple’ 属于 <code>nn</code>；</p></li>
+  <li><p><strong>所以得到的这个预测结果是正确的</strong></p></li>
+  </ul>
+</blockquote>
+
+<h3 id="目录">目录</h3>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><a href="#3个自然语言问题的处理循环神经网络">3个自然语言问题的处理（循环神经网络）</a><ul>
+<li><a href="#1-词嵌入-pytorch实现">1 词嵌入 - PyTorch实现</a></li>
+<li><a href="#2-单词预测-n-gram语言模型">2 单词预测 - N Gram语言模型</a></li>
+<li><a href="#3-词性预测判断-基于lstm">3 词性预测/判断 - 基于LSTM</a>
+<li><a href="#目录">目录</a></li>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+	
+									<!--))))Markdown内容结束-->
+
+
+								</div><!-- .entry-content -->
+
+							</article><!-- #post-## -->
+
+						</main><!-- #main -->
+
 					</div>
 					<!-- #primary -->
 
@@ -1571,21 +1271,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>
