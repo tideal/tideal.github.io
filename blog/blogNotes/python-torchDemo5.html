@@ -4,39 +4,44 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>T's Blog</title>
 
 	<link rel="stylesheet" id="wp-block-library-css"
-		href="./blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-fonts-css" href="./blog/blogCSS/t-font.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-material-icons-css" href="./blog/blogCSS/icon.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-includes.css.dist.block-library.style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-fonts-css" href="../../blog/blogCSS/t-font.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-material-icons-css" href="../../blog/blogCSS/icon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-social-icons-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="type-style-css" href="./blog/blogCSS/wp-content.themes.type-plus.style.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.fonts.socicon.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="type-style-css" href="../../blog/blogCSS/wp-content.themes.type-plus.style.css"
 		type="text/css" media="all">
+
+	<!--MarkDown: https://maxiang.io/ 转换为html后，下载的css---->
+	<link rel="stylesheet" href="../../assets/markdownStyle/marxico ver1.0.css">
+
+	<!--Code 美化下载的css-->
+	<link rel="stylesheet" type="text/css" href="../../assets/google-code-prettify/skins/doxy.css">
+
 
 	<link rel="stylesheet" id="type-blocks-style-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
-
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.css.blocks.css" type="text/css" media="all">
 	<link rel="stylesheet" id="type-slider-css-css"
-		href="./blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="jetpack_css-css" href="./blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
+		href="../../blog/blogCSS/wp-content.themes.type-plus.inc.slick.slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="../../blog/blogCSS/wp-content.plugins.jetpack.css.jetpack.css"
 		type="text/css" media="all">
 
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.jquery.jquery-migrate.min.js"></script>
 
+	<link rel="shortcut icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
+	<link rel="icon" href="../../blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="shortcut icon" href="../../blog/favicon4.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
 
-	<link rel="icon" href="./blog/favicon.ico?fit=32%2C32&amp;ssl=1" sizes="32x32">
-	<link rel="icon" href="./blog/favicon2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="../../blog/favicon3.png?fit=180%2C180&amp;ssl=1">
 
-	<link rel="apple-touch-icon-precomposed" href="./blog/favicon3.png?fit=180%2C180&amp;ssl=1">
-
-	<meta name="msapplication-TileImage" content="./blog/favicon4.png?fit=270%2C270&amp;ssl=1">
+	<meta name="msapplication-TileImage" content="../../blog/favicon4.png?fit=270%2C270&amp;ssl=1">
 
 
 	<style id="type-style-inline-css" type="text/css">
@@ -213,7 +218,6 @@
 			color: #666
 		}
 	</style>
-
 	<style>
 		.milestone-widget {
 			margin-bottom: 1em
@@ -264,7 +268,6 @@
 			padding-top: 1em
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		@keyframes caretBlink {
@@ -312,7 +315,6 @@
 			animation-timing-function: linear;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 		.skitchToastBoxContainer {
@@ -364,7 +366,6 @@
 			/* Don't remove this class it's a hack used by the Evernote Clipper */
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 
@@ -375,7 +376,6 @@
 			font-style: normal;
 		}
 	</style>
-
 	<style type="text/css">
 		/* Copyright 2019-present Evernote Corporation. All rights reserved. */
 
@@ -457,10 +457,12 @@
 			height: 36px;
 		}
 	</style>
-
 </head>
 
-<body onload="PR.prettyPrint()" class="home blog wp-custom-logo hfeed header-layout2 content-sidebar">
+<!--重要，class不一样，后面影响样式，比如class:single对 entry-meta 影响间距-->
+
+<body onload="PR.prettyPrint()"
+	class="home blog  post-template-default single single-post single-format-standard wp-custom-logo fimg-classic hfeed header-layout2 content-sidebar">
 
 	<div id="page" class="site">
 
@@ -471,7 +473,7 @@
 				<div class="site-branding">
 					<h1 class="site-title site-logo">
 						<a href="#" class="custom-logo-link" rel="home">
-							<img height="50" width="50" src="./blog/favicon.ico" class="custom-logo" alt="ALTTAO">
+							<img height="50" width="50" src="../../blog/favicon.ico" class="custom-logo" alt="ALTTAO">
 						</a>
 					</h1>
 
@@ -479,10 +481,10 @@
 				</div><!-- #site-branding -->
 
 				<!-- #header bg-image -->
-				<div class="header-image" style="background-image:url('./blog/blog bg/blogbg4.jpg')"></div>
+				<div class="header-image" style="background-image:url('../../blog/blog bg/blogbg4.jpg')"></div>
 
 				<!-- 也可以用
-					<div style="height:400px; background-image:url('./blog/blog bg/blogbg3.jpg');"></div>
+					<div style="height:400px; background-image:url('../../blog/blog bg/blogbg3.jpg');"></div>
 				-->
 
 				<div class="main-navbar navbar-left">
@@ -494,10 +496,10 @@
 									<a href="#">Python</a>
 								</li>
 								<li>
-									<a href="#">DL</a>
+									<a href="#">HTML</a>
 								</li>
 								<li>
-									<a href="#">HTML</a>
+									<a href="#">#</a>
 								</li>
 								<li>
 									<a href="#">#</a>
@@ -526,1069 +528,1329 @@
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 
-							<section class="row posts-loop ">
+							<article id="post-2676"
+								class="post-2676 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
 
-								
-								
-								<div class="post-wrapper col-12">
 
-									<article id="#" class="list-post hentry">
+								<header class="entry-header">
+									<h1 class="entry-title">
+										<!--此处要修改blog标题-->
+										<span>PyTorch 实例Ⅳ（生成对抗网络）</span>
+									</h1>
+									<div class="entry-meta">
+										<span class="byline">
+											<span class="author vcard">
 
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
+												<span class="screen-reader-text">Author</span>
+												<a class="url fn n" href="https://tideal.github.io/">tao</a>
 
-											<a href="./blog/blogNotes/python-torchDemo5.html" title="GANs学习笔记">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo5.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
+											</span>
+											&nbsp;&nbsp;
+											<time>Apr. 2021</time>
+										</span>
 
-										</figure>
+									</div>
+								</header>
+								<!-- .entry-header -->
 
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
 
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-14</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo5.html">
-													PyTorch 实例Ⅳ（生成对抗网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>[编码器(Autoencoder, Variational AutoEncoder)] -> [GAN] -> [Improving GAN]</p>
-											<p>BlogID: [<font color='red'>Py04141</font>]</p>
-										</div><!-- .entry-content -->
+								<div class="entry-content">
 
 									
-									</article><!-- #post-## -->
-
-								</div>
-											
-								
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-NLP3.html" title="三个NLP实例(RNN)">
-												<img width="520" height="400" src="./blog/blogPic/python-NLP3.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-NLP3.html">
-													3个自然语言问题的处理（循环神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>RNN在NLP中的3个小应用（PyTorch实现）</p>
-											<p>BlogID: [<font color='red'>Py04121</font>]</p>
-										</div><!-- .entry-content -->
-
+									<!--1. 标题移动到上面-->
+									<!--2. 代码块，单独处理一下-->
 									
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo4.html" title="一个完整的神经网络实例4">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo4.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-11</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo4.html">
-													PyTorch 实例Ⅲ-2（循环神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用RNN预测飞机月流量（序列数据）</p>
-											<p>BlogID: [<font color='red'>Py04112</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo3.html" title="一个完整的神经网络实例3">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo3.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-11</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo3.html">
-													PyTorch 实例Ⅲ-1（循环神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用RNN实现MNIST手写数字分类（图片类型的数据）</p>
-											<p>BlogID: [<font color='red'>Py04111</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-Learning01.html" title="Python语法学习实例01">
-												<img width="520" height="400" src="./blog/blogPic/python-eg01.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-												
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-08</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-Learning01.html">
-													Python 语法 01（用编程学习）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>编程解决实际的小任务/小问题，借此学习Python常用语法</p>
-											<p>BlogID: [<font color='red'>Py04081</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-														
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo2.html" title="一个完整的神经网络实例2">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo2.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/DeepLearning.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-														
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-05</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo2.html">
-													PyTorch 实例Ⅱ（卷积神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>利用CNN再现MNIST手写数字分类</p>
-											<p>BlogID: [<font color='red'>Py04051</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-torchDemo1.html" title="一个完整的神经网络实例1">
-												<img width="520" height="400" src="./blog/blogPic/python-torchDemo1.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/DeepLearning.html"
-														rel="category tag">DL</a>,
-														
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-04-02</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-torchDemo1.html">
-													PyTorch 实例Ⅰ（全连接神经网络）
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>多层全连接神经网络实现MNIST手写数字分类</p>
-											<p>BlogID: [<font color='red'>Py04021</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-pkl.html" title="pickle file 操作">
-												<img width="520" height="400" src="./blog/blogPic/python-pkl.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-pkl.html">
-													普通文件转.pkl文件
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>同时也可以举一反三，其他类型问题是否可以同样处理呢？</p>
-											<p>BlogID: [<font color='red'>Py03192</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-config.html" title="config使用方法">
-												<img width="520" height="400" src="./blog/blogPic/python-config.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-19</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-config.html">
-													Python-config 配置实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Python中config的使用方法的实际应用</p>
-											<p>BlogID: [<font color='red'>Py03191</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-							
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-parser.html" title="parser实例">
-												<img width="520" height="400" src="./blog/blogPic/python-parser.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-parser.html">
-													Python-parser 学习实例
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>用实际的例子，综合学习Python中parser以及setup.py的用法。</p>
-											<p>BlogID: [<font color='red'>Py03172</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-import.html" title="import导包">
-												<img width="520" height="400" src="./blog/blogPic/python-import.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-17</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-import.html">
-													关于导包的几种方式
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>在不同的文件中，import导入包的格式、作用有哪些不同？</p>
-											<p>BlogID: [<font color='red'>Py03171</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-								
-							
-							<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-tox.html" title="tox">
-												<img width="520" height="400" src="./blog/blogPic/python-tox.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：tag_href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：time-->
-												<span class="posted-on">
-													
-														<time>2021-03-15</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-tox.html">
-													Python自动化测试工具tox学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>tox.ini的学习与实例验证</p>
-											<p>BlogID: [<font color='red'>Py03151</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-							
-							
-							
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-setup.html" title="setup&tools">
-												<img width="520" height="400" src="./blog/blogPic/python-setup.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												<span class="cat-links">
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">Python</a>
-
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-14</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-setup.html">
-													Setup.py &amp; Setup.cfg 学习
-												</a>
-											</h2>
-
-											<div class=" entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											  <p>setup.py 和 setup.cfg的功能和作用 <br>
-setuptools的用法</p>
-<p>BlogID: [<font color='red'>Py03141</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-exec.html" title="pythonExec">
-												<img width="520" height="400" src="./blog/blogPic/html-python.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-exec.html">
-													Python & Python -m 的区别
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>python直接执行与python -m方式执行.py文件的区别？</p>
-											<p>BlogID: [<font color='red'>Py03123</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/python-apj.html" title="Anaconda,pytorch,jupyter">
-												<img width="520" height="400" src="./blog/blogPic/python-apj.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-
-												
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/tag1.html"
-														rel="category tag">tag1</a>,
-
-													<a href="https://#.com/category/tag2.html"
-														rel="category tag">tag2</a>,
-													-->
-
-													<a href="https://#.com/category/tag3.html"
-														rel="category tag">Python</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/python-apj.html">
-													Linux下安装Anaconda3, pytorch, jupyter notebook
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Anaconda3, pytorch, jupyter notebook的安装与配置（就像是自己搭载了一个服务器的感觉）</p>
-											<p>BlogID: [<font color='red'>Py03122</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-
-								</div>
-
-
-
-
-								<div class="post-wrapper col-12">
-
-									<article id="#" class="list-post hentry">
-
-										<!--入口图片-->
-										<!--第1/5处修改(3)：href, title, src-->
-										<figure class="entry-thumbnail">
-
-											<a href="./blog/blogNotes/html-MKFX.html" title="马克飞象">
-												<img width="520" height="400" src="./blog/blogPic/html-markdown.jpg"
-													class="attachment-type-medium size-type-medium wp-post-image"
-													alt="PicFirst" sizes="(max-width: 520px) 100vw, 520px">
-											</a>
-
-										</figure>
-
-										<!--入口Tag & Time & Title-->
-										<div class="entry-header">
-											<div class="entry-meta">
-												<!--入口Tag-->
-												<!--第2/5处修改(2)：href, tag-->
-												<span class="cat-links">
-													<!--
-													<a href="https://#.com/category/uncategorized.html"
-														rel="category tag">untag</a>
-													-->
-													<a href="https://#.com/category/HTMLlearning.html"
-														rel="category tag">HTML</a>
-												</span>
-
-												<!--入口Time-->
-												<!--第3/5处修改(2)：href, time-->
-												<span class="posted-on">
-													
-														<time>2021-03-12</time>
-													
-												</span>
-
-											</div>
-
-											<!--入口Title-->
-											<!--第4/5处修改(2)：href, title-->
-											<h2 class="entry-title">
-												<a href="./blog/blogNotes/html-MKFX.html">
-													马克飞象(Markdown->HTML)
-												</a>
-											</h2>
-
-											<div class="entry-meta">
-
-											</div>
-										</div><!-- .entry-header -->
-
-										<!--入口-简介-->
-										<!--第5/5处修改(1)：p-->
-										<div class="entry-summary">
-											<p>Markdown转Html的学习参考资料！</p>
-											<p>BlogID: [<font color='red'>Html03121</font>]</p>
-										</div><!-- .entry-content -->
-
-									</article><!-- #post-## -->
-								</div>
-
-								
-
-
-
-							</section>
-
-						</main>
-						<!-- #main -->
+									<!--Markdown内容开始((((-->
+	
+<div id='preview-contents' class='note-content'>
+                        
+                
+
+<blockquote>
+  <p>★ <code>GANs</code>的发展与改进</p>
+  
+  <ul><li><p>生成模型：自动编码器(<code>Autoencoder</code>) 和 变分自动编码器(<code>Variational AutoEncoder</code>, <code>VAE</code>)</p></li>
+  <li><p>生成对抗网络(<code>Generative Adversarial Networks</code>, <code>GANs</code>)：生成模型 vs. 对抗模型</p></li>
+  <li><p>Improving GAN：<code>GAN</code> 的缺点以及改进的<code>GAN</code> (<code>Wasserstein GAN</code>, etc.)</p></li>
+  </ul>
+</blockquote>
+
+<p><strong>前提</strong>1：MNIST数据集<a href="./python-torchDemo5/data.zip" target="_blank">下载</a>（附一种压缩&amp;解压命令） <br>
+( <code>?</code> ) 什么要压缩：文件夹在Jupyter notebook中无法直接下载（单个文件下载速度太慢且容易出错）</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-txt"><div class="hljs-line"><span class="hljs-comment line-number">1.</span>tar -cvf data_mnist.tar data  # 压缩 data 文件夹到 data_mnist.tar (目录相同)
+</div><div class="hljs-line"><span class="hljs-comment line-number">2.</span>tar -tf data_mnist.tar  # 查看压缩包内容
+</div><div class="hljs-line"><span class="hljs-comment line-number">3.</span>tar -xf data_mnist.tar -C  # 解压到当前目录
+</div><div class="hljs-line"><span class="hljs-comment line-number">4.</span>[or]
+</div><div class="hljs-line"><span class="hljs-comment line-number">5.</span>tar -xf data_mnist.tar -C ./anyfolder/  # 解压到当前目录的anyfolder文件夹下
+</div></code></pre>
+
+<p><strong>前提</strong>2：GPU版PyTorch已安装</p>
+
+<p>( <code>★</code> ) 查看方法：各种关于GPU信息的查看/设置命令</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> os
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">print(torch.cuda.is_available())  <span class="hljs-comment"># cuda是否可用； -&gt; True</span>
+</div><div class="hljs-line">print(torch.cuda.device_count())  <span class="hljs-comment"># 返回gpu数量；  -&gt; 1</span>
+</div><div class="hljs-line">print(torch.cuda.get_device_name(<span class="hljs-number">0</span>))  <span class="hljs-comment"># 返回gpu名字，设备索引默认从0开始； -&gt; GeForce GTX 1080 Ti</span>
+</div><div class="hljs-line">print(torch.cuda.current_device())  <span class="hljs-comment"># 返回当前设备索引；  -&gt; 0</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 如果device_count() 大于 1</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 可以指定GPU</span>
+</div><div class="hljs-line">os.environ[<span class="hljs-string">'CUDA_VISIBLE_DEVICES'</span>]=<span class="hljs-string">'0,1,2'</span>  <span class="hljs-comment"># 0, 1, 2</span>
+</div></code></pre>
+
+<hr>
+
+
+
+<h3 id="0-背景知识">0 背景知识</h3>
+
+<blockquote>
+  <p><code>生成模型</code>（<code>Generative Model</code>）这一概念属于概率统计和机器学习， 是指一系列用于<strong>随机</strong><code>生成</code><strong>可观测</strong><code>数据的模型</code>。 <br>
+  </p><ul><li><p>即：“生成”的样本和“真实”的样本尽可能地相似。</p></li></ul><p></p>
+</blockquote>
+
+<blockquote>
+  <p><code>生成模型</code>的两个主要功能：</p>
+  
+  <ul>
+  <li><p>学习一个概率分布</p></li>
+  
+  <li><p>生成数据</p></li>
+  </ul>
+</blockquote>
+
+
+<blockquote>
+  <p><strong>知识回顾</strong>：</p>
+  
+  <ul><li><p>第一代卷积神经网络Lenet的时间是1998年，由Lecun提出；卷积神经网络(<code>CNN</code>)适用于<strong>处理图像数据</strong></p></li>
+  <li><p>循环神经网络的提出时间是1986年，比卷积神经网络更早；循环神经网络(<code>RNN</code>)适用于<strong>处理序列数据</strong></p></li>
+  <li><p><code>CNN</code> -&gt; inception net、 resnet</p></li>
+  <li><p><code>RNN</code> -&gt; LSTM、GRU等不同的长短时记忆的网络</p></li>
+  <li><p>（本质上，仍然是在<code>CNN</code>和<code>RNN</code>的基础上作者监督学习的任务）</p></li>
+  </ul>
+  
+  <p>希望机器能够完成创造性的工作（<code>AE</code>, <code>VAE</code>的提出） <br>
+  推进了整个无监督学习的发展进程（<code>GANs</code>的提出）</p>
+</blockquote>
+
+<h3 id="1-自动编码器ae">1 自动编码器(AE)</h3>
+
+<blockquote>
+  <p><strong>功能</strong> <br>
+  ① 最开始作为一种数据的压缩方法 <br>
+  ② 在卷积网络中进行逐层预训练 <br>
+  ③ 数据去噪 <br>
+  ④ 可视化降维 <br>
+  ⑤ 生成数据（☆）</p>
+  
+  <p><strong>结构</strong> &amp; <strong>工作</strong></p>
+  
+  <ul><li><p>包括两个部分，第一部分是编码器(<code>encoder</code>)，第二部分是解码器(<code>decoder</code>)； <br>
+  </p><ul><li><p><code>编码器</code>和<code>解码器</code>都可以是任意的模型，通常我们可以使用神经网络作为我们的<code>编码器</code>和<code>解码器</code>；</p></li>
+  <li><p>输入的数据经过神经网络降维到一个编码，然后又通过另外一个神经网络解码得到一个与原始数据一模一样的生成数据，通过比较原始数据和生成数据，希望他们尽可能接近，所以最小化他们之间的差异来训练网络中编码器和解码器的参数；</p></li></ul><p></p></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+  <li><p>当训练完成之后，<code>只需要拿出解码器的部分</code>，然后随机传入<code>code</code>，<strong>就可以通过解码器<code>生成</code>各种各样的<code>数据</code></strong></p></li></ul>
+</blockquote>
+
+
+<blockquote>
+  <p>使用 MNIST 数据集构建一个简单的自动编码器</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> os
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision.datasets <span class="hljs-keyword">import</span> MNIST
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision <span class="hljs-keyword">import</span> transforms <span class="hljs-keyword">as</span> tfs
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision.utils <span class="hljs-keyword">import</span> save_image
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt 
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> datetime
+</div></code></pre>
+
+<blockquote>
+  <p>进行数据预处理和迭代器的构建</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># transforms.Normalize()使得图片的大小变为-1~1之间，这是为了使输入变成一个比较对称的分布，训练更加容易收敛。</span>
+</div><div class="hljs-line">im_tfs = tfs.Compose([
+</div><div class="hljs-line">    tfs.ToTensor(),
+</div><div class="hljs-line">    tfs.Normalize([<span class="hljs-number">0.5</span>], [<span class="hljs-number">0.5</span>]) <span class="hljs-comment"># 标准化      # 作者代码：tfs.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])</span>
+</div><div class="hljs-line">])
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 使用DataLoader生成一个读取图片的迭代器</span>
+</div><div class="hljs-line">train_set = MNIST(<span class="hljs-string">'./data'</span>, transform=im_tfs)
+</div><div class="hljs-line">train_data = DataLoader(train_set, batch_size=<span class="hljs-number">128</span>, shuffle=<span class="hljs-keyword">True</span>)
+</div></code></pre>
+
+<blockquote>
+  <p><strong>特别说明</strong>：这一步一般最好要有，个人经验来看，具有两个好处：</p>
+  
+  <ul><li><p>熟悉数据集；</p></li>
+  <li><p>验证数据读取是否成功！</p></li>
+  </ul>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">print(train_set.data.size())
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 图片数据，打印一张出来看看</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 同时也是为了验证，数据读取是否成功！    </span>
+</div><div class="hljs-line">plt.imshow(train_set.data[<span class="hljs-number">0</span>].numpy(),cmap=<span class="hljs-string">'gray'</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">plt.title(<span class="hljs-string">'%i'</span> % train_set.targets[<span class="hljs-number">0</span>])              <span class="hljs-comment"># 图片名称，显示真实标签，%i %d十进制整数，有区别，深入请查阅资料</span>
+</div><div class="hljs-line">plt.show()
+</div></code></pre>
+
+<blockquote>
+  <p><strong>定义网络</strong>(多层全连接神经网络 - 多层感知器)</p>
+  
+  <ul><li><p>特别注意★: 最后使用的激活函数是Tanh()，这个激活函数能够将最后的输出转换到-1~1之间，因为输入图片标准化在 -1 ~ 1 之间，所以输出也要在 -1 ~ 1 这个范围内</p></li>
+  </ul>
+  
+  </blockquote>
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">autoencoder</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+</div><div class="hljs-line">        super(autoencoder, self).__init__()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 定义简单的多层全连接网络（4层网络）作为编码器，中间使用ReLU激活函数</span>
+</div><div class="hljs-line">        self.encoder = nn.Sequential(
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">28</span>*<span class="hljs-number">28</span>, <span class="hljs-number">128</span>),
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">128</span>, <span class="hljs-number">64</span>),
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">64</span>, <span class="hljs-number">12</span>),
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">12</span>, <span class="hljs-number">3</span>) <span class="hljs-comment"># 输出的 code 是 3 维，便于可视化</span>
+</div><div class="hljs-line">        )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 定义的解码器，输入 3 维的编码，输出一个28 x 28 的图像数据，特别注意★</span>
+</div><div class="hljs-line">        self.decoder = nn.Sequential(
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">3</span>, <span class="hljs-number">12</span>),
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">12</span>, <span class="hljs-number">64</span>),
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">64</span>, <span class="hljs-number">128</span>),
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">128</span>, <span class="hljs-number">28</span>*<span class="hljs-number">28</span>),
+</div><div class="hljs-line">            nn.Tanh()  <span class="hljs-comment"># 特别注意★: 最后使用的激活函数是Tanh()，这个激活函数能够将最后的输出转换到-1~1之间</span>
+</div><div class="hljs-line">            <span class="hljs-comment"># 因为输入图片标准化在 -1 ~ 1 之间，所以输出也要在 -1 ~ 1 这个范围内</span>
+</div><div class="hljs-line">        )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        encode = self.encoder(x)
+</div><div class="hljs-line">        decode = self.decoder(encode)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> encode, decode
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">net = autoencoder()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    print(<span class="hljs-string">"GPU Available"</span>)
+</div><div class="hljs-line">    net = net.cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">x = Variable(torch.randn(<span class="hljs-number">1</span>, <span class="hljs-number">28</span>*<span class="hljs-number">28</span>)) <span class="hljs-comment"># batch size 是 1</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    x = x.cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">code, _ = net(x)
+</div><div class="hljs-line">print(code.shape)  <span class="hljs-comment"># 可以看到最后得到的 code 就是三维的 -&gt; torch.Size([1, 3])</span>
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">criterion = nn.MSELoss(size_average=<span class="hljs-keyword">False</span>)
+</div><div class="hljs-line">optimizer = torch.optim.Adam(net.parameters(), lr=<span class="hljs-number">1e-3</span>)
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">to_img</span><span class="hljs-params">(x)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-string">'''</span>
+</div><div class="hljs-line"><span class="hljs-string">    定义一个函数将最后的结果转换回图片</span>
+</div><div class="hljs-line"><span class="hljs-string">    '''</span>
+</div><div class="hljs-line">    x = <span class="hljs-number">0.5</span> * (x + <span class="hljs-number">1.</span>)
+</div><div class="hljs-line">    x = x.clamp(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)
+</div><div class="hljs-line">    x = x.view(x.shape[<span class="hljs-number">0</span>], <span class="hljs-number">1</span>, <span class="hljs-number">28</span>, <span class="hljs-number">28</span>)
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> x
+</div></code></pre>
+
+<blockquote>
+  <p><strong>训练网络</strong></p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 记录时间消耗 1/4</span>
+</div><div class="hljs-line">prev_time = datetime.datetime.now()  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 开始训练自动编码器</span>
+</div><div class="hljs-line">temp = <span class="hljs-number">1</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):
+</div><div class="hljs-line">    print(temp)
+</div><div class="hljs-line">    temp = temp + <span class="hljs-number">1</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> im, _ <span class="hljs-keyword">in</span> train_data:
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        im = im.view(im.shape[<span class="hljs-number">0</span>], <span class="hljs-number">-1</span>)
+</div><div class="hljs-line">        im = Variable(im)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">            im = im.cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">        _, output = net(im)
+</div><div class="hljs-line">        loss = criterion(output, im) / im.shape[<span class="hljs-number">0</span>] <span class="hljs-comment"># 平均</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment"># 反向传播</span>
+</div><div class="hljs-line">        optimizer.zero_grad()
+</div><div class="hljs-line">        loss.backward()
+</div><div class="hljs-line">        optimizer.step()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录时间消耗 2/4</span>
+</div><div class="hljs-line">    cur_time = datetime.datetime.now()  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    hhh, remainder = divmod((cur_time - prev_time).seconds, <span class="hljs-number">3600</span>)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    mmm, sss = divmod(remainder, <span class="hljs-number">60</span>)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    time_str = <span class="hljs-string">"Time %02d:%02d:%02d"</span> % (hhh, mmm, sss)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录时间消耗 3/4</span>
+</div><div class="hljs-line">    prev_time = cur_time
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> (e+<span class="hljs-number">1</span>) % <span class="hljs-number">20</span> == <span class="hljs-number">0</span>: <span class="hljs-comment"># 每 20 次，将生成的图片保存一下</span>
+</div><div class="hljs-line">        print(<span class="hljs-string">'epoch: {}, Loss: {:.4f}, Elapsed time：{}\n'</span>.format(e + <span class="hljs-number">1</span>, loss.item(), cur_time)) <span class="hljs-comment"># cur_time 记录时间消耗 4/4</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        pic = to_img(output.cpu().data)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(<span class="hljs-string">'./simple_autoencoder'</span>):
+</div><div class="hljs-line">            os.mkdir(<span class="hljs-string">'./simple_autoencoder'</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        save_image(pic, <span class="hljs-string">'./simple_autoencoder/image_{}.png'</span>.format(e + <span class="hljs-number">1</span>))
+</div></code></pre>
+
+<p><strong>输出结果</strong></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">epoch: 20, Loss: 100.1256, Elapsed time：2021-04-14 10:24:30.591077
+</div><div class="hljs-line">epoch: 40, Loss: 93.7939, Elapsed time：2021-04-14 10:28:11.433891
+</div><div class="hljs-line">epoch: 60, Loss: 91.5714, Elapsed time：2021-04-14 10:31:51.640803
+</div><div class="hljs-line">epoch: 80, Loss: 107.4346, Elapsed time：2021-04-14 10:35:32.260195
+</div><div class="hljs-line">epoch: 100, Loss: 94.9293, Elapsed time：2021-04-14 10:39:12.342502
+</div></code></pre>
+
+<p><strong>观测结果</strong></p>
+
+<ul><li><p>训练完成之后查看生成的图片效果，可以发现，虽然图片具有较好的清晰度，但是轮廓有些模糊；<code>多层感知器能够做的比较有限</code>，生成的图片还是比较模糊</p></li>
+</ul>
+
+<hr>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> cm
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> mpl_toolkits.mplot3d <span class="hljs-keyword">import</span> Axes3D
+</div><div class="hljs-line">%matplotlib inline
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 可视化结果</span>
+</div><div class="hljs-line">view_data = Variable((train_set.train_data[:<span class="hljs-number">200</span>].type(torch.FloatTensor).view(<span class="hljs-number">-1</span>, <span class="hljs-number">28</span>*<span class="hljs-number">28</span>) / <span class="hljs-number">255.</span> - <span class="hljs-number">0.5</span>) / <span class="hljs-number">0.5</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    view_data = view_data.cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">encode, _ = net(view_data)    <span class="hljs-comment"># 提取压缩的特征值</span>
+</div><div class="hljs-line">fig = plt.figure(<span class="hljs-number">2</span>)
+</div><div class="hljs-line">ax = Axes3D(fig)    <span class="hljs-comment"># 3D 图</span>
+</div><div class="hljs-line"><span class="hljs-comment"># x, y, z 的数据值</span>
+</div><div class="hljs-line">X = encode.data[:, <span class="hljs-number">0</span>].cpu().numpy()
+</div><div class="hljs-line">Y = encode.data[:, <span class="hljs-number">1</span>].cpu().numpy()
+</div><div class="hljs-line">Z = encode.data[:, <span class="hljs-number">2</span>].cpu().numpy()
+</div><div class="hljs-line">values = train_set.targets[:<span class="hljs-number">200</span>].numpy()  <span class="hljs-comment"># 标签值</span>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> x, y, z, s <span class="hljs-keyword">in</span> zip(X, Y, Z, values):
+</div><div class="hljs-line">    c = cm.rainbow(int(<span class="hljs-number">255</span>*s/<span class="hljs-number">9</span>))    <span class="hljs-comment"># 上色</span>
+</div><div class="hljs-line">    ax.text(x, y, z, s, backgroundcolor=c)  <span class="hljs-comment"># 标位置</span>
+</div><div class="hljs-line">ax.set_xlim(X.min(), X.max())
+</div><div class="hljs-line">ax.set_ylim(Y.min(), Y.max())
+</div><div class="hljs-line">ax.set_zlim(Z.min(), Z.max())
+</div><div class="hljs-line">plt.show()
+</div></code></pre>
+
+<p><strong>输出结果</strong></p>
+
+
+
+<p><img src="./python-torchDemo5/3D图.png" alt="Alt text" title="" type="image/png"> <br>
+<strong>观测结果</strong></p>
+
+<ul><li><p>不同种类的图片进入自动编码器之后会被编码得不同，</p></li>
+<li><p>而相同类型的图片经过自动编码之后的编码在几何示意图上距离较近，</p></li>
+</ul>
+
+<hr>
+
+<blockquote>
+  <p>在训练好自动编码器之后，我们可以给一个随机的 code，通过 decoder 生成图片</p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">code = Variable(torch.FloatTensor([[<span class="hljs-number">1.19</span>, <span class="hljs-number">-3.36</span>, <span class="hljs-number">2.06</span>]])) <span class="hljs-comment"># 给一个 code 是 (1.19, -3.36, 2.06)</span>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    code = code.cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">decode = net.decoder(code)
+</div><div class="hljs-line">decode_img = to_img(decode).squeeze()
+</div><div class="hljs-line">decode_img = decode_img.data.cpu().numpy() * <span class="hljs-number">255</span>
+</div><div class="hljs-line">plt.imshow(decode_img.astype(<span class="hljs-string">'uint8'</span>), cmap=<span class="hljs-string">'gray'</span>) <span class="hljs-comment"># 生成图片 3</span>
+</div></code></pre>
+
+<p><strong>输出结果</strong></p>
+
+
+
+<p><img src="./python-torchDemo5/eg图.png" alt="Alt text" title="" type="image/png"></p>
+
+<p><strong>总结</strong>：以上仅仅使用多层神经网络定义了一个自动编码器；</p>
+
+<hr>
+
+<p>接下来，使用卷积神经网络来重新定义一个卷积神经网络来进行 autoencoder</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">conv_autoencoder</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+</div><div class="hljs-line">        super(conv_autoencoder, self).__init__()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        self.encoder = nn.Sequential(
+</div><div class="hljs-line">            nn.Conv2d(<span class="hljs-number">1</span>, <span class="hljs-number">16</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">3</span>, padding=<span class="hljs-number">1</span>),  <span class="hljs-comment"># (b, 16, 10, 10)</span>
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.MaxPool2d(<span class="hljs-number">2</span>, stride=<span class="hljs-number">2</span>),  <span class="hljs-comment"># (b, 16, 5, 5)</span>
+</div><div class="hljs-line">            nn.Conv2d(<span class="hljs-number">16</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>, padding=<span class="hljs-number">1</span>),  <span class="hljs-comment"># (b, 8, 3, 3)</span>
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.MaxPool2d(<span class="hljs-number">2</span>, stride=<span class="hljs-number">1</span>)  <span class="hljs-comment"># (b, 8, 2, 2)</span>
+</div><div class="hljs-line">        )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        self.decoder = nn.Sequential(
+</div><div class="hljs-line">            nn.ConvTranspose2d(<span class="hljs-number">8</span>, <span class="hljs-number">16</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>),  <span class="hljs-comment"># (b, 16, 5, 5)</span>
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.ConvTranspose2d(<span class="hljs-number">16</span>, <span class="hljs-number">8</span>, <span class="hljs-number">5</span>, stride=<span class="hljs-number">3</span>, padding=<span class="hljs-number">1</span>),  <span class="hljs-comment"># (b, 8, 15, 15)</span>
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.ConvTranspose2d(<span class="hljs-number">8</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, stride=<span class="hljs-number">2</span>, padding=<span class="hljs-number">1</span>),  <span class="hljs-comment"># (b, 1, 28, 28)</span>
+</div><div class="hljs-line">            nn.Tanh()
+</div><div class="hljs-line">        )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        encode = self.encoder(x)
+</div><div class="hljs-line">        decode = self.decoder(encode)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> encode, decode
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">conv_net = conv_autoencoder()
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    conv_net = conv_net.cuda()
+</div><div class="hljs-line">optimizer = torch.optim.Adam(conv_net.parameters(), lr=<span class="hljs-number">1e-3</span>, weight_decay=<span class="hljs-number">1e-5</span>)
+</div></code></pre>
+
+<blockquote>
+  <p><strong>解释</strong>：</p>
+  
+  <ul><li><p>这里的编码器使用了<strong>多层卷积神经网络</strong>；</p></li>
+  <li><p>解码器使用了<strong>转置卷积</strong><code>torch.nn.ConvTranspose2d()</code>，看作是卷积的反操作，可以在某种意义上看成是反卷积。</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 记录时间消耗 1/4</span>
+</div><div class="hljs-line">prev_time = datetime.datetime.now()  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment"># 开始训练自动编码器</span>
+</div><div class="hljs-line">temp = <span class="hljs-number">1</span>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> range(<span class="hljs-number">40</span>):
+</div><div class="hljs-line">    print(temp)
+</div><div class="hljs-line">    temp = temp + <span class="hljs-number">1</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> im, _ <span class="hljs-keyword">in</span> train_data:
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">            im = im.cuda()
+</div><div class="hljs-line">        im = Variable(im)
+</div><div class="hljs-line">        <span class="hljs-comment"># 前向传播</span>
+</div><div class="hljs-line">        _, output = conv_net(im)
+</div><div class="hljs-line">        loss = criterion(output, im) / im.shape[<span class="hljs-number">0</span>] <span class="hljs-comment"># 平均</span>
+</div><div class="hljs-line">        <span class="hljs-comment"># 反向传播</span>
+</div><div class="hljs-line">        optimizer.zero_grad()
+</div><div class="hljs-line">        loss.backward()
+</div><div class="hljs-line">        optimizer.step()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录时间消耗 2/4</span>
+</div><div class="hljs-line">    cur_time = datetime.datetime.now()  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    hhh, remainder = divmod((cur_time - prev_time).seconds, <span class="hljs-number">3600</span>)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    mmm, sss = divmod(remainder, <span class="hljs-number">60</span>)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line">    time_str = <span class="hljs-string">"Time %02d:%02d:%02d"</span> % (hhh, mmm, sss)  <span class="hljs-comment"># time</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 记录时间消耗 3/4</span>
+</div><div class="hljs-line">    prev_time = cur_time
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> (e+<span class="hljs-number">1</span>) % <span class="hljs-number">20</span> == <span class="hljs-number">0</span>: <span class="hljs-comment"># 每 20 次，将生成的图片保存一下</span>
+</div><div class="hljs-line">        print(<span class="hljs-string">'epoch: {}, Loss: {:.4f}, Elapsed time：{}\n'</span>.format(e+<span class="hljs-number">1</span>, loss.item(), cur_time)) <span class="hljs-comment"># cur_time 记录时间消耗 4/4</span>
+</div><div class="hljs-line">        pic = to_img(output.cpu().data)
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(<span class="hljs-string">'./conv_autoencoder'</span>):
+</div><div class="hljs-line">            os.mkdir(<span class="hljs-string">'./conv_autoencoder'</span>)
+</div><div class="hljs-line">        save_image(pic, <span class="hljs-string">'./conv_autoencoder/image_{}.png'</span>.format(e+<span class="hljs-number">1</span>))
+</div></code></pre>
+
+<p><strong>输出结果</strong></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">epoch: 20, Loss: 113.5400, Elapsed time：2021-04-14 11:23:13.367150
+</div><div class="hljs-line">epoch: 40, Loss: 94.0273, Elapsed time：2021-04-14 11:27:05.002844
+</div></code></pre>
+
+<blockquote>
+  <p><strong>AE的优缺点</strong></p>
+  
+  <ul><li><p>优点：相比于随机取一个随机向量更好——自动编码器中需要输入一张图片，然后将一张图片编码之后得到一个隐含向量，这包含着原图片的信息，然后将隐含向量解码得到与原图片对应的照片；</p></li>
+  <li><p>缺点：不能生成任意图片——因为没办法自己取构造隐藏向量(因为我们并不知道 encode 之后的编码到底是什么样的概率分布)，需要通过一张图片输入编码才知道得到的隐含向量是什么</p></li>
+  </ul>
+</blockquote>
+
+<p><strong>解决这个缺点 -&gt; <code>变法自动编码器</code></strong></p>
+
+
+
+<h3 id="2-变分自动编码器vae">2 变分自动编码器(VAE)</h3>
+
+<blockquote>
+  <p><strong>原理</strong></p>
+  
+  <ul><li><p>只需要在编码过程给它增加一些限制，迫使其生成的隐含向量能够粗略的遵循一个标准正态分布，这就是其与一般的自动编码器最大的不同。</p></li>
+  <li><p>优势：<strong>随机生成隐含变量</strong>；<strong>提高网络的泛化能力</strong>。</p></li>
+  </ul>
+  
+  <p><strong>工作</strong></p>
+  
+  <ul><li><p>这样就可以更加简单地生成一张新图片，即，只需要给它一个标准正态分布的随机隐含向量，这样通过解码器就能够生成想要的图片，而不需要给它一张原始图片先编码。</p></li>
+  <li><p>loss 1: 利用 <code>KL divergence</code> 衡量 <code>encoder 得到的隐含向量的分布</code> 与 <code>一个标准的正态分布</code> 之间的相似程度;</p></li>
+  <li><p>loss 2: 利用均方误差 <code>MSE</code> 衡量 <code>生成图片</code> 与 <code>原图片</code> 之间的误差;</p></li>
+  </ul>
+  
+  <p><strong>说明</strong></p>
+  
+  <ul><li><p><code>KL divergence</code>是用来衡量两种分布相似程度的统计量，它越小，表示两种概率分布越接近。</p></li>
+  <li><p>技巧“重新参数化”来解决<code>KL divergence</code>的计算问题——避免计算<code>KL divergence</code>中的积分</p></li>
+  <li><p><strong>重新参数化</strong>——不再是每次生成一个隐含向量，而是生成两个向量：一个表示均值，一个表示标准差，然后通过着两个统计量<code>合成</code>隐含向量（用一个标准正态分布先乘标准差再加上均值就行了，这里默认编码之后的隐含向量是服从一个正态分布的）,最后 loss 就是希望这个生成的正态分布能够符合一个标准正态分布，也就是希望均值为 0，方差为 1</p></li>
+  </ul>
+</blockquote>
+
+<p><code>★</code> 变分自动编码器的实现（基于MNIST数据集）</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> os
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> torch.nn.functional <span class="hljs-keyword">as</span> F
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision.datasets <span class="hljs-keyword">import</span> MNIST
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision <span class="hljs-keyword">import</span> transforms <span class="hljs-keyword">as</span> tfs
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision.utils <span class="hljs-keyword">import</span> save_image
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">im_tfs = tfs.Compose([
+</div><div class="hljs-line">    tfs.ToTensor(),
+</div><div class="hljs-line">    tfs.Normalize([<span class="hljs-number">0.5</span>], [<span class="hljs-number">0.5</span>]) <span class="hljs-comment"># 标准化 原作者代码：tfs.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])</span>
+</div><div class="hljs-line">])
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_set = MNIST(<span class="hljs-string">'./data'</span>, transform=im_tfs)
+</div><div class="hljs-line">train_data = DataLoader(train_set, batch_size=<span class="hljs-number">128</span>, shuffle=<span class="hljs-keyword">True</span>)
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VAE</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+</div><div class="hljs-line">        super(VAE, self).__init__()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        self.fc1 = nn.Linear(<span class="hljs-number">784</span>, <span class="hljs-number">400</span>)
+</div><div class="hljs-line">        self.fc21 = nn.Linear(<span class="hljs-number">400</span>, <span class="hljs-number">20</span>) <span class="hljs-comment"># mean</span>
+</div><div class="hljs-line">        self.fc22 = nn.Linear(<span class="hljs-number">400</span>, <span class="hljs-number">20</span>) <span class="hljs-comment"># var</span>
+</div><div class="hljs-line">        self.fc3 = nn.Linear(<span class="hljs-number">20</span>, <span class="hljs-number">400</span>)
+</div><div class="hljs-line">        self.fc4 = nn.Linear(<span class="hljs-number">400</span>, <span class="hljs-number">784</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">encode</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        h1 = F.relu(self.fc1(x))
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> self.fc21(h1), self.fc22(h1)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment"># 重新参数化</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">reparametrize</span><span class="hljs-params">(self, mu, logvar)</span>:</span>
+</div><div class="hljs-line">        std = logvar.mul(<span class="hljs-number">0.5</span>).exp_()  <span class="hljs-comment"># 参数 1 “标准差”</span>
+</div><div class="hljs-line">        eps = torch.FloatTensor(std.size()).normal_()  <span class="hljs-comment"># 参数 2 “均值”</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">            eps = Variable(eps.cuda())
+</div><div class="hljs-line">        <span class="hljs-keyword">else</span>:
+</div><div class="hljs-line">            eps = Variable(eps)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> eps.mul(std).add_(mu)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decode</span><span class="hljs-params">(self, z)</span>:</span>
+</div><div class="hljs-line">        h3 = F.relu(self.fc3(z))
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> F.tanh(self.fc4(h3))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        mu, logvar = self.encode(x) <span class="hljs-comment"># 编码</span>
+</div><div class="hljs-line">        z = self.reparametrize(mu, logvar) <span class="hljs-comment"># 重新参数化成正态分布</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> self.decode(z), mu, logvar <span class="hljs-comment"># 解码，同时输出均值方差</span>
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">net = VAE() <span class="hljs-comment"># 实例化网络</span>
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    net = net.cuda()
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">x, _ = train_set[<span class="hljs-number">0</span>]
+</div><div class="hljs-line">x = x.view(x.shape[<span class="hljs-number">0</span>], <span class="hljs-number">-1</span>)
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    x = x.cuda()
+</div><div class="hljs-line">x = Variable(x)
+</div><div class="hljs-line">_, mu, var = net(x)
+</div></code></pre>
+
+<p><em>变量查看</em></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">print(mu)
+</div></code></pre>
+
+<p><em>变量查看</em> -&gt; Output</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">tensor([[-0.2078, -0.0315, -0.3368,  0.2668, -0.1725, -0.0438, -0.0255, -0.2598,
+</div><div class="hljs-line">          0.3098,  0.0805,  0.1474, -0.2702, -0.0527, -0.6565,  0.0457,  0.2047,
+</div><div class="hljs-line">         -0.2575,  0.1529, -0.3746, -0.1734]], device='cuda:0',
+</div><div class="hljs-line">       grad_fn=&lt;AddmmBackward&gt;)
+</div></code></pre>
+
+<blockquote>
+  <p>可以看到，对于输入，网络可以输出隐含变量的均值和方差，这里的均值方差还没有训练</p>
+</blockquote>
+
+<hr>
+
+<blockquote>
+  <p><strong>开始训练</strong></p>
+</blockquote>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><wbr>
+</div><div class="hljs-line">reconstruction_function = nn.MSELoss(size_average=<span class="hljs-keyword">False</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loss_function</span><span class="hljs-params">(recon_x, x, mu, logvar)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-string">"""</span>
+</div><div class="hljs-line"><span class="hljs-string">    recon_x: generating images</span>
+</div><div class="hljs-line"><span class="hljs-string">    x: origin images</span>
+</div><div class="hljs-line"><span class="hljs-string">    mu: latent mean</span>
+</div><div class="hljs-line"><span class="hljs-string">    logvar: latent log variance</span>
+</div><div class="hljs-line"><span class="hljs-string">    """</span>
+</div><div class="hljs-line">    MSE = reconstruction_function(recon_x, x)
+</div><div class="hljs-line">    <span class="hljs-comment"># loss = 0.5 * sum(1 + log(sigma^2) - mu^2 - sigma^2)</span>
+</div><div class="hljs-line">    KLD_element = mu.pow(<span class="hljs-number">2</span>).add_(logvar.exp()).mul_(<span class="hljs-number">-1</span>).add_(<span class="hljs-number">1</span>).add_(logvar)
+</div><div class="hljs-line">    KLD = torch.sum(KLD_element).mul_(<span class="hljs-number">-0.5</span>)
+</div><div class="hljs-line">    <span class="hljs-comment"># KL divergence</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> MSE + KLD
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">optimizer = torch.optim.Adam(net.parameters(), lr=<span class="hljs-number">1e-3</span>)
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">to_img</span><span class="hljs-params">(x)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-string">'''</span>
+</div><div class="hljs-line"><span class="hljs-string">    定义一个函数将最后的结果转换回图片</span>
+</div><div class="hljs-line"><span class="hljs-string">    '''</span>
+</div><div class="hljs-line">    x = <span class="hljs-number">0.5</span> * (x + <span class="hljs-number">1.</span>)
+</div><div class="hljs-line">    x = x.clamp(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)
+</div><div class="hljs-line">    x = x.view(x.shape[<span class="hljs-number">0</span>], <span class="hljs-number">1</span>, <span class="hljs-number">28</span>, <span class="hljs-number">28</span>)
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> x
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> im, _ <span class="hljs-keyword">in</span> train_data:
+</div><div class="hljs-line">        im = im.view(im.shape[<span class="hljs-number">0</span>], <span class="hljs-number">-1</span>)
+</div><div class="hljs-line">        im = Variable(im)
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">            im = im.cuda()
+</div><div class="hljs-line">        recon_im, mu, logvar = net(im)
+</div><div class="hljs-line">        loss = loss_function(recon_im, im, mu, logvar) / im.shape[<span class="hljs-number">0</span>] <span class="hljs-comment"># 将 loss 平均</span>
+</div><div class="hljs-line">        optimizer.zero_grad()
+</div><div class="hljs-line">        loss.backward()
+</div><div class="hljs-line">        optimizer.step()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">if</span> (e + <span class="hljs-number">1</span>) % <span class="hljs-number">20</span> == <span class="hljs-number">0</span>:
+</div><div class="hljs-line">        print(<span class="hljs-string">'epoch: {}, Loss: {:.4f}'</span>.format(e + <span class="hljs-number">1</span>, loss.item()))
+</div><div class="hljs-line">        save = to_img(recon_im.cpu().data)
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(<span class="hljs-string">'./vae_img'</span>):
+</div><div class="hljs-line">            os.mkdir(<span class="hljs-string">'./vae_img'</span>)
+</div><div class="hljs-line">        save_image(save, <span class="hljs-string">'./vae_img/image_{}.png'</span>.format(e + <span class="hljs-number">1</span>))
+</div></code></pre>
+
+<p><strong>输出结果</strong></p>
+
+<pre class="prettyprint hljs-dark"><code class="hljs groovy"><div class="hljs-line"><span class="hljs-string">epoch:</span> <span class="hljs-number">20</span>, <span class="hljs-string">Loss:</span> <span class="hljs-number">64.6217</span>
+</div><div class="hljs-line"><span class="hljs-string">epoch:</span> <span class="hljs-number">40</span>, <span class="hljs-string">Loss:</span> <span class="hljs-number">63.8465</span>
+</div><div class="hljs-line"><span class="hljs-string">epoch:</span> <span class="hljs-number">60</span>, <span class="hljs-string">Loss:</span> <span class="hljs-number">64.0109</span>
+</div><div class="hljs-line"><span class="hljs-string">epoch:</span> <span class="hljs-number">80</span>, <span class="hljs-string">Loss:</span> <span class="hljs-number">66.6021</span>
+</div><div class="hljs-line"><span class="hljs-string">epoch:</span> <span class="hljs-number">100</span>, <span class="hljs-string">Loss:</span> <span class="hljs-number">60.1428</span>
+</div></code></pre>
+
+<p><strong>结论</strong></p>
+
+<ul><li><p>使用变分自动编码器得到的结果，可以发现效果比一般的编码器要好很多</p></li>
+</ul>
+
+<p><em>查看均值</em></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">x, _ = train_set[<span class="hljs-number">0</span>]
+</div><div class="hljs-line">x = x.view(x.shape[<span class="hljs-number">0</span>], <span class="hljs-number">-1</span>)
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> torch.cuda.is_available():
+</div><div class="hljs-line">    x = x.cuda()
+</div><div class="hljs-line">x = Variable(x)
+</div><div class="hljs-line">_, mu, _ = net(x)
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">print(mu)
+</div></code></pre>
+
+<p><em>变量查看</em> -&gt; Output</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-text hljs"><div class="hljs-line">tensor([[-1.7890, -1.4560,  2.4941, -1.5575,  0.6719, -0.4668, -0.0496, -0.5515,
+</div><div class="hljs-line">         -0.2201,  0.7045, -0.6811, -0.3978,  1.3749,  0.0168,  0.6829, -0.7402,
+</div><div class="hljs-line">         -0.6127, -0.7239,  2.8570, -0.9265]], device='cuda:0',
+</div><div class="hljs-line">       grad_fn=&lt;AddmmBackward&gt;)
+</div></code></pre>
+
+<blockquote>
+  <p><strong>VAE的优缺点</strong></p>
+  
+  <ul><li><p><strong>优点</strong>：比一般的自动编码器效果要好，而且也限制了其输出的编码 (code) 的概率分布；</p></li>
+  <li><p><strong>缺点</strong>：<code>仍然</code>是通过直接计算生成图片和原始图片的均方误差来生成 loss，生成的图片依然会有点模糊 <br>
+  <strong>即</strong>：<strong>针对loss定义方法</strong> <br>
+  不论是自动编码器还是变分自动编码器，都是通过计算生成图像和输入图像在每个像素点的误差来生成 loss，这一点是特别不好的，因为不同的像素点可能造成不同的视觉结果，但是可能他们的 loss 是相同的，所以通过单个像素点来得到 loss 是不准确的，这个时候我们需要一种全新的 loss 定义方式，就是通过对抗进行学习。</p></li>
+  </ul>
+</blockquote>
+
+<p><strong>解决这个缺点 -&gt; <code>生成对抗网络</code></strong> : 一种新的训练办法——通过生成对抗的训练方式来训练网络而不是直接比较两张图片的每个像素点的均方误差</p>
+
+<h3 id="3-生成对抗网络gans">3 生成对抗网络(GANs)</h3>
+
+<blockquote>
+  <p><strong>组成</strong></p>
+  
+  <ul><li><p>生成模型：类似自动编码器的解码部分</p></li>
+  <li><p>对抗模型：判断真假图片的判别器</p></li>
+  </ul>
+  
+  <p><strong>工作</strong></p>
+  
+  <ul><li><p>让两个网络相互竞争，通过生成网络来生成假的数据，对抗网络通过判别器判别真伪，最后希望生成器生成的数据能够以假乱真骗过判别器。</p></li>
+  </ul>
+  
+  <p><strong>介绍</strong> <br>
+  <code>生成模型</code>：</p>
+  
+  <ul><li><p>一般的生成模型——自动编码器</p></li>
+  <li><p>随机初始化一个隐含向量，根据变分自动编码的特点，初始化一个正态分布的隐含向量，通过类似解码的过程，将它映射到一个更高的维度，<code>最后生成一个与输入数据相似的数据</code>，这就是假的图片。【生成对抗网络会通过<code>对抗过程</code>来计算出这个损失函数】</p></li>
+  </ul>
+  
+  <p><code>对抗模型</code>：</p>
+  
+  <ul><li><p>对抗过程可简化为一个判断真假的判别器，相当于一个二分类问题，即</p>
+  
+  <blockquote>
+    <p>输入一张真的图片希望判别器输出的结果是1； <br>
+    输入一张假的图片希望判别器输出的结果是0。</p>
+  </blockquote></li>
+  <li><p>这跟原图片的label没有关系，即，不管原图片到底是一个多少类别的图片，它们都统一称为真的图片，输出的label是1；对于生成的假的图片，其label是0。</p></li>
+  </ul>
+  
+  <p><strong>训练</strong></p>
+  
+  <ul><li><p>在训练的时候，<strong>先</strong>训练判别器，将假的数据和真的数据都输入给判别模型，这个时候优化这个判别模型；希望它能够正确地判断出真的数据和假的数据，这样就能够得到一个比较好的判别器。</p></li>
+  <li><p>然<strong>后</strong>开始训练生成器， 希望它生成的假的数据能够骗过现在这个比较好的判别器。<code>具体做法：将判别器的参数固定，通过反向传播优化生成器的参数，希望生成器得到的数据在经过判别器之后得到的结果能尽可能地接近1，这时只需要调整一下损失函数即可（！）</code>。</p></li>
+  <li><p>之前在优化判别器的时候损失函数是让假的数据尽可能接近0，而现在训练生成器的损失函数是让假的数据尽可能接近1。</p></li>
+  <li><p>我们训练的过程就是希望这个判别器能够正确的判出真的图片和假的图片，这其实就是一个简单的二分类问题，对于这个问题可以用我们前面讲过的很多方法去处理，比如 <code>logistic 回归</code>，<code>深层网络（多层感知器）</code>，<code>卷积神经网络（CNN）</code>，<code>循环神经网络（RNN）</code>都可以。</p></li>
+  </ul>
+  
+  <p><strong>Improving GAN</strong></p>
+  
+  <ul><li><p>关于生成对抗网络，出现了很多变形，比如 <code>LS-GAN</code>，<code>WGAN</code> 等等</p></li>
+  </ul>
+</blockquote>
+
+
+
+<h4 id="31-简单版本的生成对抗网络">3.1 简单版本的生成对抗网络</h4>
+
+<blockquote>
+  <p>一个简单版本的网络结构，生成网络和对抗网络都是简单的多层神经网络</p>
+  
+  <ul><li><p>通过前面我们知道生成对抗网络有两个部分构成，一个是生成网络，一个是对抗网络，我们首先写一个简单版本的网络结构，生成网络和对抗网络都是简单的多层神经网络</p></li>
+  </ul>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-keyword">import</span> torch
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> torchvision.transforms <span class="hljs-keyword">as</span> tfs
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader, sampler
+</div><div class="hljs-line"><span class="hljs-keyword">from</span> torchvision.datasets <span class="hljs-keyword">import</span> MNIST
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+</div><div class="hljs-line"><span class="hljs-keyword">import</span> matplotlib.gridspec <span class="hljs-keyword">as</span> gridspec
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">%matplotlib inline
+</div><div class="hljs-line">plt.rcParams[<span class="hljs-string">'figure.figsize'</span>] = (<span class="hljs-number">10.0</span>, <span class="hljs-number">8.0</span>) <span class="hljs-comment"># 设置画图的尺寸</span>
+</div><div class="hljs-line">plt.rcParams[<span class="hljs-string">'image.interpolation'</span>] = <span class="hljs-string">'nearest'</span>
+</div><div class="hljs-line">plt.rcParams[<span class="hljs-string">'image.cmap'</span>] = <span class="hljs-string">'gray'</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_images</span><span class="hljs-params">(images)</span>:</span> <span class="hljs-comment"># 定义画图工具</span>
+</div><div class="hljs-line">    images = np.reshape(images, [images.shape[<span class="hljs-number">0</span>], <span class="hljs-number">-1</span>])
+</div><div class="hljs-line">    sqrtn = int(np.ceil(np.sqrt(images.shape[<span class="hljs-number">0</span>])))
+</div><div class="hljs-line">    sqrtimg = int(np.ceil(np.sqrt(images.shape[<span class="hljs-number">1</span>])))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    fig = plt.figure(figsize=(sqrtn, sqrtn))
+</div><div class="hljs-line">    gs = gridspec.GridSpec(sqrtn, sqrtn)
+</div><div class="hljs-line">    gs.update(wspace=<span class="hljs-number">0.05</span>, hspace=<span class="hljs-number">0.05</span>)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> i, img <span class="hljs-keyword">in</span> enumerate(images):
+</div><div class="hljs-line">        ax = plt.subplot(gs[i])
+</div><div class="hljs-line">        plt.axis(<span class="hljs-string">'off'</span>)
+</div><div class="hljs-line">        ax.set_xticklabels([])
+</div><div class="hljs-line">        ax.set_yticklabels([])
+</div><div class="hljs-line">        ax.set_aspect(<span class="hljs-string">'equal'</span>)
+</div><div class="hljs-line">        plt.imshow(img.reshape([sqrtimg,sqrtimg]))
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> 
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">preprocess_img</span><span class="hljs-params">(x)</span>:</span>
+</div><div class="hljs-line">    x = tfs.ToTensor()(x)
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> (x - <span class="hljs-number">0.5</span>) / <span class="hljs-number">0.5</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deprocess_img</span><span class="hljs-params">(x)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> (x + <span class="hljs-number">1.0</span>) / <span class="hljs-number">2.0</span>
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChunkSampler</span><span class="hljs-params">(sampler.Sampler)</span>:</span> <span class="hljs-comment"># 定义一个取样的函数</span>
+</div><div class="hljs-line">    <span class="hljs-string">"""Samples elements sequentially from some offset. </span>
+</div><div class="hljs-line"><span class="hljs-string">    Arguments:</span>
+</div><div class="hljs-line"><span class="hljs-string">        num_samples: # of desired datapoints</span>
+</div><div class="hljs-line"><span class="hljs-string">        start: offset where we should start selecting from</span>
+</div><div class="hljs-line"><span class="hljs-string">    """</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, num_samples, start=<span class="hljs-number">0</span>)</span>:</span>
+</div><div class="hljs-line">        self.num_samples = num_samples
+</div><div class="hljs-line">        self.start = start
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__iter__</span><span class="hljs-params">(self)</span>:</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> iter(range(self.start, self.start + self.num_samples))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__len__</span><span class="hljs-params">(self)</span>:</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> self.num_samples
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">NUM_TRAIN = <span class="hljs-number">50000</span>
+</div><div class="hljs-line">NUM_VAL = <span class="hljs-number">5000</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">NOISE_DIM = <span class="hljs-number">96</span>
+</div><div class="hljs-line">batch_size = <span class="hljs-number">128</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_set = MNIST(<span class="hljs-string">'./data'</span>, train=<span class="hljs-keyword">True</span>, download=<span class="hljs-keyword">True</span>, transform=preprocess_img)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_data = DataLoader(train_set, batch_size=batch_size, sampler=ChunkSampler(NUM_TRAIN, <span class="hljs-number">0</span>))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">val_set = MNIST(<span class="hljs-string">'./data'</span>, train=<span class="hljs-keyword">True</span>, download=<span class="hljs-keyword">True</span>, transform=preprocess_img)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">val_data = DataLoader(val_set, batch_size=batch_size, sampler=ChunkSampler(NUM_VAL, NUM_TRAIN))
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">imgs = deprocess_img(train_data.__iter__().next()[<span class="hljs-number">0</span>].view(batch_size, <span class="hljs-number">784</span>)).numpy().squeeze() <span class="hljs-comment"># 可视化图片效果</span>
+</div><div class="hljs-line">show_images(imgs)
+</div></code></pre>
+
+<p>Output</p>
+
+
+
+<p><img src="./python-torchDemo5/gan01.png" alt="Alt text" title="" type="image/png"></p>
+
+<h5 id="判别网络">判别网络</h5>
+
+<p>判别网络的结构非常简单，就是一个二分类器</p>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">discriminator</span><span class="hljs-params">()</span>:</span>
+</div><div class="hljs-line">    net = nn.Sequential(        
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">784</span>, <span class="hljs-number">256</span>),
+</div><div class="hljs-line">            nn.LeakyReLU(<span class="hljs-number">0.2</span>),  <span class="hljs-comment"># 这里使用了斜率为0.2的LeakyReLU激活函数，不用ReLU的原因是，经过实验发现，LeakyReLU的表现更好</span>
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">256</span>, <span class="hljs-number">256</span>),
+</div><div class="hljs-line">            nn.LeakyReLU(<span class="hljs-number">0.2</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">256</span>, <span class="hljs-number">1</span>)
+</div><div class="hljs-line">            <span class="hljs-comment"># sigmoid? 书上提出这里用了Sigmoid()激活函数，但是实际的代码中，没有使用？</span>
+</div><div class="hljs-line">        )
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> net
+</div></code></pre>
+
+<h5 id="生成网络">生成网络</h5>
+
+<p>生成网络的结构是根据一个随机噪声生成一个和数据维度一样的张量</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generator</span><span class="hljs-params">(noise_dim=NOISE_DIM)</span>:</span>   
+</div><div class="hljs-line">    net = nn.Sequential(
+</div><div class="hljs-line">        nn.Linear(noise_dim, <span class="hljs-number">1024</span>),
+</div><div class="hljs-line">        nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">        nn.Linear(<span class="hljs-number">1024</span>, <span class="hljs-number">1024</span>),
+</div><div class="hljs-line">        nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">        nn.Linear(<span class="hljs-number">1024</span>, <span class="hljs-number">784</span>),
+</div><div class="hljs-line">        nn.Tanh()  <span class="hljs-comment"># 最后需要使用nn.Tanh(),将数据分布到-1~1之间，这是因为输入的图片会规范化到-1~1之间。</span>
+</div><div class="hljs-line">    )
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> net
+</div></code></pre>
+
+<blockquote>
+  <p><strong>定义</strong>生成对抗网络的 loss</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 对于对抗网络，相当于二分类问题，将真的判别为真的，假的判别为假的</span>
+</div><div class="hljs-line">bce_loss = nn.BCEWithLogitsLoss()  <span class="hljs-comment"># Binary Cross Entropy 二分类的损失函数</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">discriminator_loss</span><span class="hljs-params">(logits_real, logits_fake)</span>:</span> <span class="hljs-comment"># 判别器的 loss</span>
+</div><div class="hljs-line">    size = logits_real.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line">    true_labels = Variable(torch.ones(size, <span class="hljs-number">1</span>)).float().cuda()
+</div><div class="hljs-line">    false_labels = Variable(torch.zeros(size, <span class="hljs-number">1</span>)).float().cuda()
+</div><div class="hljs-line">    loss = bce_loss(logits_real, true_labels) + bce_loss(logits_fake, false_labels)
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> loss
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generator_loss</span><span class="hljs-params">(logits_fake)</span>:</span> <span class="hljs-comment"># 生成器的 loss  </span>
+</div><div class="hljs-line">    size = logits_fake.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line">    true_labels = Variable(torch.ones(size, <span class="hljs-number">1</span>)).float().cuda()
+</div><div class="hljs-line">    loss = bce_loss(logits_fake, true_labels)
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> loss
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 使用 adam 来进行训练，学习率是 3e-4, beta1 是 0.5, beta2 是 0.999</span>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_optimizer</span><span class="hljs-params">(net)</span>:</span>
+</div><div class="hljs-line">    optimizer = torch.optim.Adam(net.parameters(), lr=<span class="hljs-number">3e-4</span>, betas=(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.999</span>))
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> optimizer
+</div></code></pre>
+
+<blockquote>
+  <p><strong>开始训练</strong></p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-comment"># 【先】训练判别器</span>
+</div><div class="hljs-line"><span class="hljs-comment"># 【后】训练生成器</span>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">train_a_gan</span><span class="hljs-params">(D_net, G_net, D_optimizer, G_optimizer, discriminator_loss, generator_loss, show_every=<span class="hljs-number">250</span>, </span></span>
+</div><div class="hljs-line"><span class="hljs-function">                noise_size=<span class="hljs-number">96</span>, num_epochs=<span class="hljs-number">10</span>):</span>
+</div><div class="hljs-line">    iter_count = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> range(num_epochs):
+</div><div class="hljs-line">        <span class="hljs-keyword">for</span> x, _ <span class="hljs-keyword">in</span> train_data:
+</div><div class="hljs-line">            bs = x.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line">            <span class="hljs-comment"># 判别网络</span>
+</div><div class="hljs-line">            real_data = Variable(x).view(bs, <span class="hljs-number">-1</span>).cuda() <span class="hljs-comment"># 真实数据</span>
+</div><div class="hljs-line">            logits_real = D_net(real_data) <span class="hljs-comment"># 判别网络得分</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            sample_noise = (torch.rand(bs, noise_size) - <span class="hljs-number">0.5</span>) / <span class="hljs-number">0.5</span> <span class="hljs-comment"># -1 ~ 1 的均匀分布</span>
+</div><div class="hljs-line">            g_fake_seed = Variable(sample_noise).cuda()
+</div><div class="hljs-line">            fake_images = G_net(g_fake_seed) <span class="hljs-comment"># 生成的假的数据</span>
+</div><div class="hljs-line">            logits_fake = D_net(fake_images) <span class="hljs-comment"># 判别网络得分</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            d_total_error = discriminator_loss(logits_real, logits_fake) <span class="hljs-comment"># 判别器的 loss</span>
+</div><div class="hljs-line">            D_optimizer.zero_grad()
+</div><div class="hljs-line">            d_total_error.backward()
+</div><div class="hljs-line">            D_optimizer.step() <span class="hljs-comment"># 优化判别网络</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            <span class="hljs-comment"># 生成网络</span>
+</div><div class="hljs-line">            g_fake_seed = Variable(sample_noise).cuda()
+</div><div class="hljs-line">            fake_images = G_net(g_fake_seed) <span class="hljs-comment"># 生成的假的数据</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            gen_logits_fake = D_net(fake_images)
+</div><div class="hljs-line">            g_error = generator_loss(gen_logits_fake) <span class="hljs-comment"># 生成网络的 loss</span>
+</div><div class="hljs-line">            G_optimizer.zero_grad()
+</div><div class="hljs-line">            g_error.backward()
+</div><div class="hljs-line">            G_optimizer.step() <span class="hljs-comment"># 优化生成网络</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            <span class="hljs-keyword">if</span> (iter_count % show_every == <span class="hljs-number">0</span>):
+</div><div class="hljs-line">                print(<span class="hljs-string">'Iter: {}, D: {:.4}, G:{:.4}'</span>.format(iter_count, d_total_error.item(), g_error.item()))  <span class="hljs-comment"># tao</span>
+</div><div class="hljs-line">                imgs_numpy = deprocess_img(fake_images.data.cpu().numpy())
+</div><div class="hljs-line">                show_images(imgs_numpy[<span class="hljs-number">0</span>:<span class="hljs-number">16</span>])
+</div><div class="hljs-line">                plt.show()
+</div><div class="hljs-line">                print()
+</div><div class="hljs-line">            iter_count += <span class="hljs-number">1</span>
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">D = discriminator().cuda()
+</div><div class="hljs-line">G = generator().cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">D_optim = get_optimizer(D)
+</div><div class="hljs-line">G_optim = get_optimizer(G)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_a_gan(D, G, D_optim, G_optim, discriminator_loss, generator_loss)
+</div></code></pre>
+
+<p><strong>总结</strong></p>
+
+<blockquote>
+  <p>上述使用简单的多层全连接神经网络实现了一个简单的生成对抗网络（最基本的生成对抗网络）,【但是可以看到效果并不是特别好，生成的数字也不是特别完整】 <br>
+  其他变式（<code>结构</code> or <code>loss</code>）</p>
+  
+  <ul><li><p><code>Least Squares GAN</code> (<code>loss</code>上的变式)：使用了<strong>最小平方误差</strong>（<strong>均方误差最小化</strong>、<strong>最小二乘法</strong>）来进行评估，而不是<strong>二分类的损失函数</strong>，比最原始的GANs的loss更加稳定。</p></li>
+  </ul>
+</blockquote>
+
+<h4 id="32-least-squares-gan">3.2 Least Squares GAN</h4>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ls_discriminator_loss</span><span class="hljs-params">(scores_real, scores_fake)</span>:</span>
+</div><div class="hljs-line">    loss = <span class="hljs-number">0.5</span> * ((scores_real - <span class="hljs-number">1</span>) ** <span class="hljs-number">2</span>).mean() + <span class="hljs-number">0.5</span> * (scores_fake ** <span class="hljs-number">2</span>).mean()
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> loss
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ls_generator_loss</span><span class="hljs-params">(scores_fake)</span>:</span>
+</div><div class="hljs-line">    loss = <span class="hljs-number">0.5</span> * ((scores_fake - <span class="hljs-number">1</span>) ** <span class="hljs-number">2</span>).mean()
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> loss
+</div></code></pre>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">D = discriminator().cuda()
+</div><div class="hljs-line">G = generator().cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">D_optim = get_optimizer(D)
+</div><div class="hljs-line">G_optim = get_optimizer(G)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_a_gan(D, G, D_optim, G_optim, ls_discriminator_loss, ls_generator_loss)
+</div></code></pre>
+
+<p>上面是最基本的 <code>GAN</code> 和 <code>least squares GAN</code>，下面是使用卷积网络的<code>GAN</code>，叫做深度卷积生成对抗网络(<code>Deep Convolutional GANs</code>, <code>DC GAN</code>)</p>
+
+
+
+<h4 id="33-deep-convolutional-gans">3.3 Deep Convolutional GANs</h4>
+
+<blockquote>
+  <p>深度卷积生成对抗网络就是将生成网络和对抗网络都改成了卷积网络的形式 <br>
+  生成对抗网络的训练比较困难，因为这是两个对偶网络在相互学习，所以需要增加一些训练技巧才能使训练更加稳定：</p>
+  
+  <ul><li><p>比如在卷积神经网络里引入批标准化（Batch Normalization）来稳定训练，同时使用LeakyReLU和平均池化来进行训练。</p></li>
+  <li><p>对于生成对抗网络而言，它其实并没有真正地学习到它要表示的物体，通过对抗的过程，它只是生成了一张尽可能真的图片，这就意味着没办法决定用哪种噪声能够生成想要的图片，除非把初始分布都试一遍</p></li>
+  <li><p>GAN的本质：通过改变训练的过程来避免烦琐的计算</p></li>
+  <li><p>引出 -&gt; 基于标准生成对抗网络的变式（用于解决各种各样的问题）</p></li>
+  </ul>
+</blockquote>
+
+<h5 id="卷积判别网络">卷积判别网络</h5>
+
+<p>卷积判别网络就是一个一般的卷积网络，结构如下</p>
+
+<ul><li><p>32 Filters, 5x5, Stride 1, Leaky ReLU(alpha=0.01)</p></li>
+<li><p>Max Pool 2x2, Stride 2</p></li>
+<li><p>64 Filters, 5x5, Stride 1, Leaky ReLU(alpha=0.01)</p></li>
+<li><p>Max Pool 2x2, Stride 2</p></li>
+<li><p>Fully Connected size 4 x 4 x 64, Leaky ReLU(alpha=0.01)</p></li>
+<li><p>Fully Connected size 1</p></li>
+</ul>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">build_dc_classifier</span><span class="hljs-params">(nn.Module)</span>:</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+</div><div class="hljs-line">        super(build_dc_classifier, self).__init__()
+</div><div class="hljs-line">        self.conv = nn.Sequential(
+</div><div class="hljs-line">            nn.Conv2d(<span class="hljs-number">1</span>, <span class="hljs-number">32</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>),
+</div><div class="hljs-line">            nn.LeakyReLU(<span class="hljs-number">0.01</span>),
+</div><div class="hljs-line">            nn.MaxPool2d(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>),
+</div><div class="hljs-line">            nn.Conv2d(<span class="hljs-number">32</span>, <span class="hljs-number">64</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>),
+</div><div class="hljs-line">            nn.LeakyReLU(<span class="hljs-number">0.01</span>),
+</div><div class="hljs-line">            nn.MaxPool2d(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
+</div><div class="hljs-line">        )
+</div><div class="hljs-line">        self.fc = nn.Sequential(
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">1024</span>, <span class="hljs-number">1024</span>),
+</div><div class="hljs-line">            nn.LeakyReLU(<span class="hljs-number">0.01</span>),
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">1024</span>, <span class="hljs-number">1</span>)
+</div><div class="hljs-line">        )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        x = self.conv(x)
+</div><div class="hljs-line">        x = x.view(x.shape[<span class="hljs-number">0</span>], <span class="hljs-number">-1</span>)
+</div><div class="hljs-line">        x = self.fc(x)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> x
+</div></code></pre>
+
+
+
+<h5 id="卷积生成网络">卷积生成网络</h5>
+
+<p>卷积生成网络需要将一个低维的噪声向量变成一个图片数据，结构如下</p>
+
+<ul><li><p>Fully connected of size 1024, ReLU</p></li>
+<li><p>BatchNorm</p></li>
+<li><p>Fully connected of size 7 x 7 x 128, ReLU</p></li>
+<li><p>BatchNorm</p></li>
+<li><p>Reshape into Image Tensor</p></li>
+<li><p>64 conv2d^T filters of 4x4, stride 2, padding 1, ReLU</p></li>
+<li><p>BatchNorm</p></li>
+<li><p>1 conv2d^T filter of 4x4, stride 2, padding 1, TanH</p></li>
+</ul>
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">build_dc_generator</span><span class="hljs-params">(nn.Module)</span>:</span> 
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, noise_dim=NOISE_DIM)</span>:</span>
+</div><div class="hljs-line">        super(build_dc_generator, self).__init__()
+</div><div class="hljs-line">        self.fc = nn.Sequential(
+</div><div class="hljs-line">            nn.Linear(noise_dim, <span class="hljs-number">1024</span>),
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.BatchNorm1d(<span class="hljs-number">1024</span>),  <span class="hljs-comment"># 引入了批标准化（Batch Normalization）来稳定训练</span>
+</div><div class="hljs-line">            nn.Linear(<span class="hljs-number">1024</span>, <span class="hljs-number">7</span> * <span class="hljs-number">7</span> * <span class="hljs-number">128</span>),
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.BatchNorm1d(<span class="hljs-number">7</span> * <span class="hljs-number">7</span> * <span class="hljs-number">128</span>)
+</div><div class="hljs-line">        )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        self.conv = nn.Sequential(
+</div><div class="hljs-line">            nn.ConvTranspose2d(<span class="hljs-number">128</span>, <span class="hljs-number">64</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, padding=<span class="hljs-number">1</span>),
+</div><div class="hljs-line">            nn.ReLU(<span class="hljs-keyword">True</span>),
+</div><div class="hljs-line">            nn.BatchNorm2d(<span class="hljs-number">64</span>),
+</div><div class="hljs-line">            nn.ConvTranspose2d(<span class="hljs-number">64</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, padding=<span class="hljs-number">1</span>),
+</div><div class="hljs-line">            nn.Tanh()
+</div><div class="hljs-line">        )
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+</div><div class="hljs-line">        x = self.fc(x)
+</div><div class="hljs-line">        x = x.view(x.shape[<span class="hljs-number">0</span>], <span class="hljs-number">128</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>) <span class="hljs-comment"># reshape 通道是 128，大小是 7x7</span>
+</div><div class="hljs-line">        x = self.conv(x)
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> x
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">train_dc_gan</span><span class="hljs-params">(D_net, G_net, D_optimizer, G_optimizer, discriminator_loss, generator_loss, show_every=<span class="hljs-number">250</span>, </span></span>
+</div><div class="hljs-line"><span class="hljs-function">                noise_size=<span class="hljs-number">96</span>, num_epochs=<span class="hljs-number">10</span>):</span>
+</div><div class="hljs-line">    iter_count = <span class="hljs-number">0</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> range(num_epochs):
+</div><div class="hljs-line">        <span class="hljs-keyword">for</span> x, _ <span class="hljs-keyword">in</span> train_data:
+</div><div class="hljs-line">            bs = x.shape[<span class="hljs-number">0</span>]
+</div><div class="hljs-line">            <span class="hljs-comment"># 判别网络</span>
+</div><div class="hljs-line">            real_data = Variable(x).cuda() <span class="hljs-comment"># 真实数据</span>
+</div><div class="hljs-line">            logits_real = D_net(real_data) <span class="hljs-comment"># 判别网络得分</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            sample_noise = (torch.rand(bs, noise_size) - <span class="hljs-number">0.5</span>) / <span class="hljs-number">0.5</span> <span class="hljs-comment"># -1 ~ 1 的均匀分布</span>
+</div><div class="hljs-line">            g_fake_seed = Variable(sample_noise).cuda()
+</div><div class="hljs-line">            fake_images = G_net(g_fake_seed) <span class="hljs-comment"># 生成的假的数据</span>
+</div><div class="hljs-line">            logits_fake = D_net(fake_images) <span class="hljs-comment"># 判别网络得分</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            d_total_error = discriminator_loss(logits_real, logits_fake) <span class="hljs-comment"># 判别器的 loss</span>
+</div><div class="hljs-line">            D_optimizer.zero_grad()
+</div><div class="hljs-line">            d_total_error.backward()
+</div><div class="hljs-line">            D_optimizer.step() <span class="hljs-comment"># 优化判别网络</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            <span class="hljs-comment"># 生成网络</span>
+</div><div class="hljs-line">            g_fake_seed = Variable(sample_noise).cuda()
+</div><div class="hljs-line">            fake_images = G_net(g_fake_seed) <span class="hljs-comment"># 生成的假的数据</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            gen_logits_fake = D_net(fake_images)
+</div><div class="hljs-line">            g_error = generator_loss(gen_logits_fake) <span class="hljs-comment"># 生成网络的 loss</span>
+</div><div class="hljs-line">            G_optimizer.zero_grad()
+</div><div class="hljs-line">            g_error.backward()
+</div><div class="hljs-line">            G_optimizer.step() <span class="hljs-comment"># 优化生成网络</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            <span class="hljs-keyword">if</span> (iter_count % show_every == <span class="hljs-number">0</span>):
+</div><div class="hljs-line">                print(<span class="hljs-string">'Iter: {}, D: {:.4}, G:{:.4}'</span>.format(iter_count, d_total_error.item(), g_error.item()))
+</div><div class="hljs-line">                imgs_numpy = deprocess_img(fake_images.data.cpu().numpy())
+</div><div class="hljs-line">                show_images(imgs_numpy[<span class="hljs-number">0</span>:<span class="hljs-number">16</span>])
+</div><div class="hljs-line">                plt.show()
+</div><div class="hljs-line">                print()
+</div><div class="hljs-line">            iter_count += <span class="hljs-number">1</span>
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-python hljs"><div class="hljs-line">D_DC = build_dc_classifier().cuda()
+</div><div class="hljs-line">G_DC = build_dc_generator().cuda()
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">D_DC_optim = get_optimizer(D_DC)
+</div><div class="hljs-line">G_DC_optim = get_optimizer(G_DC)
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">train_dc_gan(D_DC, G_DC, D_DC_optim, G_DC_optim, discriminator_loss, generator_loss, num_epochs=<span class="hljs-number">5</span>)
+</div></code></pre>
+
+<p><code>★</code> 可以看到，通过 DC GANs 能够得到更加清楚的结果</p>
+
+<h4 id="34-improving-gan">3.4 Improving GAN</h4>
+
+<blockquote>
+  <p><strong>局限</strong></p>
+  
+  <ul><li><p>① GAN的训练非常麻烦，需要很多训练技巧</p></li>
+  <li><p>② 在不同的数据集上，由于数据的分布会发生变化，也需要重新调整参数</p></li>
+  <li><p>③ 需要小心地平衡生成器和判别器的训练过程</p></li>
+  <li><p>④ 生成的样本还缺乏多样性</p></li>
+  <li><p>⑤ 最大的问题：没办法衡量这个生成器到底好不好，因为没办法通过判别器的loss去判断这个事情。（虽然DC GAN依靠对生成器和判别器的结构进行枚举，最终找到了一个比较好的网络设置，但还是没有从根本上解决训练的问题。）</p></li>
+  </ul>
+</blockquote>
+
+<h5 id="wasserstein-gan">Wasserstein GAN</h5>
+
+<blockquote>
+  <p><strong>WGAN彻底解决的难点</strong></p>
+  
+  <ul><li><p>① 彻底解决了训练不稳定的问题，不再需要设计参数去平衡判别器和生成器</p></li>
+  <li><p>② 基本解决了collapse mode的问题，确保了生成样本的多样性</p></li>
+  <li><p>③ 训练中有一个向交叉熵、准确率的数值指标来衡量训练的进程，数值越小代表GAN训练得越好，同时也就代表着生成的图片质量越高</p></li>
+  <li><p>④ 不需要精心设计网络结构，用简单的多层感知器就能够取得比较好的效果</p></li>
+  </ul>
+  
+  <p><strong>发展</strong>（<code>衡量真实分布与生成分布之间的差异</code>）</p>
+  
+  <ul><li><p>发展线：KL Divergence -&gt; JS Divergence -&gt; Wasserstein距离 <br>
+  </p><ul><li><p>KL Divergence是不对称的；<code>↓</code></p></li>
+  <li><p>JS Divergence是对称的；但有一个严重的问题，那就是如果两种分布完全没有重叠部分，或者说重叠部分可忽略，那么JS Divergence将恒等于log2, log2 -&gt; 0是突变的；<code>↓</code></p></li>
+  <li><p>新的度量方式：Wasserstein距离（也称为Earth Mover距离–推土机距离），不管两种分布是否有重叠，它都是连续变换的，不是突变的。但是W距离有一个无法求解的问题。<code>↓</code></p></li>
+  <li><p>引入新的概念——Lipschitz连续。构造一个神经网络D作为判别器，使得满足Lipschitz条件的函数变化能比较平缓。满足Lipschitz连续条件，需要做权重裁剪。<code>↓</code></p></li></ul><p></p></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+  <li><p>(<code>Improving WGAN</code>)</p></li></ul>
+</blockquote>
+
+
+<blockquote>
+  <p><strong>总结</strong></p>
+  
+  <ul><li><p>原始的GAN做的是二分类的任务，也就是对于真假图片进行二分类，而WGAN做的是回归问题，相当于近似拟合Wasserstein距离。</p></li>
+  <li><p>WGAN与原始的GAN相比，只改了以下4点： <br>
+  </p><ul><li><p>① 判别器最后一层去掉sigmoid</p></li>
+  <li><p>② 生成器和判别器的loss不取log</p></li>
+  <li><p>③ 每次更新判别器的参数之后把它们的绝对值<code>裁剪</code>到不超过一个固定常数的数</p></li>
+  <li><p>④ 不再用基于动量的优化算法（比如momentuem 和 Adam)，推荐使用RMSProp</p></li></ul><p></p></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+  <li><p>①-③：理论分析得到；④作者实验发现。</p></li></ul>
+</blockquote>
+
+
+<blockquote>
+  <p><strong>对比</strong></p>
+  
+  <ul><li><p>第一：WGAN如果使用类似DC GAN的结构，那么和DC GAN生成的图片差不多；但是WGAN的优势就在于不用DC GAN的结构，也能生成效果比较好的图片，但是把DC GAN的Batch Normalization拿掉的话，DC GAN就不能生成图片了；</p></li>
+  <li><p>第二：WGAN和原始的GAN都是用多层全连接网络的话，WGAN生成的图片质量会变得差一些，但是原始的GAN不仅质量很差，还有多样性不足的问题。</p></li>
+  </ul>
+</blockquote>
+
+<h5 id="improving-wgan">Improving WGAN</h5>
+
+<blockquote>
+  <p>WGAN在满足一阶Lipschitz连续性条件，在训练的时候加了限制——权重裁剪 <br>
+  除了权重裁剪外，还可以有其他方法</p>
+  
+  <ul><li><p>引入<strong>定理</strong>（<code>一个可微函数如果满足1阶Lipschitz连续，等价于它的梯度范数处小于1</code>），这样不需要在整个分布上都满足Lipschitz条件，只需要沿着一些直线上的点满足这些，结果即可变得很好。（Improving WGAN 相比 WGAN训练更加稳定，生成的图片效果也更好。）</p></li>
+  </ul>
+  
+  </blockquote>
+
+
+<h3 id="目录">目录</h3>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><p>PyTorch 实例Ⅳ（生成对抗网络）</p><ul>
+<li><a href="#0-背景知识">0 背景知识</a></li>
+<li><a href="#1-自动编码器ae">1 自动编码器(AE)</a></li>
+<li><a href="#2-变分自动编码器vae">2 变分自动编码器(VAE)</a></li>
+<li><a href="#3-生成对抗网络gans">3 生成对抗网络(GANs)</a><ul>
+<li><a href="#31-简单版本的生成对抗网络">3.1 简单版本的生成对抗网络</a><ul>
+<li><a href="#判别网络">判别网络</a></li>
+<li><a href="#生成网络">生成网络</a></li>
+</ul>
+</li>
+<li><a href="#32-least-squares-gan">3.2 Least Squares GAN</a></li>
+<li><a href="#33-deep-convolutional-gans">3.3 Deep Convolutional GANs</a><ul>
+<li><a href="#卷积判别网络">卷积判别网络</a></li>
+<li><a href="#卷积生成网络">卷积生成网络</a></li>
+</ul>
+</li>
+<li><a href="#34-improving-gan">3.4 Improving GAN</a><ul>
+<li><a href="#wasserstein-gan">Wasserstein GAN</a></li>
+<li><a href="#improving-wgan">Improving WGAN</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+	
+									<!--))))Markdown内容结束-->
+
+
+								</div><!-- .entry-content -->
+
+							</article><!-- #post-## -->
+
+						</main><!-- #main -->
+
 					</div>
 					<!-- #primary -->
 
@@ -1638,21 +1900,21 @@ setuptools的用法</p>
 	<div style="display:none"></div>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.photon.photon.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.js.devicepx-jetpack.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.js.main.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-content.themes.type-plus.inc.slick.slick.min.js"></script>
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.eu-cookie-law.eu-cookie-law.min.js"></script>
 
 	<script type="text/javascript"
-		src="./blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
-	<script type="text/javascript" src="./blog/blogJS/stats.wp.com.e-202110.js" async="async" defer="defer"></script>
+		src="../../blog/blogJS/wp-content.plugins.jetpack._inc.build.widgets.milestone.milestone.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/wp-includes.js.wp-embed.min.js"></script>
+	<script type="text/javascript" src="../../blog/blogJS/stats.wp.com.e-202110.js" async="async"
+		defer="defer"></script>
 
 	<!--代码美化-->
 	<script src="../../assets/google-code-prettify/prettify.js"></script>
 
 </body>
-
 </html>
