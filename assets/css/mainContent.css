@@ -2572,7 +2572,7 @@
 	#main {
 		/*margin-left: 30%;*/       /* 相比之前：注释了 */
 		/*max-width: 65em;*/
-		padding: 3em 4em 4em 4em;
+		padding: 4em 0em 0em 0em;   /* before → padding: 3em 4em 4em 4em;/
 		width: calc(100% - 10%);    /* 相比之前：30% 改成了 10% */
 		text-align: justify;
 		margin:auto;                /* 相比之前：新增了这一行 */
